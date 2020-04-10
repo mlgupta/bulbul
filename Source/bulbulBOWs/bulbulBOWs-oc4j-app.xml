@@ -1,0 +1,53 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE orion-application PUBLIC "-//Evermind//DTD J2EE Application runtime 1.2//EN" "http://xmlns.oracle.com/ias/dtds/orion-application.dtd">
+<orion-application>
+  <web-module id="bulbulBOWs-bulbulBOPrj-webapp" path="file:/D:/Sudheer/Bulbul/Source/bulbulBOWs/bulbulBOPrj/public_html/"/>
+  <client-module path="file:/D:/Sudheer/Bulbul/Source/bulbulBOWs/bulbulBOPrj/public_html/WEB-INF/classes/"/>
+  <library path="D:\Sudheer\Bulbul\Source\bulbulBOWs\bulbulBOPrj\public_html\WEB-INF\classes">jdev-generated</library>
+  <library path="D:\Sudheer\Bulbul\Source\bulbulBOWs\bulbulBOPrj\public_html\WEB-INF\lib\bulbulbo.jar">jdev-generated</library>
+  <library path="D:\Sudheer\Bulbul\Source\bulbulBOWs\bulbulBOPrj\public_html\WEB-INF\lib\commons-dbcp-1.1.jar">jdev-generated</library>
+  <library path="D:\Sudheer\Bulbul\Source\bulbulBOWs\bulbulBOPrj\public_html\WEB-INF\lib\commons-pool-1.1.jar">jdev-generated</library>
+  <library path="D:\Sudheer\Bulbul\Source\bulbulBOWs\bulbulBOPrj\public_html\WEB-INF\lib\jdbc2_0-stdext.jar">jdev-generated</library>
+  <library path="D:\Sudheer\Bulbul\Source\bulbulBOWs\bulbulBOPrj\public_html\WEB-INF\lib\log4j-1.2.8.jar">jdev-generated</library>
+  <library path="D:\Sudheer\Bulbul\Source\bulbulBOWs\bulbulBOPrj\public_html\WEB-INF\lib\nls_charset12.jar">jdev-generated</library>
+  <library path="D:\Sudheer\Bulbul\Source\bulbulBOWs\bulbulBOPrj\public_html\WEB-INF\lib\postgresql-8.1-405.jdbc3.jar">jdev-generated</library>
+  <library path="D:\Sudheer\Bulbul\Source\bulbulBOWs\bulbulBOPrj\public_html\WEB-INF\lib\struts-legacy.jar">jdev-generated</library>
+  <library path="D:\Sudheer\Bulbul\Source\bulbulBOWs\bulbulBOPrj\public_html\WEB-INF\lib\svg\batik-awt-util.jar">jdev-generated</library>
+  <library path="D:\Sudheer\Bulbul\Source\bulbulBOWs\bulbulBOPrj\public_html\WEB-INF\lib\svg\batik-bridge.jar">jdev-generated</library>
+  <library path="D:\Sudheer\Bulbul\Source\bulbulBOWs\bulbulBOPrj\public_html\WEB-INF\lib\svg\batik-css.jar">jdev-generated</library>
+  <library path="D:\Sudheer\Bulbul\Source\bulbulBOWs\bulbulBOPrj\public_html\WEB-INF\lib\svg\batik-dom.jar">jdev-generated</library>
+  <library path="D:\Sudheer\Bulbul\Source\bulbulBOWs\bulbulBOPrj\public_html\WEB-INF\lib\svg\batik-ext.jar">jdev-generated</library>
+  <library path="D:\Sudheer\Bulbul\Source\bulbulBOWs\bulbulBOPrj\public_html\WEB-INF\lib\svg\batik-extension.jar">jdev-generated</library>
+  <library path="D:\Sudheer\Bulbul\Source\bulbulBOWs\bulbulBOPrj\public_html\WEB-INF\lib\svg\batik-gui-util.jar">jdev-generated</library>
+  <library path="D:\Sudheer\Bulbul\Source\bulbulBOWs\bulbulBOPrj\public_html\WEB-INF\lib\svg\batik-gvt.jar">jdev-generated</library>
+  <library path="D:\Sudheer\Bulbul\Source\bulbulBOWs\bulbulBOPrj\public_html\WEB-INF\lib\svg\batik-parser.jar">jdev-generated</library>
+  <library path="D:\Sudheer\Bulbul\Source\bulbulBOWs\bulbulBOPrj\public_html\WEB-INF\lib\svg\batik-script.jar">jdev-generated</library>
+  <library path="D:\Sudheer\Bulbul\Source\bulbulBOWs\bulbulBOPrj\public_html\WEB-INF\lib\svg\batik-svg-dom.jar">jdev-generated</library>
+  <library path="D:\Sudheer\Bulbul\Source\bulbulBOWs\bulbulBOPrj\public_html\WEB-INF\lib\svg\batik-svggen.jar">jdev-generated</library>
+  <library path="D:\Sudheer\Bulbul\Source\bulbulBOWs\bulbulBOPrj\public_html\WEB-INF\lib\svg\batik-swing.jar">jdev-generated</library>
+  <library path="D:\Sudheer\Bulbul\Source\bulbulBOWs\bulbulBOPrj\public_html\WEB-INF\lib\svg\batik-transcoder.jar">jdev-generated</library>
+  <library path="D:\Sudheer\Bulbul\Source\bulbulBOWs\bulbulBOPrj\public_html\WEB-INF\lib\svg\batik-util.jar">jdev-generated</library>
+  <library path="D:\Sudheer\Bulbul\Source\bulbulBOWs\bulbulBOPrj\public_html\WEB-INF\lib\svg\batik-xml.jar">jdev-generated</library>
+  <library path="D:\Sudheer\Bulbul\Source\bulbulBOWs\bulbulBOPrj\public_html\WEB-INF\lib\svg\js.jar">jdev-generated</library>
+  <library path="D:\Sudheer\Bulbul\Source\bulbulBOWs\bulbulBOPrj\public_html\WEB-INF\lib\svg\pdf-transcoder.jar">jdev-generated</library>
+  <library path="D:\Sudheer\Bulbul\Source\bulbulBOWs\bulbulBOPrj\public_html\WEB-INF\lib\svg\xerces_2_5_0.jar">jdev-generated</library>
+  <library path="D:\Sudheer\Bulbul\Source\bulbulBOWs\bulbulBOPrj\public_html\WEB-INF\lib\svg\xml-apis.jar">jdev-generated</library>
+  <library path="D:\Sudheer\JWorld\IDE\jdevstudio1013\j2ee\home\lib\ojsp.jar">jdev-generated</library>
+  <library path="D:\Sudheer\JWorld\IDE\jdevstudio1013\j2ee\home\jsp\lib\taglib\ojsputil.jar">jdev-generated</library>
+  <library path="D:\Sudheer\JWorld\IDE\jdevstudio1013\j2ee\home\lib\oc4j-internal.jar">jdev-generated</library>
+  <library path="D:\Sudheer\JWorld\IDE\jdevstudio1013\j2ee\home\lib\servlet.jar">jdev-generated</library>
+  <library path="D:\Sudheer\JWorld\IDE\jdevstudio1013\jakarta-struts\lib\struts.jar">jdev-generated</library>
+  <library path="D:\Sudheer\JWorld\IDE\jdevstudio1013\jakarta-struts\lib\commons-beanutils.jar">jdev-generated</library>
+  <library path="D:\Sudheer\JWorld\IDE\jdevstudio1013\jakarta-struts\lib\commons-collections.jar">jdev-generated</library>
+  <library path="D:\Sudheer\JWorld\IDE\jdevstudio1013\jakarta-struts\lib\commons-fileupload.jar">jdev-generated</library>
+  <library path="D:\Sudheer\JWorld\IDE\jdevstudio1013\jakarta-struts\lib\commons-digester.jar">jdev-generated</library>
+  <library path="D:\Sudheer\JWorld\IDE\jdevstudio1013\jakarta-struts\lib\commons-lang.jar">jdev-generated</library>
+  <library path="D:\Sudheer\JWorld\IDE\jdevstudio1013\jakarta-struts\lib\commons-logging.jar">jdev-generated</library>
+  <library path="D:\Sudheer\JWorld\IDE\jdevstudio1013\jakarta-struts\lib\commons-validator.jar">jdev-generated</library>
+  <library path="D:\Sudheer\JWorld\IDE\jdevstudio1013\jakarta-struts\lib\jakarta-oro.jar">jdev-generated</library>
+  <log>
+    <file path="bulbulBOWs-oc4j-app.log"/>
+  </log>
+  <jazn provider="XML" location="bulbulBOWs-jazn-data.xml" default-realm="jazn.com"/>
+   <data-sources path="D:\Sudheer\Bulbul\Source\bulbulBOWs\bulbulBOWs-data-sources.xml"/>
+</orion-application>

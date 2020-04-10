@@ -1,0 +1,42 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE>My Graphics - Upload</TITLE>
+</HEAD>
+<BODY>
+<TABLE align="center" WIDTH=50% BORDER=0 CELLSPACING=1 CELLPADDING=1>
+	<TR>
+		<TD align="right" >File</TD>
+		<TD><INPUT type="file" id=fleGraphics name=fleGraphics onkeypress="return false;"></TD>
+	</TR>
+	<TR>
+		<TD align="right">Title</TD>
+		<TD><INPUT type="text" id=txtTitle name=txtTitle></TD>
+	</TR>
+	<TR>
+		<TD align="right" valign="top">Description</TD>
+		<TD>			<TEXTAREA rows=2 cols=20 id=txtDescription name=txtDescription style="width:100%"></TEXTAREA>
+		</TD>
+	</TR>
+	<TR>
+		<TD align="right" colspan="2">
+			<INPUT type="button" value="Add" id=btnAdd name=btnAdd>
+			<INPUT type="button" value="Remove" id=btnRemove name=btnRemove>
+		</TD>
+	</TR>
+	<TR>
+		<TD align="right" valign="top">File To Upload</TD>
+		<TD>			<SELECT size=6 id=lstFiles name=lstFiles style="width:100%">
+				<OPTION></OPTION>				<OPTION></OPTION>				<OPTION></OPTION>
+			</SELECT>
+		</TD>
+	</TR>
+	<TR>
+		<TD align="right" colspan="2">
+			<INPUT type="button" value="Upload" id=btnUpload name=btnUpload onclick="window.location.replace('mygraphics_list.html')">
+			<INPUT type="button" value="Cancel" id=btnCancel name=btnCancel onclick="window.location.replace('mygraphics_list.html')" >
+		</TD>
+	</TR>
+</TABLE>
+</BODY>
+</HTML>

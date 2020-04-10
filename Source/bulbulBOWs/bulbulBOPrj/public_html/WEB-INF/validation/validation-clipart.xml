@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE form-validation PUBLIC "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.0//EN" "http://jakarta.apache.org/commons/dtds/validator_1_0.dtd"><form-validation>
+  <global>
+  </global>
+  <formset>
+    <form name="clipartForm">
+      <field property="txtClipart" depends="required,minlength,maxlength">
+        <arg0 key="txt.ClipartName">
+        </arg0>
+        <arg1 name="minlength" key="${var:minlength}" resource="false">
+        </arg1>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>minlength</var-name>
+          <var-value>5</var-value>
+        </var>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>10</var-value>
+        </var>
+      </field>
+      <field property="txaClipartKeywords" depends="maxlength">
+        <arg0 key="txa.ClipartKeywords">
+        </arg0>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>50</var-value>
+        </var>
+      </field>
+    </form>
+
+    <form name="clipartCategoryForm">
+      <field property="txtClipartCategory" depends="required,minlength,maxlength">
+        <arg0 key="txt.ClipartCategoryName">
+        </arg0>
+        <arg1 name="minlength" key="${var:minlength}" resource="false">
+        </arg1>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>minlength</var-name>
+          <var-value>5</var-value>
+        </var>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>10</var-value>
+        </var>
+      </field>
+      <field property="txaClipartCategoryDesc" depends="maxlength">
+        <arg0 key="txa.ClipartCategoryDesc">
+        </arg0>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>50</var-value>
+        </var>
+      </field>
+    </form>
+  </formset>
+</form-validation>

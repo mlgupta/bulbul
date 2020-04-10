@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+  <data-sources>
+    <data-source type="org.apache.commons.dbcp.BasicDataSource">
+      <set-property property="driverClassName" value="org.postgresql.Driver"/>
+      <set-property property="url" value="jdbc:postgresql://192.168.0.6/employees"/>
+      <set-property property="username" value="amit"/>
+      <set-property property="password" value="amit"/>
+    </data-source>
+  </data-sources>
+
+  <form-beans>
+   <form-bean name="outletListForm" type="bulbul.boff.outlet.actionforms.OutletListForm" />
+   <form-bean name="outletForm" type="bulbul.boff.outlet.actionforms.OutletForm" />
+  </form-beans>
+
+  <global-forwards>
+   <forward name="outletList" path="/outletListAction.do" />
+   <forward name="outletAdd" path="/outlet_add.jsp" />
+   <forward name="outletEdit" path="/outlet_edit.jsp" />
+  </global-forwards>
+
+  <action-mappings>
+                          <!-- Outlet List Action -->
+   <action name="outletListForm" path="/outletListAction" input="globalErrorHandler" type="bulbul.boff.outlet.actions.OutletListAction" scope="request">
+    <forward name="success" path="/outlet_list.jsp"/>
+   </action>
+                          <!-- Outlet View Action -->
+   <action name="outletForm" path="/outletViewAction" input="outletList" type="bulbul.boff.outlet.actions.OutletViewAction" scope="request">
+    <forward name="success" path="/outlet_view.jsp"/>
+   </action>
+                          <!-- Outlet Add B4 Action -->
+   <action name="outletForm" path="/outletAddB4Action" input="outletList" type="bulbul.boff.outlet.actions.OutletAddB4Action" scope="request">
+    <forward name="success" path="/outlet_add.jsp"/>
+   </action>
+                          <!-- Outlet Add Action -->
+   <action name="outletForm" path="/outletAddAction" input="outletAdd" type="bulbul.boff.outlet.actions.OutletAddAction" scope="request">
+    <forward name="success" path="/outletListAction.do"/>
+   </action>
+                          <!-- Outlet Edit B4 Action -->
+   <action name="outletForm" path="/outletEditB4Action" input="outletList" type="bulbul.boff.outlet.actions.OutletEditB4Action" scope="request">
+    <forward name="success" path="/outlet_edit.jsp"/>
+   </action>
+                          <!-- Outlet Edit Action -->
+   <action name="outletForm" path="/outletEditAction" input="outletEdit" type="bulbul.boff.outlet.actions.OutletEditAction" scope="request">
+    <forward name="success" path="/outletListAction.do"/>
+   </action>
+                          <!-- Outlet Delete Action -->
+   <action name="outletListForm" path="/outletDeleteAction" input="outletList" type="bulbul.boff.outlet.actions.OutletDeleteAction" scope="request">
+    <forward name="success" path="/outletListAction.do"/>
+   </action>
+                          <!-- Outlet Activate and Deactivate Action -->
+   <action name="outletListForm" path="/outletActDeactAction" input="outletList" type="bulbul.boff.outlet.actions.OutletActDeactAction" scope="request">
+    <forward name="success" path="/outletListAction.do"/>
+   </action>
+                          <!-- Outlet Relay Action -->
+   <action name="outletListForm" path="/outletRelayAction" input="globalErrorHandler" type="bulbul.boff.outlet.actions.OutletRelayAction" scope="request">
+    <forward name="list" path="/outletListAction.do"/>
+    <forward name="view" path="/outletViewAction.do"/>
+    <forward name="add" path="/outletAddB4Action.do"/>
+    <forward name="edit" path="/outletEditB4Action.do"/>
+    <forward name="delete" path="/outletDeleteAction.do"/>
+    <forward name="act_deact" path="/outletActDeactAction.do"/>
+    <forward name="search" path="/outletListAction.do"/>
+    <forward name="page" path="/outletListAction.do"/>
+   </action>
+     
+  </action-mappings>
+
+  <controller>
+    <set-property property="inputForward" value="true"/>
+  </controller>
+  
+  <message-resources parameter="bulbul.boff.outlet.resources.ApplicationResources"/>
+  
+  <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+    <set-property property="pathnames" value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"/>
+  </plug-in>
+
+</struts-config>

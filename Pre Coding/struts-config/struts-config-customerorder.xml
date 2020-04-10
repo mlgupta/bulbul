@@ -1,0 +1,99 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+  <data-sources>
+    <data-source type="org.apache.commons.dbcp.BasicDataSource">
+      <set-property property="driverClassName" value="org.postgresql.Driver"/>
+      <set-property property="url" value="jdbc:postgresql://192.168.0.6/employees"/>
+      <set-property property="username" value="amit"/>
+      <set-property property="password" value="amit"/>
+    </data-source>
+  </data-sources>
+
+  <form-beans>
+   <form-bean name="orderListForm" type="bulbul.boff.order.actionforms.OrderListForm" />
+   <form-bean name="orderForm" type="bulbul.boff.order.actionforms.OrderForm" />
+  </form-beans>
+
+  <global-forwards>
+   <forward name="orderListCustomer" path="/orderListCustomerAction.do"  />
+   <forward name="orderListMerchandiser" path="/orderListMerchandiserAction.do"  />
+   <forward name="orderListPrinter" path="/orderListPrinterAction.do"  />
+   <forward name="orderAdd" path="/order_add.jsp"  />
+   <forward name="orderEdit" path="/order_edit.jsp"  />
+  </global-forwards>
+
+  <action-mappings>
+                                <!-- Order  List Customer Action -->
+    <action name="orderListForm" path="/orderListCustomerAction" input="globalErrorHandler" type="bulbul.boff.order.actions.OrderListCustomerAction" scope="request">
+     <forward name="success" path="/order_list_customer.jsp"/>
+    </action>
+                                <!-- Order  List Merchandiser Action -->
+    <action name="orderListForm" path="/orderListMerchandiserAction" input="globalErrorHandler" type="bulbul.boff.order.actions.OrderListMerchandiserAction" scope="request">
+     <forward name="success" path="/order_list_merchandiser.jsp"/>
+    </action>
+                                <!-- Order  List Printer Action -->
+    <action name="orderListForm" path="/orderListPrinterAction" input="globalErrorHandler" type="bulbul.boff.order.actions.OrderListPrinterAction" scope="request">
+     <forward name="success" path="/order_list_printer.jsp"/>
+    </action>
+                                <!-- Order View Customer Action -->
+    <action name="orderForm" path="/orderViewCustomerAction" input="orderListCustomer" type="bulbul.boff.order.actions.OrderViewCustomerAction" scope="request">
+     <forward name="success" path="/order_view_customer.jsp"/>
+    </action>
+                                <!-- Order View Merchandiser Action --> 
+    <action name="orderForm" path="/orderViewMerchandiserAction" input="orderListMerchandiser" type="bulbul.boff.order.actions.OrderViewMerchandiserAction" scope="request">
+     <forward name="success" path="/order_view_merchandiser.jsp"/>
+    </action>
+                                <!-- Order View Printer Action --> 
+    <action name="orderForm" path="/orderViewPrinterAction" input="orderListPrinter" type="bulbul.boff.order.actions.OrderViewPrinterAction" scope="request">
+     <forward name="success" path="/order_view_printer.jsp"/>
+    </action>
+                                <!-- Order Add B4 Action -->
+    <action name="orderForm" path="/orderAddB4Action" input="globalErrorHandler" type="bulbul.boff.order.actions.OrderAddB4Action" scope="request">
+     <forward name="success" path="/order_add.jsp"/>
+    </action>
+                                <!-- Order Add Action -->
+    <action name="orderForm" path="/orderAddAction" input="orderAdd" type="bulbul.boff.order.actions.OrderAddAction" scope="request">
+     <forward name="success" path="/order_add_success.jsp"/>
+    </action>
+                                <!-- Order Edit B4 Action -->
+    <action name="orderForm" path="/orderEditB4Action" input="globalErrorHandler" type="bulbul.boff.order.actions.OrderEditB4Action" scope="request">
+     <forward name="success" path="/order_edit.jsp"/>
+    </action>
+                                <!-- Order Edit Action -->
+    <action name="orderForm" path="/orderEditAction" input="orderEdit" type="bulbul.boff.order.actions.OrderEditAction" scope="request">
+     <forward name="success" path="/order_edit_success.jsp"/>
+    </action>
+                                <!-- Order Relay Action -->
+    <action name="orderListForm" path="/orderRelayAction" input="" type="bulbul.boff.order.actions.OrderRelayAction" scope="request">
+     <forward name="list_customer" path="/orderListCustomerAction.do"/>
+     <forward name="list_merchandiser" path="/orderListMerchandiserAction.do"/>
+     <forward name="list_printer" path="/orderListPrinterAction.do"/>
+     <forward name="view_customer" path="/orderViewCustomerAction.do"/>
+     <forward name="view_merchandiser" path="/orderViewMerchandiserAction.do"/>
+     <forward name="view_printer" path="/orderViewPrinterAction.do"/>
+     <forward name="add" path="/orderAddB4Action.do"/>
+     <forward name="edit" path="/orderEditB4Action.do"/>
+     <forward name="search_customer" path="/orderListCustomerAction.do"/>
+     <forward name="search_merchandiser" path="/orderListMerchandiserAction.do"/>
+     <forward name="search_printer" path="/orderListPrinterAction.do"/>
+     <forward name="page_customer" path="/orderListCustomerAction.do"/>
+     <forward name="page_merchandiser" path="/orderListMechandiserAction.do"/>
+     <forward name="page_printer" path="/orderListPrinterAction.do"/>
+    </action>
+    
+  </action-mappings>
+
+  <controller>
+    <set-property property="inputForward" value="true"/>
+  </controller>
+  
+  <message-resources parameter="bulbul.boff.order.resources.ApplicationResources"/>
+  
+  <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+    <set-property property="pathnames" value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"/>
+  </plug-in>
+  
+</struts-config>

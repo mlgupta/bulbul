@@ -1,0 +1,43 @@
+select
+outertbl.merchandise_category_tbl_pk,
+outertbl.merchandise_category,
+outertbl.merchandise_category_description
+from (
+select
+mctbl.merchandise_category_tbl_pk,
+mctbl.merchandise_category,
+mctbl.merchandise_category_description
+
+from merchandise_category_tbl as mctbl
+where merchandise_category_tbl_fk is null
+and is_active=1
+and m_or_c=1
+and (select
+count(*) from merchandise_category_tbl inmctbl
+where inmctbl.merchandise_category_tbl_fk=mctbl.merchandise_category_tbl_pk
+and inmctbl.is_active=1
+)>0
+
+union
+
+select
+mctbl.merchandise_category_tbl_pk,
+mctbl.merchandise_category,
+mctbl.merchandise_category_description
+from merchandise_category_tbl as mctbl
+where merchandise_category_tbl_fk is null
+and is_active=1
+and m_or_c=0
+and (select
+count(*) from merchandise_parents_tbl mptbl
+where mptbl.merchandise_category_tbl_pk=mctbl.merchandise_category_tbl_pk
+and mptbl.is_active=1
+)>0
+
+) as outertbl
+order by outertbl.merchandise_category
+
+
+
+
+

@@ -1,0 +1,346 @@
+<HTML>
+<HEAD>
+<TITLE>Merchandise Add</TITLE>
+<link href="main.css" rel="stylesheet" type="text/css">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+</HEAD>
+   <BODY>
+   <form>
+      <table width="100%"  border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="220" height="41"><img src="images/admin_logo.jpg" width="220" height="41"></td>
+          <td background="images/tile5x41.gif">&nbsp;</td>
+        </tr>
+      </table>
+      <br>
+      <table width="970" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td width="8%" height="20px" class="tabActive bdrLeftColor_333333 bdrTopColor_333333"><div align="center">Cliparts</div></td>
+              <td width="6%" class="tabPassive bdrLeftColor_333333 bdrTopColor_333333 bdrBottomColor_333333"><div align="center"><a class="tabLink" href="#">User</a></div></td>
+              <td width="6%" class="tabPassive bdrLeftColor_333333 bdrTopColor_333333 bdrBottomColor_333333"><div align="center"><a class="tabLink" href="#">Fonts</a></div></td>
+              <td width="11%" class="tabPassive bdrLeftColor_333333 bdrTopColor_333333 bdrBottomColor_333333"><div align="center"><a class="tabLink" href="#">Internet bank</a> </div></td>
+              <td width="12%" class="tabPassive bdrLeftColor_333333 bdrTopColor_333333 bdrBottomColor_333333"><div align="center"><a class="tabLink" href="#">Merchandise</a></div></td>
+              <td width="7%" class="tabPassive bdrLeftColor_333333 bdrTopColor_333333 bdrBottomColor_333333"><div align="center"><a class="tabLink" href="#">Outlet</a></div></td>
+              <td width="13%" class="tabPassive bdrLeftColor_333333 bdrTopColor_333333 bdrBottomColor_333333"><div align="center"><a class="tabLink" href="#">Price Promotion</a></div></td>
+              <td width="6%" class="tabPassive bdrLeftColor_333333 bdrTopColor_333333 bdrRightColor_333333 bdrBottomColor_333333"><div align="center"><a class="tabLink" href="#">Size</a></div></td>
+              <td width="31%" class="bdrBottomColor_333333">&nbsp;</td>
+            </tr>
+          </table></td>
+        </tr>
+        <tr>
+          <td height="550px" class="bgColor_DFE7EC bdrLeftColor_333333 bdrBottomColor_333333 bdrRightColor_333333">
+		  <table width="333px" height="375" border="0" cellpadding="1" cellspacing="2" class="bdrColor_336666" style="margin-left:20px; float:left">
+            <tr>
+              <th height="15px" colspan="2"><div align="center">Add Merchandise </div></th>
+            </tr>
+			
+            <tr>
+              <td width="118"><div align="right">Merchandise Name:</div></td>
+              <td width="200">                <input name="txtClipart" type="text" class="bdrColor_336666" id="txtClipart" style="width:200px" value="">              </td>
+            </tr>
+            <tr>
+              <td valign="top"><div align="right">Merchandise<br>
+              Description:</div></td>
+              <td>
+                <textarea name="TxaClipartKeywords" cols="" rows="4" class="bdrColor_336666" id="textarea"  style="width:200px; height:70px"></textarea>              </td>
+            </tr>
+            <tr>
+              <td valign="top"><div align="right">Merchandise<br>
+              Comment:</div></td>
+              <td><textarea name="textarea" cols="" rows="4" class="bdrColor_336666" id="textarea2"  style="width:200px; height:70px"></textarea></td>
+            </tr>
+            <tr>
+              <td valign="top"><div align="right">Material<br>
+              Description:</div></td>
+              <td><textarea name="textarea2" cols="" rows="4" class="bdrColor_336666" id="textarea3"  style="width:200px; height:70px"></textarea></td>
+            </tr>
+            <tr>
+              <td><div align="right">Minimum
+              Quantity:</div></td>
+              <td><input name="txtClipart2" type="text" class="bdrColor_336666" id="txtClipart3" style="width:200px" value=""></td>
+            </tr>
+            <tr>
+              <td valign="top"><div align="right">Delivery
+              Note: </div></td>
+              <td>
+                <textarea name="textarea3" cols="" rows="4" class="bdrColor_336666" id="textarea5"  style="width:200px; height:70px"></textarea>              </td>
+            </tr>
+          </table>
+		  <table width="250px" height="375" border="0" cellpadding="0" cellspacing="0" class="bdrColor_336666" style="margin-left:40px; float:left">
+            <tr>
+              <td height="3px"></td>
+            </tr>
+			<tr>
+              <td>
+			  <table width="240px" align="center" cellpadding="1" cellspacing="2" class="bdrColor_336666">
+                <tr>
+                  <th height="15px" colspan="2">Color Definition</th>
+                </tr>
+                <tr>
+                  <td width="34%"><div align="right">Color 1 :                    </div></td>
+                  <td width="66%"><input name="txtColor1" type="text" class="bdrColor_336666" id="txtColor1" value="" style="width:100px"> <a href="#"><img src="images/clr_swatch.gif" alt="swatch" width="17" height="17" border="0" align="absmiddle"></a>                   </td>
+                </tr>
+                <tr>
+                  <td><div align="right">Color 2 :                    </div></td>
+                  <td valign="bottom"><input name="txtColor12" type="text" class="bdrColor_336666" id="txtColor12" value="" style="width:100px">
+                    <a href="#"><img src="images/clr_swatch.gif" alt="swatch" width="17" height="17" border="0" align="absmiddle"></a> </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <div align="right">
+        <input name="btnColorOk" type="button" class="buttons" id="btnColorOk" value="Ok" >
+        <input name="btnColorClear" type="reset" class="buttons" id="btnColorClear" value="Clear" >
+        <input name="btnColorDelete" type="button" class="buttons" id="btnColorDelete" value="Delete" style="margin-right:27px" >
+                    </div></td>
+                </tr>
+              </table></td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td><table width="225" align="center" cellpadding="1" cellspacing="1" class="bdrColor_336666">
+                <tr>
+                  <th colspan="3"><div align="center">Size Definition </div></th>
+                </tr>
+                <tr>
+                  <td width="100">
+                    <table align="center" cellpadding="1" cellspacing="1">
+                      <tr>
+                        <td>Available Sizes:</td>
+                      </tr>
+                      <tr>
+                        <td><div align="center">
+                            <select  name="lstUserAccessFrom" multiple class="bdrColor_336666" id="select4" style="width:100px; height:75px">
+                              <option>38</option>
+                              <option>40</option>
+                              <option>42</option>
+                              <option>44</option>
+                              <option>46</option>
+                            </select>
+                        </div></td>
+                      </tr>
+                  </table></td>
+                  <td width="25">
+                    <input name="btn2RtAccess" type="button" class="buttons" id="btn2RtAccess5" style="width:20px; margin-top:10px" value=">" title="Move">
+                    <input name="btn2RtAccess3" type="button" class="buttons" id="btn2RtAccess6" style="width:20px; margin-top:10px" value="<" title="Move">
+                  </td>
+                  <td width="100"><table align="center" cellpadding="1" cellspacing="1">
+                      <tr>
+                        <td>Selelcted Sizes:</td>
+                      </tr>
+                      <tr>
+                        <td><div align="center">
+                            <select  name="select3" multiple class="bdrColor_336666" id="select12" style="width:100px; height:75px">
+                            </select>
+                        </div></td>
+                      </tr>
+                  </table></td>
+                </tr>
+                <tr>
+                  <td colspan="3"><div align="center">
+                      <input name="btnColorOk32" type="button" class="buttons" id="btnColorOk33" value="Ok" >
+                      <input name="btnColorClear32" type="reset" class="buttons" id="btnColorClear33" value="Clear" >
+                      <input name="btnColorDelete32" type="button" class="buttons" id="btnColorDelete33" value="Delete">
+                  </div></td>
+                </tr>
+              </table></td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>
+			  <table width="240px" align="center" cellpadding="1" cellspacing="2" class="bdrColor_336666">
+                <tr>
+                  <th height="15px" colspan="2">Price Definition</th>
+                </tr>
+                <tr>
+                  <td width="39%"><div align="right">Color :                    </div></td>
+                  <td width="61%"><select name="select" class="bdrColor_336666" style="width:100px">
+                  </select></td>
+                </tr>
+                <tr>
+                  <td><div align="right">Size : </div></td>
+                  <td><select name="select2" class="bdrColor_336666" style="width:100px">
+                  </select></td>
+                </tr>
+                <tr>
+                  <td><div align="right">Price :                  </div></td>
+                  <td><input name="txtColor142" type="text" class="bdrColor_336666" id="txtColor142" value="" style="width:100px"></td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <div align="right">
+                      <input name="btnColorOk3" type="button" class="buttons" id="btnColorOk4" value="Ok" >
+                      <input name="btnColorClear3" type="reset" class="buttons" id="btnColorClear4" value="Clear" >
+                      <input name="btnColorDelete3" type="button" class="buttons" id="btnColorDelete4" value="Delete" style="margin-right:40px">
+                    </div></td>
+                </tr>
+              </table></td>
+            </tr>
+            <tr>
+              <td height="3px"></td>
+            </tr>
+          </table>
+		  <table width="250px" border="0" cellpadding="0" cellspacing="0" class="bdrColor_336666" style="margin-left:10px; float:left">
+            <tr>
+              <td height="375px" valign="top">
+			  <div align="center" style="overflow:auto;height:375px;width:250px;">
+			  <div style="width:100%;" >
+			  <table width="100%" align="center" cellpadding="1" cellspacing="1" bgcolor="#80A0B2">
+                <tr>
+                  <th height="15px">Sl.No.</th>
+                  <th height="15px">Color</th>
+                  <th height="15px">Size/Price</th>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                  <td width="20%">&nbsp;</td>
+                  <td width="40%">&nbsp;</td>
+                  <td width="40%">&nbsp;</td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+              </table>
+			  </div>
+			  </div>
+			  </td>
+            </tr>
+			</table>
+		  </td>
+        </tr>
+	</table>
+      <div id="Layer1" style="position:absolute; width:884px; height:29px; z-index:1; left: 58px; top: 564px;">
+        <div align="right">
+          <input name="btnColorClear35" type="submit" class="buttons" id="btnColorClear34" value="Save" >
+          <input name="btnColorClear34" type="button" class="buttons" id="btnColorClear32" value="Cancel" >
+          <input name="btnColorClear33" type="reset" class="buttons" id="btnColorClear3" value="Clear" >
+        </div>
+      </div>
+   </form>  
+</BODY>
+</HTML>

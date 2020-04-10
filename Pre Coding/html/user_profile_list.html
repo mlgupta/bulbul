@@ -1,0 +1,173 @@
+<HTML>
+<HEAD>  
+  <TITLE>User Profile Listing</TITLE>
+  <link href="main.css" rel="stylesheet" type="text/css">
+  <script language="JavaScript" type="text/JavaScript">
+<!--
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_showHideLayers() { //v6.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'':(v=='hide')?'none':v; }
+    obj.display=v; }
+}
+//-->
+</script>
+</HEAD>
+   <BODY>   
+      <table width="100%"  border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="220" height="41"><img src="images/admin_logo.jpg" width="220" height="41"></td>
+          <td background="images/tile5x41.gif">&nbsp;</td>
+        </tr>
+      </table>
+      <br>
+	  <form>
+      <table width="970" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td width="8%" height="20px" class="tabPassive bdrLeftColor_333333 bdrTopColor_333333 bdrBottomColor_333333"><div align="center"><a class="tabLink" href="clipart_list.html">Cliparts</a></div></td>
+              <td width="6%" class="tabActive bdrLeftColor_333333 bdrTopColor_333333"><div align="center">User</div></td>
+              <td width="6%" class="tabPassive bdrLeftColor_333333 bdrTopColor_333333 bdrBottomColor_333333"><div align="center"><a class="tabLink" href="font_list.html">Fonts</a></div></td>
+              <td width="11%" class="tabPassive bdrLeftColor_333333 bdrTopColor_333333 bdrBottomColor_333333"><div align="center"><a class="tabLink" href="inet_bank_list.html">Internet bank</a> </div></td>
+              <td width="12%" class="tabPassive bdrLeftColor_333333 bdrTopColor_333333 bdrBottomColor_333333"><div align="center"><a class="tabLink" href="merchandise_list.html">Merchandise</a></div></td>
+              <td width="7%" class="tabPassive bdrLeftColor_333333 bdrTopColor_333333 bdrBottomColor_333333"><div align="center"><a class="tabLink" href="outlet_list.html">Outlet</a></div></td>
+              <td width="13%" class="tabPassive bdrLeftColor_333333 bdrTopColor_333333 bdrBottomColor_333333"><div align="center"><a class="tabLink" href="price_promotion_list.html">Price Promotion</a></div></td>
+              <td width="6%" class="tabPassive bdrLeftColor_333333 bdrTopColor_333333 bdrRightColor_333333 bdrBottomColor_333333"><div align="center"><a class="tabLink" href="size_list.html">Size</a></div></td>
+              <td width="31%" class="bdrBottomColor_333333">&nbsp;</td>
+            </tr>
+          </table></td>
+        </tr>
+        <tr>
+          <td height="550px" valign="top" class="bgColor_DFE7EC bdrLeftColor_333333 bdrBottomColor_333333 bdrRightColor_333333">
+		  <table width="98%"  border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+              <td width="14%" valign="top">
+			  <input type="button" name="Button" value="Search Options >>" class="buttons" style="margin-left:5px; margin-top:15px; width:115px" onClick="MM_findObj('blue').style.display=='none'?MM_showHideLayers('blue','','show'):MM_showHideLayers('blue','','hide')"></td>
+              <td width="86%" height="60px" valign="bottom">
+			  <br>
+			  <table width="100%"  border="0" class="bdrColor_336666" id="blue" style="display:yes ">
+                <tr>
+                  <td width="12%"><div align="right">User ID: </div></td>
+                  <td width="20%"><input type="text" id="txtClipartCategory3" name="txtClipartCategory" value="" class="bdrColor_336666"></td>
+                  <td width="30%">First Name:
+                    <input type="text" id="txtClipartCategory22" name="txtClipartCategory2" value="" class="bdrColor_336666"></td>
+                  <td width="34%">Status:
+                    <input name="radiobutton" type="radio" value="radiobutton">
+Active
+<input name="radiobutton" type="radio" value="radiobutton">
+Inactive
+<input name="radiobutton" type="radio" value="radiobutton">
+Both</td>
+                  <td width="4%"><a href="#"><img src="images/icon_search.gif" alt="" width="18" height="18" border="0" title="Search Now"></a></td>
+                </tr>
+                <tr>
+                  <td><div align="right">Category: </div></td>
+                  <td><input type="text" id="txtClipartCategory" name="txtClipartCategory3" value="" class="bdrColor_336666"></td>
+                  <td>Last Name:
+                  <input type="text" id="txtClipartCategory2" name="txtClipartCategory22" value="" class="bdrColor_336666"></td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+              </table>			
+			  </td>
+            </tr>
+            <tr>
+              <td height="10px" colspan="2" valign="bottom"></td>
+            </tr>
+          </table>
+<br>		    <table width="98%" height="25"  border="0" align="center" cellpadding="0" cellspacing="0">
+              <tr>
+                <td><input type="submit" name="Submit2" value="View" class="buttons" style="margin-left:224px">
+                <input type="submit" name="Submit3" value="Add" class="buttons">
+                <input type="submit" name="Submit6" value="Edit" class="buttons">
+                <input type="submit" name="Submit7" value="Delete" class="buttons">
+                <input type="submit" name="Submit8" value="Activate" class="buttons">
+                <input type="submit" name="Submit4" value="Deactivate" class="buttons">                </td>
+              </tr>
+            </table>
+            <table width="220px" height="430px"  border="0" cellpadding="0" cellspacing="0" class="bdrColor_336666" style="float:left; margin-left:5px">
+              <tr>
+                <td>&nbsp;</td>
+              </tr>
+            </table>
+			<table width="720px"  border="0" cellspacing="1" bgcolor="#80A0B2">
+              <tr bgcolor="#FFFFFF">
+                <th width="3%">&nbsp;</th>
+                <th width="14%">User ID </th>
+                <th width="27%">First Name</th>
+                <th width="21%">Last Name </th>
+                <th width="18%">Category</th>
+                <th width="17%">Status</th>
+              </tr>
+              <tr bgcolor="#FFFFFF">
+                <td><input name="radiobutton" type="radio" value="radiobutton"></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr bgcolor="#FFFFFF">
+                <td><input name="radiobutton" type="radio" value="radiobutton"></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr bgcolor="#FFFFFF">
+                <td><input name="radiobutton" type="radio" value="radiobutton"></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr bgcolor="#FFFFFF">
+                <td><input name="radiobutton" type="radio" value="radiobutton"></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr bgcolor="#FFFFFF">
+                <td><input name="radiobutton" type="radio" value="radiobutton"></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr bgcolor="#FFFFFF">
+                <td><input name="radiobutton" type="radio" value="radiobutton"></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr bgcolor="#FFFFFF">
+                <td><input name="radiobutton" type="radio" value="radiobutton"></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+            </table></td>
+        </tr>
+      </table>
+	  </form>
+</BODY>
+</HTML>

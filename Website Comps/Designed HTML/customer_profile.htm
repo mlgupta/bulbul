@@ -1,0 +1,187 @@
+<html>
+<head>
+<title>Customer Profile</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="main.css" rel="stylesheet" type="text/css">
+<link href="myprntn.css" rel="stylesheet" type="text/css">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+</head>
+
+<body><br>
+<table width="725px" border="0" align="center" cellpadding="0" cellspacing="0" id="panRevisiting">
+      <tr>
+        <td width="24" height="17px"><img src="images/myprntn_pan_corner_lt.gif" width="24" height="17"></td>
+        <td width="696" background="images/myprntn_pan_tile17px.gif" class="heading_pan">My Profile:</td>
+        <td width="5"><img src="images/myprntn_pan_corner_rt.gif" width="5" height="17"></td>
+      </tr>
+	  <tr>
+        <td height="20px" bgcolor="#FFFFFF" colspan="3" class="bdrLeftColor_006600 bdrRightColor_006600 bdrTopColor_006600 text_bold12">
+		  <div align="right"><a class="linkMenu" href="#">&nbsp;Profile&nbsp;</a> | <a class="linkMenu" href="cutomer_change_password.htm">&nbsp;Change Password&nbsp;</a> | <a class="linkMenu" href="cutomer_change_email.htm">&nbsp;Change Email&nbsp;</a> &nbsp;</div></td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF" colspan="3" class="bdrLeftColor_006600 bdrRightColor_006600">
+		<form enctype="multipart/form-data">
+	      <table width="100%"  border="0" cellpadding="1" cellspacing="1">
+		  	<tr>
+              <td colspan="3" class="bdrTopColor_006600">&nbsp;</td>
+            </tr>
+            <tr>
+              <td width="24%"><div align="right">Title:</div></td>
+              <td width="45%"><select id="cboCustomerTitle" name="cboCustomerTitle" style="width:60px">
+                <option selected>Mr</option>
+                <option>Mrs</option>
+                <option>Miss</option>
+              </select></td>
+              <td width="31%" rowspan="5" valign="middle">
+                <div id="Layer1" style="position:relative; width:125px; height:125px;" class="bdrColor_006600">
+                  <div style="right:0; bottom:0; ">
+                    <div align="center">Your Photo<br>
+                    Appears Here
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><div align="right">First Name:</div></td>
+              <td><input id="txtCustomerFirstName" type="text" name="txtCustomerFirstName" style="width:200px"></td>
+            </tr>
+            <tr>
+              <td><div align="right">Last Name:</div></td>
+              <td><input id="txtCustomerLastName" type="text" name="txtCustomerLastName" style="width:200px"></td>
+            </tr>
+            <tr>
+              <td><div align="right">Age:</div></td>
+			  <td><input id="txtAge" type="text" name="txtAge" style="width:60px">
+				yrs.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sex:
+				<select id="cboSex" name="cboSex" style="width:60px">
+				  <option selected>Male</option>
+				  <option>Female</option>
+				</select>
+			 </td>
+            </tr>
+            <tr>
+              <td><div align="right">Upload Your Photo:</div></td>
+              <td><input id="fleProfileImage" name="fleProfileImage" type="file" size="16"></td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td colspan="2">Only .jpg/jpeg, .gif, .png (suggested size = 125 x 125 pixel)</td>
+            </tr>
+            <tr>
+              <td colspan="3">&nbsp;</td>
+            </tr>
+          </table>
+	      <table width="100%"  border="0" cellpadding="1" cellspacing="1">
+            <tr>
+              <td colspan="4" class="bdrTopColor_006600">&nbsp;</td>
+            </tr>
+            <tr>
+              <td width="24%" valign="top"><div align="right">Address Line 1:</div></td>
+              <td width="28%"><input id="txtAddressLine1" type="text" name="txtAddressLine1" style="width:200px"></td>
+              <td width="8%">&nbsp;</td>
+              <td width="40%">&nbsp;</td>
+            </tr>
+		    <tr>
+              <td width="24%" valign="top"><div align="right">Address Line 2:</div></td>
+              <td width="28%"><input id="txtAddressLine2" type="text" name="txtAddressLine2" style="width:200px"></td>
+              <td width="8%">&nbsp;</td>
+              <td width="40%">&nbsp;</td>
+            </tr>
+			<tr>
+              <td width="24%" valign="top"><div align="right">Address Line 3:</div></td>
+              <td width="28%"><input id="txtAddressLine3" type="text" name="txtAddressLine3" style="width:200px"></td>
+              <td width="8%">&nbsp;</td>
+              <td width="40%">&nbsp;</td>
+            </tr>
+            <tr>
+              <td><div align="right">City: </div></td>
+              <td><input id="txtCity" type="text" name="txtCity" style="width:200px"></td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td><div align="right">State:</div></td>
+              <td><select id="cboState" name="cboState" style="width:200px">
+                <option selected>Select Your State</option>
+                <option>aaaaaaaaaaaaa</option>
+              </select>                </td>
+              <td><div align="right">Other: </div></td>
+              <td><input id="txtState" type="text" name="txtState" style="width:200px"></td>
+            </tr>
+            <tr>
+              <td><div align="right">Country:</div></td>
+              <td><select id="cboCountry" name="cboCountry" style="width:200px">
+                <option selected>Select Your Country</option>
+                <option>bbbbbbbbbbbbbbbb</option>
+                                          </select>                 </td>
+              <td><div align="right">Other: </div></td>
+              <td><input id="txtCountry" type="text" name="txtCountry" style="width:200px"></td>
+            </tr>
+            <tr>
+              <td><div align="right">Pin Code: </div></td>
+              <td><input id="txtPincode" type="text" name="txtPincode" style="width:200px"></td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td colspan="3"><input id="chkUseAddress4Shipping" name="chkUseAddress4Shipping" type="checkbox" value="checkbox">
+Use the above address for shipping</td>
+            </tr>
+            <tr>
+              <td><div align="right">Phone1:</div></td>
+              <td><input id="txtPhone1" type="text" name="txtPhone1" style="width:200px"></td>
+              <td colspan="2" rowspan="3" valign="top">(Country Code, Area Code &amp; Phone Numbers<br> 
+              must be written in a single string without any<br> 
+              comma, space, hyphen etc...)</td>
+            </tr>
+            <tr>
+              <td><div align="right">Phone2:</div></td>
+              <td><input id="txtPhone2" type="text" name="txtPhone2" style="width:200px"></td>
+            </tr>
+            <tr>
+              <td><div align="right">Mobile:</div></td>
+              <td><input id="txtMobile" type="text" name="txtMobile" style="width:200px"></td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td colspan="3">
+                <input id="chkNewsLetter" name="chkNewsLetter" type="checkbox" value="checkbox">
+      I would like to receive occasional news updates and special offers from Printoon. <br>
+      (Your information remains absolutely private and you can unsubscribe at any time)</td>
+            </tr>
+            <tr>
+              <td height="30"></td>
+              <td colspan="3">
+			  <input id="btnSave" name="btnSave" type="button" class="buttons" value="Save" style="margin-left:5px; width:62px">
+              <input id="btnCancel" name="btnCancel" type="button" class="buttons" value="Cancel" style="width:62px">
+              <input id="btnClear" name="btnClear" type="reset" class="buttons" value="Clear" style="width:62px"></td>
+            </tr>
+          </table>
+		</form>
+		</td>
+      </tr>
+      <tr>
+        <td height="3px"><img src="images/myprntn_pan_corner_lb.gif" width="24" height="3"></td>
+        <td background="images/myprntn_pan_tile3px.gif"></td>
+        <td><img src="images/myprntn_pan_corner_rb.gif" width="5" height="3"></td>
+      </tr>
+</table>
+</body>
+</html>

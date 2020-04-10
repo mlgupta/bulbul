@@ -1,0 +1,174 @@
+body {
+	background-color: #CFCEF8;
+	background-image: url("images/studio_bgtile_stars.jpg");
+	/*background-repeat:repeat-y;*/
+}
+.bgColor_FFEDDA {
+	background-color: #FFEDDA;
+}
+.bgColor_CC6A00 {
+	background-color: #CC6A00;
+}
+.th_F89627 {
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 11px; font-weight:bold;
+	color:#FFFFFF;
+	background-color:#F89627;
+}
+/***** Border Styles here******************************************/
+.bdrColor_CC6A00 {
+	border:1px solid #CC6A00;
+	font-size: 11px;
+}
+.bdrBottomColor_CC6A00 {
+	border-bottom:1px solid #CC6A00;
+}
+.bdrLeftColor_CC6A00 {
+	border-left:1px solid #CC6A00;
+}
+.bdrTopColor_CC6A00 {
+	border-top:1px solid #CC6A00;
+}
+.bdrRightColor_CC6A00 {
+	border-Right:1px solid #CC6A00;
+}
+
+.bdrColor_CC6600 {
+	border:#CC6600 1px solid ;
+}
+.bdrLeftColor_CC6600 {
+	border-Left:#CC6600 1px solid ;
+}
+.bdrTopColor_CC6600 {
+	border-Top:#CC6600 1px solid ;
+}
+.bdrRightColor_CC6600 {
+	border-Right:#CC6600 1px solid ;
+}
+.bdrBtmColor_CC6600 {
+	border-Bottom:#CC6600 1px solid ;
+}
+.bdrBtmColor_CC6600_dotted {
+	border-Bottom:#CC6600 1px dotted ;
+}
+
+/**** Text Styles Here*****************************/
+.text_CC6A00 {
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #CC6A00;
+	font-weight:bold;
+}
+.text_008000 {
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #008000;
+	font-weight:bold;
+}
+
+.TxtBold_1 {
+	FONT-WEIGHT: bold;FONT-SIZE: 12px;TEXT-DECORATION: none;font-family: Arial, Verdana, Helvetica, sans-serif;color: #0066CC;
+}
+
+.text_CC6600 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #CC6600;
+	font-weight:normal;
+}
+
+/**** Link Style Here*******************************/
+A.linkMenu:link {
+	FONT-WEIGHT: bold;FONT-SIZE: 12px;TEXT-DECORATION: none;font-family: Arial, Verdana, Helvetica, sans-serif;color: #CC6A00;
+}
+A.linkMenu:visited {
+		FONT-WEIGHT: bold;FONT-SIZE: 12px;TEXT-DECORATION: none;font-family: Arial, Verdana, Helvetica, sans-serif;color: #CC6A00;
+}
+A.linkMenu:hover {
+		FONT-WEIGHT: bold;FONT-SIZE: 12px;TEXT-DECORATION: none;font-family: Arial, Verdana, Helvetica, sans-serif;color: #FFFFFF; 
+		background-color:#F89627
+}
+A.linkMenu:active {
+		FONT-WEIGHT: bold;FONT-SIZE: 12px;TEXT-DECORATION: none;font-family: Arial, Verdana, Helvetica, sans-serif;color: #CC6A00;
+}
+
+
+A.linkPageNav:link {
+	FONT-WEIGHT: normal;FONT-SIZE: 9px;TEXT-DECORATION:underline; font-family: Verdana, Arial, Helvetica, sans-serif;color: #333333;
+}
+A.linkPageNav:visited {
+		FONT-WEIGHT: normal;FONT-SIZE: 9px;TEXT-DECORATION:underline; font-family: Verdana, Arial, Helvetica, sans-serif;color: #333333;
+}
+A.linkPageNav:hover {
+		FONT-WEIGHT: normal;FONT-SIZE: 9px;TEXT-DECORATION:none; font-family: Verdana, Arial, Helvetica, sans-serif;color: #333333;
+}
+A.linkPageNav:active {
+		FONT-WEIGHT: normal;FONT-SIZE: 9px;TEXT-DECORATION:underline; font-family: Verdana, Arial, Helvetica, sans-serif;color: #333333;
+}
+
+.linkPageNavCurrentPage {
+		FONT-WEIGHT: bold;FONT-SIZE: 9px;TEXT-DECORATION:none; font-family: Verdana, Arial, Helvetica, sans-serif;color: #CC6A00;
+}
+/*****/
+/*********** Following classes are for table row link  ************/
+A.linkTableRow:link {
+	FONT-WEIGHT: normal;FONT-SIZE: 11px;TEXT-DECORATION:underline; font-family: Verdana, Arial, Helvetica, sans-serif;color: #CC6A00;
+}
+A.linkTableRow:visited {
+		FONT-WEIGHT: normal;FONT-SIZE: 11px;TEXT-DECORATION:none; font-family: Verdana, Arial, Helvetica, sans-serif;color: #CC6A00;
+}
+A.linkTableRow:hover {
+		FONT-WEIGHT: normal;FONT-SIZE: 11px;TEXT-DECORATION:none; font-family: Verdana, Arial, Helvetica, sans-serif;color: #CC6A00;
+}
+A.linkTableRow:active {
+		FONT-WEIGHT: normal;FONT-SIZE: 11px;TEXT-DECORATION:none; font-family: Verdana, Arial, Helvetica, sans-serif;color: #CC6A00;
+}
+
+
+A.linkHeading:link {
+	FONT-WEIGHT: bold;FONT-SIZE: 11px;TEXT-DECORATION:underline; font-family: Arial, Verdana, Helvetica, sans-serif;color: #008000;
+}
+A.linkHeading:visited {
+		FONT-WEIGHT: bold;FONT-SIZE: 11px;TEXT-DECORATION:none; font-family:  Arial, Verdana, Helvetica, sans-serif;color: #008000;
+}
+A.linkHeading:hover {
+		FONT-WEIGHT: bold;FONT-SIZE: 11px;TEXT-DECORATION:none; font-family:  Arial, Verdana, Helvetica, sans-serif;color: #008000;
+}
+A.linkHeading:active {
+		FONT-WEIGHT: bold;FONT-SIZE: 11px;TEXT-DECORATION:none; font-family:  Arial, Verdana, Helvetica, sans-serif;color: #008000;
+}
+
+
+A.linkStdTxt:link {
+	FONT-WEIGHT: bold;FONT-SIZE: 10px;TEXT-DECORATION: none;font-family: Arial, Verdana, Helvetica, sans-serif;color: #CC6600;
+}
+A.linkStdTxt:visited {
+		FONT-WEIGHT: bold;FONT-SIZE: 10px;TEXT-DECORATION: none;font-family: Arial, Verdana, Helvetica, sans-serif;color: #CC6600;
+}
+A.linkStdTxt:hover {
+		FONT-WEIGHT: bold;FONT-SIZE: 10px;TEXT-DECORATION: none;font-family: Arial, Verdana, Helvetica, sans-serif;color: #FFFFFF; background-color:#CC6600
+}
+A.linkStdTxt:active {
+		FONT-WEIGHT: bold;FONT-SIZE: 10px;TEXT-DECORATION: none;font-family: Arial, Verdana, Helvetica, sans-serif;color: #CC6600;
+}
+/*****/
+
+/**** Miscellaneous********************/
+.buttons {
+	/*BORDER-RIGHT: 1px solid #006600; BORDER-BOTTOM: 1px solid #006600;
+	BORDER-LEFT: 1px solid #006600; BORDER-TOP: 1px solid #006600;*/
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	FONT-WEIGHT: normal; FONT-SIZE: 11px; color: #333333; 
+	BACKGROUND-IMAGE: url(images/butt_tile_studio.gif); BACKGROUND-REPEAT: repeat-x;
+}
+.heading_pan {
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FFFFFF;
+	font-weight:bold;
+}
+.cmbStd{
+	font-size: 9px;
+	background-color:#FF9933;
+	color: #000000;
+}

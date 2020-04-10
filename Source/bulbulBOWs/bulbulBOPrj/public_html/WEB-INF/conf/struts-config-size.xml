@@ -1,0 +1,128 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+
+
+  <form-beans>
+   <form-bean name="sizeTypeListForm" type="bulbul.boff.size.actionforms.SizeTypeListForm"/>
+   <form-bean name="sizeTypeForm" type="bulbul.boff.size.actionforms.SizeTypeForm"/>
+   <form-bean name="sizeListForm" type="bulbul.boff.size.actionforms.SizeListForm"/>
+   <form-bean name="sizeForm" type="bulbul.boff.size.actionforms.SizeForm"/>
+  </form-beans>
+
+  <global-forwards>
+   <forward name="sizeTypeList" path="/sizeTypeListAction.do"/>
+   <forward name="sizeTypeAdd" path="/size_type_add.jsp"/>
+   <forward name="sizeTypeEdit" path="/size_type_edit.jsp"/>
+   <forward name="sizeList" path="/sizeListAction.do"/>
+   <forward name="sizeAdd" path="/size_add.jsp"/>
+   <forward name="sizeEdit" path="/size_edit.jsp"/>
+  </global-forwards>
+
+  <action-mappings>
+                          <!-- Size Type List Action -->
+   <action name="sizeTypeListForm" path="/sizeTypeListAction" input="globalErrorHandler" validate="false" type="bulbul.boff.size.actions.SizeTypeListAction" scope="request">
+    <forward name="success" path="/size_type_list.jsp"/>
+   </action>
+                          <!-- Size Type View Action -->
+   <action name="sizeTypeForm" path="/sizeTypeViewAction" input="sizeTypeList" validate="false" type="bulbul.boff.size.actions.SizeTypeViewAction" scope="request">
+    <forward name="success" path="/size_type_view.jsp"/>
+   </action>
+                          <!-- Size Type Add B4 Action -->
+   <action name="sizeTypeForm" path="/sizeTypeAddB4Action" input="sizeTypeList" validate="false" type="bulbul.boff.size.actions.SizeTypeAddB4Action" scope="request">
+    <forward name="success" path="/size_type_add.jsp"/>
+   </action>
+                          <!-- Size Type Add Action -->
+   <action name="sizeTypeForm" path="/sizeTypeAddAction" input="sizeTypeAdd" type="bulbul.boff.size.actions.SizeTypeAddAction" scope="request">
+    <forward name="success" path="/sizeTypeListAction.do"/>
+   </action>
+                          <!-- Size Type Edit B4 Action -->
+   <action name="sizeTypeForm" path="/sizeTypeEditB4Action" input="sizeTypeList" validate="false" type="bulbul.boff.size.actions.SizeTypeEditB4Action" scope="request">
+    <forward name="success" path="/size_type_edit.jsp"/>
+   </action>
+                          <!-- Size Type Edit Action -->
+   <action name="sizeTypeForm" path="/sizeTypeEditAction" input="sizeTypeEdit" type="bulbul.boff.size.actions.SizeTypeEditAction" scope="request">
+    <forward name="success" path="/sizeTypeListAction.do"/>
+   </action>
+                          <!-- Size Type Delete Action -->
+   <action name="sizeTypeListForm" path="/sizeTypeDeleteAction" input="sizeTypeList" type="bulbul.boff.size.actions.SizeTypeDeleteAction" scope="request">
+    <forward name="success" path="/sizeTypeListAction.do"/>
+   </action>
+                          <!-- Size Type Activate and Deactivate Action -->
+   <action name="sizeTypeListForm" path="/sizeTypeActDeactAction" input="sizeTypeList" type="bulbul.boff.size.actions.SizeTypeActDeactAction" scope="request">
+    <forward name="success" path="/sizeTypeListAction.do"/>
+   </action>
+                               
+                          <!-- Size Type Relay Action -->
+   <action name="sizeTypeListForm" path="/sizeTypeRelayAction" input="globalErrorHandler" type="bulbul.boff.size.actions.SizeTypeRelayAction" scope="request">
+    <forward name="list" path="/sizeTypeListAction.do"/>
+    <forward name="view" path="/sizeTypeViewAction.do"/>
+    <forward name="add" path="/sizeTypeAddB4Action.do"/>
+    <forward name="edit" path="/sizeTypeEditB4Action.do"/>
+    <forward name="delete" path="/sizeTypeDeleteAction.do"/>
+    <forward name="act_deact" path="/sizeTypeActDeactAction.do"/>
+    <forward name="search" path="/sizeTypeListAction.do"/>
+    <forward name="page" path="/sizeTypeListAction.do"/>
+   </action>
+   
+                            <!-- Size Type List 4 Size Action -->
+   <action name="sizeTypeListForm" path="/sizeTypeList4SizeAction" input="globalErrorHandler" validate="false" type="bulbul.boff.size.actions.SizeTypeList4SizeAction" scope="request">
+    <forward name="success" path="/size_type_list_4_size.jsp"/>
+   </action>
+
+                             <!-- Size Type Select List Action -->
+   <action name="sizeTypeListForm" path="/sizeTypeSelectListAction" input="globalErrorHandler" validate="false" type="bulbul.boff.size.actions.SizeTypeSelectListAction" scope="request">
+    <forward name="success" path="/size_type_select_list.jsp"/>
+   </action>
+
+                          <!-- Size List Action -->
+   <action name="sizeListForm" path="/sizeListAction" input="globalErrorHandler" validate="false" type="bulbul.boff.size.actions.SizeListAction" scope="request">
+    <forward name="success" path="/size_list.jsp"/>
+   </action>
+                          <!-- Size View Action -->
+   <action name="sizeForm" path="/sizeViewAction" input="sizeList" validate="false" type="bulbul.boff.size.actions.SizeViewAction" scope="request">
+    <forward name="success" path="/size_view.jsp"/>
+   </action>
+                          <!-- Size Add B4 Action -->
+   <action name="sizeForm" path="/sizeAddB4Action" input="sizeList" validate="false" type="bulbul.boff.size.actions.SizeAddB4Action" scope="request">
+    <forward name="success" path="/size_add.jsp"/>
+   </action>
+                          <!-- Size Add Action -->
+   <action name="sizeForm" path="/sizeAddAction" input="sizeAdd" type="bulbul.boff.size.actions.SizeAddAction" scope="request">
+    <forward name="success" path="/sizeListAction.do"/>
+   </action>
+                          <!-- Size Edit B4 Action -->
+   <action name="sizeForm" path="/sizeEditB4Action" input="sizeList" validate="false" type="bulbul.boff.size.actions.SizeEditB4Action" scope="request">
+    <forward name="success" path="/size_edit.jsp"/>
+   </action>
+                          <!-- Size Edit Action -->
+   <action name="sizeForm" path="/sizeEditAction" input="sizeEdit" type="bulbul.boff.size.actions.SizeEditAction" scope="request">
+    <forward name="success" path="/sizeListAction.do"/>
+   </action>
+                          <!-- Size Delete Action -->
+   <action name="sizeListForm" path="/sizeDeleteAction" input="sizeList" type="bulbul.boff.size.actions.SizeDeleteAction" scope="request">
+    <forward name="success" path="/sizeListAction.do"/>
+   </action>
+                          <!-- Size Activate and Deactivate Action -->
+   <action name="sizeListForm" path="/sizeActDeactAction" input="sizeList" type="bulbul.boff.size.actions.SizeActDeactAction" scope="request">
+    <forward name="success" path="/sizeListAction.do"/>
+   </action>
+                          <!-- Size Relay Action -->
+   <action name="sizeListForm" path="/sizeRelayAction" input="globalErrorHandler" type="bulbul.boff.size.actions.SizeRelayAction" scope="request">
+    <forward name="list" path="/sizeListAction.do"/>
+    <forward name="view" path="/sizeViewAction.do"/>
+    <forward name="add" path="/sizeAddB4Action.do"/>
+    <forward name="edit" path="/sizeEditB4Action.do"/>
+    <forward name="delete" path="/sizeDeleteAction.do"/>
+    <forward name="act_deact" path="/sizeActDeactAction.do"/>
+    <forward name="search" path="/sizeListAction.do"/>
+    <forward name="page" path="/sizeListAction.do"/>
+   </action>
+   
+  </action-mappings>
+
+  <controller>
+    <set-property property="inputForward" value="true"/>
+  </controller>
+  
+</struts-config>

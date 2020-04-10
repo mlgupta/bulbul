@@ -1,0 +1,78 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+  <form-beans>
+   <form-bean name="customerProfileListForm" type="bulbul.boff.users.customer.actionforms.CustomerProfileListForm" />
+   <form-bean name="customerProfileForm" type="bulbul.foff.customer.actionforms.CustomerProfileForm" />
+   <form-bean name="changePassrwordForm" type="bulbul.foff.customer.actionforms.ChangePassrwordForm" />
+  </form-beans>
+
+  <global-forwards>
+   <forward name="customerProfileList" path="/customerProfileListAction.do" />
+   <forward name="customerProfileAdd" path="/customer_profile_add.jsp" />
+   <forward name="customerProfileEdit" path="/customer_profile_edit.jsp" />
+   <forward name="changePassword" path="/customer_change_password.jsp" />
+  </global-forwards>
+
+  <action-mappings>
+                          <!-- Customer Profile List Action -->
+   <action name="customerProfileListForm" path="/customerProfileListAction" input="globalErrorHandler" type="bulbul.boff.user.customer.actions.CustomerProfileListAction" scope="request" >
+    <forward name="success" path="/customer_profile_list.jsp" />
+   </action>
+                          <!-- Customer Profile View Action -->
+   <action name="customerProfileForm" path="/customerProfileViewAction" input="cusomterProfileList" type="bulbul.boff.user.customer.actions.CustomerProfileViewAction" scope="request" >
+    <forward name="success" path="/customer_profile_view.jsp" />
+   </action>
+                          <!-- Customer Profile Add B4 Action -->
+   <action name="customerProfileForm" path="/customerProfileAddB4Action" input="globalErrorHandler" type="bulbul.boff.user.customer.actions.CustomerProfileAddB4Action" scope="request" >
+    <forward name="success" path="/outlet_add.jsp" />
+   </action>
+                          <!-- Customer Profile Add Action -->
+   <action name="customerProfileForm" path="/customerProfileAddAction" input="customerProfileAdd" type="bulbul.boff.user.customer.actions.CustomerProfileAddAction" scope="request" >
+    <forward name="success" path="/customer_add_success.jsp" />
+   </action>
+                          <!-- Customer Profile Edit B4 Action -->
+   <action name="customerProfileForm" path="/customerProfileEditB4Action" input="globalErrorHandler" type="bulbul.boff.user.customer.actions.CustomerProfileEditB4Action" scope="request" >
+    <forward name="success" path="/outlet_edit.jsp" />
+   </action>
+                          <!-- Customer Profile Edit Action -->
+   <action name="customerProfileForm" path="/customerProfileEditAction" input="customerProfileEdit" type="bulbul.boff.user.customer.actions.CustomerProfileEditAction" scope="request" >
+    <forward name="success" path="/customer_edit_success.jsp" />
+   </action>
+                          <!-- Customer Profile Delete Action -->
+   <action name="customerProfileListForm" path="/customerProfileDeleteAction" input="customerProfileList" type="bulbul.boff.user.customer.actions.CustomerProfileDeleteAction" scope="request" >
+    <forward name="success" path="/customerProfileListAction.do" />
+   </action>
+                          <!-- Customer Profile Activate and Deactivate Action -->
+   <action name="customerProfileListForm" path="/customerProfileActDeactAction" input="customerProfileList" type="bulbul.boff.user.customer.actions.CustomerProfileActDeactAction" scope="request" >
+    <forward name="success" path="/customerProfileListAction.do" />
+   </action>
+                          <!-- Change Password B4 Action -->
+   <!--<action name="changePasswordForm" path="/changePasswordB4Action" input="globalErrorHandler" type="bulbul.boff.user.customer.actions.ChangePasswordB4Action" scope="request" >
+    <forward name="success" path="/customer_change_password.jsp" />
+   </action>-->
+                          <!-- Change Password Action -->     
+   <!--<action name="changePasswordForm" path="/changePasswordAction" input="changePassword" type="bulbul.boff.user.customer.actions.ChangePasswordAction" scope="request" >
+    <forward name="success" path="/change_password_success.jsp" />
+   </action>-->
+                          <!-- Customer Profile Relay Action -->  
+   <action name="customerProfileListForm" path="/customerProfileRelayAction" input="globalErrorHandler" type="bulbul.boff.user.customer.actions.CustomerProfileRelayAction" scope="request" >
+    <forward name="list" path="/customerProfileListAction.do" />
+    <forward name="view" path="/customerProfileViewAction.do" />
+    <forward name="add" path="/customerProfileAddB4Action.do" />
+    <forward name="edit" path="/customerProfileEditB4Action.do" />
+    <forward name="delete" path="/customerProfileDeleteAction.do" />
+    <forward name="act_deact" path="/customerProfileActDeactAction.do" />
+    <forward name="search" path="/customerProfileListAction.do" />
+    <forward name="page" path="/customerProfileListAction.do" />
+   </action>
+   
+  </action-mappings>
+
+  <controller>
+    <set-property property="inputForward" value="true"/>
+  </controller>
+
+</struts-config>  

@@ -1,0 +1,192 @@
+<html>
+<head>
+<title>Product Details</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="main.css" rel="stylesheet" type="text/css">
+<link href="catalogue.css" rel="stylesheet" type="text/css">
+<SCRIPT LANGUAGE=javascript>
+<!--
+/***********************Opening Widnows Starts **************************/
+
+function openWindow(url,name,width,height,top,left,alignCenter,otherfeatures)
+{
+	if (alignCenter){
+				top=(window.screen.availHeight/2)-(height/2);
+				left=(window.screen.availWidth/2)-(width/2);
+	 }  
+    var features="width=" + width + "px,height=" + height +"px,";
+		features=features + "left=" + left + "px," + "top=" + top + "px,";    
+		features=features+otherfeatures;
+    return window.open (url,name,features);
+ }
+/***********************Opening Widnows Ends **************************/
+  
+function  btnAddFav_onclick(){
+	openWindow('add_to_favourite.html','add2fav',350,200,0,0,true,'');
+}
+//-->
+</SCRIPT>
+</head>
+
+<body><br>
+<form>
+<table width="725px" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="24" height="17px"><img src="images/catalogue_pan_corner_lt.gif" width="24" height="17"></td>
+        <td width="696" background="images/catalogue_pan_tile17px.gif" class="heading_pan">Product Name :</td>
+        <td width="5"><img src="images/catalogue_pan_corner_rt.gif" width="5" height="17"></td>
+      </tr>
+	  <tr>
+	    <td height="20px" bgcolor="#FFFFFF" colspan="3" class="bdrLeftColor_007C94 bdrRightColor_007C94 bdrTopColor_007C94 bdrBottomColor_007C94"> &nbsp;<a class="linkMenu" href="#">&nbsp;&lt; Back&nbsp;</a></td>
+  	  </tr>
+	  <tr>
+	  <td bgcolor="#FFFFFF" colspan="3" class="bdrLeftColor_007C94 bdrRightColor_007C94 bdrBottomColor_007C94">
+	 	<table width="100%"  border="0" cellspacing="1" cellpadding="1">
+		  <tr>
+			<td valign="top">			<table width="450"  border="0" cellpadding="1" cellspacing="1">
+              <tr>
+                <td width="100%" height="20px" class="text_007C94"><div align="center">Product Name</div></td>
+              </tr>
+              <tr>
+                <td height="20px"><div align="center">
+                    <div class="bdrColor_007C94" style="width:200px; height:200px; background-color:#FFFFFF">
+                      <div align="center">Image Here</div>
+                    </div>
+                </div></td>
+              </tr>
+              <tr>
+                <td valign="top"><div align="center">
+                    <input class="buttons" style="width:110px; height:20px" type="button" value="Add To Favorite" id="btnOrder3" name="btnOrder"  onclick="return btnAddFav_onclick();" >
+                </div></td>
+              </tr>
+            </table></td>
+			<td align="right" valign="top">
+			  <table width="255"  border="0" cellpadding="1" cellspacing="1">
+               <tr>
+               <td height="10px">
+			   <table width="250"  border="0" cellspacing="1" cellpadding="1" class="bgColor_007C94">
+                 <tr>
+                   <td class="th_01A0BF" colspan="3"><div align="center">Colors</div></td>
+                   </tr>
+                 <tr bgcolor="#FFFFFF">
+                   <td width="10%"><input name="radiobutton" type="radio" value="radiobutton"></td>
+                   <td width="14%"> 
+                   <table width="100%" height="18px" border="0" cellpadding="0" cellspacing="0">
+                     <tr>
+                       <td bgcolor="#CC6600">&nbsp;</td>
+                       <td bgcolor="#CCCC33">&nbsp;</td>
+                     </tr>
+                   </table>
+				   </td>
+                   <td width="76%">Red/Yellow</td>
+                 </tr>
+                 <tr bgcolor="#FFFFFF">
+                   <td><input name="radiobutton" type="radio" value="radiobutton"></td>
+                   <td>
+				     <table width="100%" height="18px" border="0" cellpadding="0" cellspacing="0">
+                       <tr>
+                         <td bgcolor="#CC6600">&nbsp;</td>
+                         <td bgcolor="#CCCC33">&nbsp;</td>
+                       </tr>
+                     </table></td>
+                   <td>Pink/Green</td>
+                 </tr>
+                 <tr bgcolor="#FFFFFF">
+                   <td><input name="radiobutton" type="radio" value="radiobutton"></td>
+                   <td>&nbsp;</td>
+                   <td>Water Green/Blue </td>
+                 </tr>
+                 <tr bgcolor="#FFFFFF">
+                   <td><input name="radiobutton" type="radio" value="radiobutton"></td>
+                   <td>&nbsp;</td>
+                   <td>Water Green/Blue </td>
+                 </tr>
+                 <tr bgcolor="#FFFFFF">
+                   <td><input name="radiobutton" type="radio" value="radiobutton"></td>
+                   <td>&nbsp;</td>
+                   <td>Water Green/Blue </td>
+                 </tr>
+               </table></td>
+             </tr>
+             <tr>
+               <td height="7px"></td>
+             </tr>
+             <tr>
+               <td height="20px">
+			   <table width="250"  border="0" cellspacing="1" cellpadding="2" class="bgColor_007C94">
+                 <tr>
+                   <td class="th_01A0BF" width="33%"><div align="center">Size</div></td>
+                   <td class="th_01A0BF" width="36%"><div align="center">Price</div></td>
+                   <td class="th_01A0BF" width="31%"><div align="center">Disccount</div></td>
+                 </tr>
+                 <tr bgcolor="#FFFFFF">
+                   <td>Adult XL</td>
+                   <td><div align="right">Rs. 100/-</div></td>
+                   <td><div align="center"><a class="linkTableRow" href="#">...</a></div></td>
+                 </tr>
+                 <tr bgcolor="#FFFFFF">
+                   <td>Adult XXL</td>
+                   <td><div align="right">Rs. 300/-</div></td>
+                   <td><div align="center"><a class="linkTableRow" href="#">...</a></div></td>
+                 </tr>
+                 <tr bgcolor="#FFFFFF">
+                   <td>Youth L</td>
+                   <td><div align="right">Rs. 160/-</div></td>
+                   <td><div align="center"><a class="linkTableRow" href="#">...</a></div></td>
+                 </tr>
+                 <tr bgcolor="#FFFFFF">
+                   <td>Youth M </td>
+                   <td><div align="right">Rs. 600/-</div></td>
+                   <td><div align="center"><a class="linkTableRow" href="#">...</a></div></td>
+                 </tr>
+                 <tr bgcolor="#FFFFFF">
+                   <td>Youth M </td>
+                   <td><div align="right">Rs. 600/-</div></td>
+                   <td><div align="center"><a class="linkTableRow" href="#">...</a></div></td>
+                 </tr>
+               </table>
+               </td>
+             </tr>
+           </table>			</td>
+		  </tr>
+		</table>
+	    <table width="98%"  border="0" align="center" cellpadding="2" cellspacing="1" class="bdrTopColor_007C94">
+          <tr>
+            <td width="20%" valign="top" class="text_007C94"><div align="right">Material:</div></td>
+            <td width="80%">100% cotton; 6.1 oz.</td>
+          </tr>
+          <tr>
+            <td valign="top" class="text_007C94"><div align="right">Guaranteed Delivery:</div></td>
+            <td>14 days/7 rush (quoted in <b>actual</b>, not "business" days)</td>
+          </tr>
+          <tr>
+            <td valign="top" class="text_007C94"><div align="right">Minimum Quantity:</div></td>
+            <td>6 pieces</td>
+          </tr>
+          <tr>
+            <td valign="top" class="text_007C94"><div align="right">Decoration:</div></td>
+            <td>Screenprinting</td>
+          </tr>
+          <tr>
+            <td valign="top" class="text_007C94"><div align="right">Product Description:</div></td>
+            <td>Pre-shrunk. Taped neck and shoulders. Double needle stitching throughout garment. (Sport Grey is 90% cotton 10% polyester.)</td>
+          </tr>
+          <tr>
+            <td valign="top" class="text_007C94"><div align="right">Comments:</div></td>
+            <td>Generous fit. High quality, heavyweight t-shirt at a very good price. Best selling imprintable t-shirt in America. PLEASE NOTE: recent changes by the manufacturer have increased the youth sizes for this t-shirt.</td>
+          </tr>
+        </table></td>
+	  </tr>
+	  <tr>
+        <td bgcolor="#FFFFFF" colspan="3" class="bdrLeftColor_007C94 bdrRightColor_007C94">&nbsp;	      </td>
+      </tr>
+      <tr>
+        <td height="3px"><img src="images/catalogue_pan_corner_lb.gif" width="24" height="3"></td>
+        <td background="images/catalogue_pan_tile3px.gif" bgcolor="#FFFFFF"></td>
+        <td><img src="images/catalogue_pan_corner_rb.gif" width="5" height="3"></td>
+      </tr>
+</table>
+<p>&nbsp;</p>
+</form>
+</body>
+</html>

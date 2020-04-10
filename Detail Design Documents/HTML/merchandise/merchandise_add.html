@@ -1,0 +1,167 @@
+<HTML>
+   <HEAD>
+
+      <TITLE>Merchandise Add</TITLE>
+   </HEAD>
+   <BODY>
+      <H1>Merchandise Add</H1>
+
+      <table border="1" cellpadding="1" cellspacing="1">
+       <tr>
+        <td>
+          Merchandise Name: <input type="text" id="txtMerchandise" name="txtMerchandise" value="" maxlength="10"><br>
+          Merchandise Description: <textarea id="txaMerchandiseDesc" name="txaMerchandiseDesc" cols="" rows=""></textarea><br>
+          Merchandise Comment: <textarea id="txaMerchandiseComm" name="txaMerchandiseComm" cols="" rows=""></textarea><br>
+          Material Description: <textarea id="txaMaterialDesc" name="txaMaterialDesc" cols="" rows=""></textarea><br>
+          Minimum Quantity: <input type="text" id="txtThresholdQty" name="txtThresholdQty" value=><br>        
+          Delivery Note: <textarea  name="txaDeliveryNote" cols="" rows=""></textarea>
+        </td>
+        <td>
+          <table border="1" cellpadding="1" cellspacing="1">
+            <tr>
+              <td><H2></H2>Display Image Here</H2></td>
+            </tr>
+          </table><br><br><br><br>
+          <table border="1" cellpadding="1" cellspacing="1">
+            <tr>
+              <td><H2></H2>Design Image Here</H2></td>
+            </tr>
+          </table>
+        </td>
+       </tr>
+      </table>
+      <table border="1" cellpadding="1" cellspacing="1">
+       <tr>
+         <td>
+          <table border="1" cellpadding="1" cellspacing="1">
+            <tr>
+              <td>
+                <H3>Color Definition</H3>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Color 1 : <input type="text" id="txtColor1" name="txtColor1" value="">
+                <input type="button" id="btnColor1" name="btnColor1" value="..." ><br>
+                Color 2 : <input type="text" id="txtColor2" name="txtColor2" value="">
+                <input type="button" id="btnColor2" name="btnColor2" value="..." ><br>
+                <input type="button" id="btnColorOk" name="btnColorOk" value="Ok" >
+                <input type="button" id="btnColorClear" name="btnColorClear" value="Clear" >
+                <input type="button" id="btnColorDelete" name="btnColorDelete" value="Delete" >
+                
+              </td>
+            </tr>
+          </table>
+          <table border="1" cellpadding="1" cellspacing="1">
+            <tr>
+              <td>
+                <H3>Size Definition</H3>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Color: <select id="cboSizeColor" name="cboSizeColor" style="width:100px" ></select><br>
+                    <table border="1" cellpadding="1" cellspacing="1">
+                      <tr>
+                        <td>
+                        <table border="1" cellpadding="1" cellspacing="1">
+                          <tr>
+                            <td>
+                              Available Sizes
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <select id="lstAvailableSize" name="lstAvailableSize" size="3" style="width:100px" ></select>                     
+                            </td>
+                          </tr>
+                        </table>
+                        </td>
+                        <td>
+                        <input type="button" id="btn2Rt" name="btn2Rt" value=">" >
+                        <input type="button" id="btn2Lt" name="btn2Lt" value="<" >
+                        </td>
+                        <td>
+                        <table border="1" cellpadding="1" cellspacing="1">
+                          <tr>
+                            <td>
+                              Selelcted Sizes
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <select id="lstSelectedSize" name="lstSelectedSize" size="3" style="width:100px" ></select>                     
+                            </td>
+                          </tr>
+                        </table>                        
+                        </td>
+                      </tr>
+                    </table>
+                <input type="button" id="btnSizeOk" name="btnSizeOk" value="Ok" >
+                <input type="button" id="btnSizeClear" name="btnSizeClear" value="Clear" >
+                <input type="button" id="btnSizeDelete" name="btnSizeDelete" value="Delete" >
+              </td>
+            </tr>
+          </table>
+          <table border="1" cellpadding="1" cellspacing="1">
+            <tr>
+              <td>
+                <H3>Price Definition</H3>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Color: <select id="cboPriceColor" name="cboPriceColor" style="width:100px" ></select><br>
+                Size: <select id="cboSize" name="cboSize" style="width:100px" ></select><br>
+                Price: <input type="text" id="txtPrice" name="txtPrice" value=""><br>        
+                <input type="button" id="btnPriceOk" name="btnSizeOk" value="Ok" >
+                <input type="button" id="btnPriceClear" name="btnPriceClear" value="Clear" >
+                <input type="button" id="btnPriceDelete" name="btnPriceDelete" value="Delete" >
+              </td>
+            </tr>
+          </table>
+         </td>
+         <td>
+         <table border="1" cellpadding="1" cellspacing="1">
+            <tr>
+              <th>S.No.</th>
+              <th>Color</th>
+              <th>Size/Price</th>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+          </table>
+         </td>
+       </tr>
+      </table>
+
+     
+      <input type="button" id="btnSave" name="btnSave" value="Save">
+      <input type="button" id="btnCancel" name="btnCancel" value="Cancel">
+      <input type="button" id="btnClear" name="btnClear" value="Clear">
+
+   </BODY>
+</HTML>

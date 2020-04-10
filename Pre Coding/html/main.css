@@ -1,0 +1,86 @@
+body {
+	background-color: #80A0B2;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+.bgColor_DFE7EC {
+	background-color:#DFE7EC;
+}
+.bgColor_C6D4DC {
+	background-color:#C6D4DC;
+}
+.bdrColor_336666 {
+	border:1px solid #666666;
+	font-size: 11px;
+}
+.bdrBottomColor_333333 {
+	border-bottom:1px solid #333333;
+}
+.bdrLeftColor_333333 {
+	border-left:1px solid #333333;
+}
+.bdrTopColor_333333 {
+	border-top:1px solid #333333;
+}
+.bdrRightColor_333333 {
+	border-Right:1px solid #333333;
+}
+td {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+}
+.tr_C5E2E5 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	background-color:#C5E2E5;
+}
+th {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+	font-weight:bold;
+	background-color:#80A0B2;
+}
+A.tabLink:link {
+	FONT-WEIGHT: normal;FONT-SIZE: 11px;TEXT-DECORATION: none;font-family: Verdana, Arial, Helvetica, sans-serif;color: #333333;
+}
+A.tabLink:visited {
+		FONT-WEIGHT: normal;FONT-SIZE: 11px;TEXT-DECORATION: none;font-family: Verdana, Arial, Helvetica, sans-serif;color: #333333;
+}
+A.tabLink:hover {
+		FONT-WEIGHT: normal;FONT-SIZE: 11px;TEXT-DECORATION: underline;font-family: Verdana, Arial, Helvetica, sans-serif;color: #000000;
+}
+A.tabLink:active {
+		FONT-WEIGHT: normal;FONT-SIZE: 11px;TEXT-DECORATION: none;font-family: Verdana, Arial, Helvetica, sans-serif;color: #333333;
+}
+.tabActive {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	font-weight:normal;
+	background-color:#DFE7EC;
+}
+.tabPassive {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #333333;
+	font-weight:normal;
+	background-color:#C6D4DC;
+}
+.heading_1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+	font-weight:bold;
+}
+.buttons {
+	BORDER-RIGHT: #336666 1px solid; BORDER-TOP: #336666 1px solid;
+	BORDER-LEFT: #336666 1px solid; BORDER-BOTTOM: #336666 1px solid;
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	FONT-WEIGHT: normal; FONT-SIZE: 11px; color: #333333; 
+	BACKGROUND-IMAGE: url(images/butt_tile5x20.gif); BACKGROUND-REPEAT: repeat-x;
+}

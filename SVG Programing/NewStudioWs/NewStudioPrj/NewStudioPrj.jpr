@@ -1,0 +1,544 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<project nselem="project" class="oracle.jdeveloper.model.JProject" xmlns="http://xmlns.oracle.com/jdeveloper/10120/jproject">
+   <defaultPackage>bulbul.foff.studio.engine.general</defaultPackage>
+   <defaultPackages class="java.util.ArrayList">
+      <Item class="java.lang.String">bulbul.foff.studio.engine.general</Item>
+      <Item class="java.lang.String">bulbul.foff.studio.engine.domactions</Item>
+      <Item class="java.lang.String">bulbul.foff.studio.engine.ui</Item>
+      <Item class="java.lang.String">bulbul.foff.studio.engine.shapes</Item>
+      <Item class="java.lang.String">bulbul.foff.studio.engine.selection</Item>
+      <Item class="java.lang.String">bulbul.foff.studio.engine.undoredo</Item>
+      <Item class="java.lang.String">bulbul.foff.studio.engine.managers</Item>
+      <Item class="java.lang.String">bulbul.foff.studio.engine.listeners</Item>
+      <Item class="java.lang.String">bulbul.foff.studio.engine</Item>
+      <Item class="java.lang.String">studio.engine</Item>
+      <Item class="java.lang.String">mypackage1</Item>
+   </defaultPackages>
+   <dependencyList/>
+   <htmlRootDirectory path="public_html/"/>
+   <j2eeWebAppName>NewStudioWs-NewStudioPrj-webapp</j2eeWebAppName>
+   <j2eeWebContextRoot>NewStudioWs-NewStudioPrj-context-root</j2eeWebContextRoot>
+   <listOfChildren class="oracle.ide.model.DataList">
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/engine.html"/>
+         <nodeClass>oracle.jdevimpl.webapp.html.HtmlSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/listeners/GridPaintListener.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/ui/MainStatusBar.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/ui/MainTabSet.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/ui/MainToolBar.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/general/NodeIterator.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/ui/ProductImagePanel.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/listeners/SBListener.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/struts-config.xml"/>
+         <nodeClass>oracle.adfimpl.struts.navigator.StrutsConfigNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/domactions/SVGAlign.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/shapes/SVGAny.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/ui/SVGApplet.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/ui/SVGCanvas.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/domactions/SVGCenter.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/shapes/SVGCircle.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/managers/SVGClassManager.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/general/SVGClassObject.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/general/SVGClipboard.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/general/SVGCursors.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/shapes/SVGEllipse.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/domactions/SVGFlip.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/general/SVGGrid.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/domactions/SVGGroupUnGroup.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/shapes/SVGImage.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/shapes/SVGLine.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/domactions/SVGOrder.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/listeners/SVGPaintListener.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/shapes/SVGPath.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/shapes/SVGPolygon.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/shapes/SVGPolyLine.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/shapes/SVGRectangle.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/domactions/SVGRotate.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/ui/SVGRuler.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/general/SVGRulers.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/domactions/SVGSame.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/general/SVGSaveNdSaveAs.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/ui/SVGScrollPane.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/selection/SVGSelection.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/selection/SVGSelectionListener.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/selection/SVGSelectionManager.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/selection/SVGSelectionSquare.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/shapes/SVGShape.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/domactions/SVGSpacing.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/ui/SVGTab.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/managers/SVGTabManager.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/shapes/SVGText.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/ui/SVGToolBar.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/general/SVGToolkit.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/general/SVGTransformMatrix.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/undoredo/SVGUndoRedo.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/undoredo/SVGUndoRedoAction.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/undoredo/SVGUndoRedoActionList.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/general/SVGZoom.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/src/bulbul/foff/studio/engine/listeners/SVGZoomActionListener.java"/>
+         <nodeClass>oracle.jdeveloper.model.JavaSourceNode</nodeClass>
+      </Item>
+      <Item class="oracle.ide.model.Reference">
+         <URL path="public_html/WEB-INF/web.xml"/>
+         <nodeClass>oracle.jdeveloper.xml.j2ee.war.WebAppNode</nodeClass>
+      </Item>
+   </listOfChildren>
+   <ownerMap/>
+   <projectDocPath>
+      <entries class="[Ljava.net.URL;"/>
+   </projectDocPath>
+   <projectLibraryList class="oracle.jdeveloper.library.JProjectLibraryList">
+      <jdkList class="java.util.ArrayList"/>
+      <libraryList class="java.util.ArrayList"/>
+   </projectLibraryList>
+   <projectSettings>
+      <activeConfigName>Development</activeConfigName>
+      <commonData class="java.util.HashMap">
+         <Item>
+            <Key>oracle.bm.commonIde.data.project.ModelerProjectSettings</Key>
+            <Value class="oracle.bm.commonIde.data.project.ModelerProjectSettings">
+               <modelersPath>
+                  <entries>
+                     <Item path="model/"/>
+                  </entries>
+               </modelersPath>
+               <modelersVersion>10.12</modelersVersion>
+            </Value>
+         </Item>
+         <Item>
+            <Key>oracle.jdeveloper.compiler.ant.AntConfiguration</Key>
+            <Value class="oracle.jdeveloper.compiler.ant.AntConfiguration">
+               <arguments class="java.lang.String"/>
+               <makeTarget/>
+               <projectBuildfile/>
+               <rebuildTarget/>
+               <showOutput>true</showOutput>
+            </Value>
+         </Item>
+         <Item>
+            <Key>oracle.jdeveloper.offlinedb.OfflineDBProjectSettings</Key>
+            <Value class="oracle.jdeveloper.offlinedb.OfflineDBProjectSettings">
+               <databasePath>
+                  <entries>
+                     <Item path="database/"/>
+                  </entries>
+               </databasePath>
+            </Value>
+         </Item>
+      </commonData>
+      <configurations class="java.util.TreeMap">
+         <Item>
+            <Key>Development</Key>
+            <Value class="oracle.jdeveloper.model.JProjectConfiguration">
+               <configData class="java.util.HashMap">
+                  <Item>
+                     <Key>oracle.jdeveloper.compiler.OjcConfiguration</Key>
+                     <Value class="oracle.jdeveloper.compiler.OjcConfiguration">
+                        <assertionsEnabled>false</assertionsEnabled>
+                        <copyRes>
+                           <Item>.gif</Item>
+                           <Item>.properties</Item>
+                           <Item>.jpg</Item>
+                           <Item>.jpeg</Item>
+                           <Item>.xml</Item>
+                           <Item>-apf.xml</Item>
+                           <Item>.xcfg</Item>
+                           <Item>.cpx</Item>
+                           <Item>.css</Item>
+                           <Item>.js</Item>
+                           <Item>.png</Item>
+                           <Item>.tld</Item>
+                        </copyRes>
+                        <debugInformation>true</debugInformation>
+                        <excludedClasses class="[Ljava.lang.String;"/>
+                        <internalEncoding>Cp1252</internalEncoding>
+                        <obfuscate>false</obfuscate>
+                        <reverseCopyRes>false</reverseCopyRes>
+                        <showDeprecations>true</showDeprecations>
+                        <showObjectDotStaticWarnings>false</showObjectDotStaticWarnings>
+                        <showPartialImportWarnings>false</showPartialImportWarnings>
+                        <showSelfDeprecations>true</showSelfDeprecations>
+                        <showUnusedImportWarnings>false</showUnusedImportWarnings>
+                        <showWarnings>true</showWarnings>
+                        <target>Default</target>
+                        <updateImports>false</updateImports>
+                        <updateZipJarImports>false</updateZipJarImports>
+                     </Value>
+                  </Item>
+                  <Item>
+                     <Key>oracle.jdeveloper.javadoc.JProjectJavadoc</Key>
+                     <Value class="oracle.jdeveloper.javadoc.JProjectJavadoc">
+                        <embedDiagram>5</embedDiagram>
+                        <genDiagramDoc>true</genDiagramDoc>
+                        <generateAuthor>true</generateAuthor>
+                        <generateDeprecated>true</generateDeprecated>
+                        <generateIndex>true</generateIndex>
+                        <generateNavbar>true</generateNavbar>
+                        <generateSince>true</generateSince>
+                        <generateTree>true</generateTree>
+                        <generateVersion>true</generateVersion>
+                        <heapSize>32</heapSize>
+                        <imageFormat>1</imageFormat>
+                        <miscOptions class="java.lang.String"/>
+                        <oneOneFormat>false</oneOneFormat>
+                        <outputDirectory path="javadoc/"/>
+                        <scope>-protected</scope>
+                     </Value>
+                  </Item>
+                  <Item>
+                     <Key>oracle.jdeveloper.runner.RunConfiguration</Key>
+                     <Value class="oracle.jdeveloper.runner.RunConfiguration">
+                        <VMName>ojvm</VMName>
+                        <XSLTInputFileURL/>
+                        <XSLTOutputFileURL/>
+                        <allowInput>false</allowInput>
+                        <alwaysUseTarget>false</alwaysUseTarget>
+                        <clearLogBeforeRun>true</clearLogBeforeRun>
+                        <compileBeforeRun>true</compileBeforeRun>
+                        <connectionName/>
+                        <javaOptions class="java.lang.String"/>
+                        <logCommand>true</logCommand>
+                        <logError>true</logError>
+                        <logExit>true</logExit>
+                        <logOutput>true</logOutput>
+                        <programArguments class="java.lang.String"/>
+                        <runActiveFile>true</runActiveFile>
+                        <runDirectoryURL/>
+                        <targetURL path="public_html/engine.html"/>
+                        <useProxy>true</useProxy>
+                     </Value>
+                  </Item>
+                  <Item>
+                     <Key>oracle.jdevimpl.config.JProjectLibraries</Key>
+                     <Value class="oracle.jdevimpl.config.JProjectLibraries">
+                        <jdkName>1.4.2_04</jdkName>
+                        <jdkVersionNumber>1.4.2_04</jdkVersionNumber>
+                        <libraries>JDeveloper Runtime;JSP Runtime;Struts Runtime;Servlet Runtime</libraries>
+                     </Value>
+                  </Item>
+                  <Item>
+                     <Key>oracle.jdevimpl.config.JProjectPaths</Key>
+                     <Value class="oracle.jdevimpl.config.JProjectPaths">
+                        <additionalClassPath>
+                           <entries>
+                              <Item path="public_html/applets/batik-awt-util.jar" jar-entry=""/>
+                              <Item path="public_html/applets/batik-bridge.jar" jar-entry=""/>
+                              <Item path="public_html/applets/batik-css.jar" jar-entry=""/>
+                              <Item path="public_html/applets/batik-dom.jar" jar-entry=""/>
+                              <Item path="public_html/applets/batik-ext.jar" jar-entry=""/>
+                              <Item path="public_html/applets/batik-gvt.jar" jar-entry=""/>
+                              <Item path="public_html/applets/batik-parser.jar" jar-entry=""/>
+                              <Item path="public_html/applets/batik-script.jar" jar-entry=""/>
+                              <Item path="public_html/applets/batik-svg-dom.jar" jar-entry=""/>
+                              <Item path="public_html/applets/batik-svggen.jar" jar-entry=""/>
+                              <Item path="public_html/applets/batik-swing.jar" jar-entry=""/>
+                              <Item path="public_html/applets/batik-util.jar" jar-entry=""/>
+                              <Item path="public_html/applets/batik-xml.jar" jar-entry=""/>
+                              <Item path="public_html/applets/xerces_2_5_0.jar" jar-entry=""/>
+                              <Item path="public_html/applets/pg74.215.jdbc3.jar" jar-entry=""/>
+                              <Item path="public_html/applets/jdbc2_0-stdext.jar" jar-entry=""/>
+                              <Item path="public_html/applets/activation.jar" jar-entry=""/>
+                              <Item path="public_html/applets/commons-beanutils.jar" jar-entry=""/>
+                              <Item path="public_html/applets/commons-collections.jar" jar-entry=""/>
+                              <Item path="public_html/applets/commons-dbcp-1.1.jar" jar-entry=""/>
+                              <Item path="public_html/applets/commons-digester.jar" jar-entry=""/>
+                              <Item path="public_html/applets/commons-fileupload.jar" jar-entry=""/>
+                              <Item path="public_html/applets/commons-lang.jar" jar-entry=""/>
+                              <Item path="public_html/applets/commons-logging.jar" jar-entry=""/>
+                              <Item path="public_html/applets/commons-pool-1.1.jar" jar-entry=""/>
+                              <Item path="public_html/applets/commons-validator.jar" jar-entry=""/>
+                              <Item path="public_html/applets/jakarta-oro.jar" jar-entry=""/>
+                              <Item path="public_html/applets/nls_charset12.jar" jar-entry=""/>
+                              <Item path="public_html/applets/struts-legacy.jar" jar-entry=""/>
+                              <Item path="public_html/applets/struts.jar" jar-entry=""/>
+                           </entries>
+                        </additionalClassPath>
+                        <outputDirectory path="public_html/applets/"/>
+                     </Value>
+                  </Item>
+                  <Item>
+                     <Key>oracle.jdevimpl.runner.codecoach.CCConfiguration</Key>
+                     <Value class="oracle.jdevimpl.runner.codecoach.CCConfiguration">
+                        <advices>ALL</advices>
+                        <exclude>com;java;javax;sun;sunw;org;oracle</exclude>
+                        <include class="java.lang.String"/>
+                        <level>4</level>
+                     </Value>
+                  </Item>
+                  <Item>
+                     <Key>oracle.jdevimpl.runner.debug.DebugConfiguration</Key>
+                     <Value class="oracle.jdevimpl.runner.debug.DebugConfiguration">
+                        <JPDAClassicDebugArguments>-Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,address=&lt;port></JPDAClassicDebugArguments>
+                        <JPDADebugArguments>-Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=&lt;port></JPDADebugArguments>
+                        <OJVMDebugArguments>-XXdebug,quiet,port&lt;port></OJVMDebugArguments>
+                        <breakpointScope>workspace</breakpointScope>
+                        <remoteDebugging>false</remoteDebugging>
+                        <remoteDebuggingParameters class="java.util.HashMap"/>
+                        <remoteDebuggingParametersSaved>false</remoteDebuggingParametersSaved>
+                        <remoteDebuggingProtocol>ojvm</remoteDebuggingProtocol>
+                        <startOption>running</startOption>
+                        <tracingDisabled>java;javax;sun;sunw;apple;com.apple;com.evermind;com.oracle;com.orionserver;com.sun;EDU.oswego;oracle.core;oracle.dms;oracle.ide;oracle.j2ee;oracle.jdbc;oracle.jdevimpl;oracle.jsp;oracle.oc4j;oracle.ojc;oracle.security;oracle.xml;org.omg;org.w3c;org.xml</tracingDisabled>
+                        <tracingEnabled class="java.lang.String"/>
+                     </Value>
+                  </Item>
+                  <Item>
+                     <Key>oracle.jdevimpl.runner.profile.ProfileConfiguration</Key>
+                     <Value class="oracle.jdevimpl.runner.profile.ProfileConfiguration">
+                        <DMSstartID>20000</DMSstartID>
+                        <DMSstate>0</DMSstate>
+                        <eventColumnVisible>
+                           <Item>true</Item>
+                           <Item>true</Item>
+                           <Item>true</Item>
+                           <Item>true</Item>
+                           <Item>true</Item>
+                           <Item>true</Item>
+                        </eventColumnVisible>
+                        <events>G(All events;(G(VM Events;(E(0;GC;-16776961;1);E(10;Wait;-65485;0);E(11;Synch Blocks 0;-39322;0);E(12;Synch Blocks 1;-39322;0);E(13;Synch Blocks 2;-39322;0);E(20;Prepare Class;-16751002;0);E(21;Load Class;-16724992;0);E(22;Resolve Class;-16737997;0);));G(BC4J Events;(E(1000;JBO_MISCELLANEOUS;-4144960;1);E(1001;JDBC_SELECT;-256;1);E(1002;JDBC_CREATE_STATEMENT;-256;1);E(1003;JDBC_CONNECT;-256;1);E(1004;JDBC_CREATE_PREPARED_STATEMENT;-256;1);E(1005;JDBC_EXECUTE;-256;1);E(1006;METAOBJECT_LOAD;-65281;1);E(1007;EXECUTE_QUERY;-16776961;1);E(1008;BC4J_CREATE_COMPOBJ;-65281;0);E(1009;BC4J_CREATE_ROOTAM;-65281;1);E(1010;BC4J_CREATE_VIEWOBJECT;-65281;0);E(1011;BC4J_CREATE_AM;-65281;0);E(1012;BC4J_CREATE_VIEWLINK;-65281;0);E(1013;SQLB_DOENTITYDML;-16776961;1);E(1014;SQLB_DOENTITYSELECT;-16776961;1);E(1015;VIEWOBJECT_GETSTATEMENT;-16776961;1);E(1016;REMOTE_METHOD_CALL;-65536;1);));));</events>
+                        <excludedClasses>java;javax;sun;sunw;com;oracle</excludedClasses>
+                        <excludedInstances class="java.lang.String"/>
+                        <includedClasses class="java.lang.String"/>
+                        <includedInstances class="java.lang.String"/>
+                        <localProfiling>true</localProfiling>
+                        <memColumnVisible>
+                           <Item>true</Item>
+                           <Item>true</Item>
+                           <Item>true</Item>
+                           <Item>true</Item>
+                           <Item>true</Item>
+                           <Item>true</Item>
+                           <Item>true</Item>
+                           <Item>true</Item>
+                           <Item>true</Item>
+                           <Item>true</Item>
+                        </memColumnVisible>
+                        <memoryUpdateInterval>10</memoryUpdateInterval>
+                        <remoteHost class="java.lang.String"/>
+                        <remoteParametersSaved>false</remoteParametersSaved>
+                        <remotePort>4000</remotePort>
+                        <sampleColumnVisible>
+                           <Item>true</Item>
+                           <Item>true</Item>
+                           <Item>true</Item>
+                           <Item>true</Item>
+                           <Item>true</Item>
+                           <Item>true</Item>
+                           <Item>true</Item>
+                        </sampleColumnVisible>
+                        <sampleInterval>5</sampleInterval>
+                        <sliderDepth>20</sliderDepth>
+                        <useAPI>false</useAPI>
+                     </Value>
+                  </Item>
+                  <Item>
+                     <Key>oracle.jdevimpl.runner.xslt.XSLTConfiguration</Key>
+                     <Value class="oracle.jdevimpl.runner.xslt.XSLTConfiguration">
+                        <inputFileURL/>
+                        <outputFileURL/>
+                        <showInputFile>true</showInputFile>
+                        <showOutputFile>true</showOutputFile>
+                        <sourcePath>
+                           <entries class="[Ljava.net.URL;"/>
+                        </sourcePath>
+                     </Value>
+                  </Item>
+                  <Item>
+                     <Key>oracle.jdevimpl.sqlj.config.SqljConfiguration</Key>
+                     <Value class="oracle.jdevimpl.sqlj.config.SqljConfiguration">
+                        <additionalParameters class="java.lang.String"/>
+                        <checkSemantics>false</checkSemantics>
+                        <codegen>oracle</codegen>
+                        <contextConnectionMap class="java.util.HashMap"/>
+                        <contextName>&lt;none></contextName>
+                        <useCache>false</useCache>
+                        <warnAll>false</warnAll>
+                        <warnNull>false</warnNull>
+                        <warnPortable>false</warnPortable>
+                        <warnPrecision>false</warnPrecision>
+                        <warnStrict>false</warnStrict>
+                        <warnVerbose>false</warnVerbose>
+                     </Value>
+                  </Item>
+                  <Item>
+                     <Key>WebappJspCompilerOptions</Key>
+                     <Value class="oracle.jdevimpl.webapp.jsp.JspCompilerOptions">
+                        <forgiveDuplicateDirectiveAttributes>false</forgiveDuplicateDirectiveAttributes>
+                        <requestTimeIntrospection>false</requestTimeIntrospection>
+                        <validate>true</validate>
+                        <validateTLD>true</validateTLD>
+                     </Value>
+                  </Item>
+               </configData>
+            </Value>
+         </Item>
+      </configurations>
+   </projectSettings>
+   <projectSourcePath>
+      <entries>
+         <Item path="public_html/WEB-INF/src/"/>
+      </entries>
+   </projectSourcePath>
+   <properties class="java.util.HashMap">
+      <Item>
+         <Key>CachedConfigTable</Key>
+         <Value class="oracle.jsp.parse.CachedConfigTable"/>
+      </Item>
+   </properties>
+</project>

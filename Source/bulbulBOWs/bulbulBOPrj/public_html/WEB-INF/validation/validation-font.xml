@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE form-validation PUBLIC "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.0//EN" "http://jakarta.apache.org/commons/dtds/validator_1_0.dtd"><form-validation>
+  <global>
+  </global>
+  <formset>
+    <form name="fontForm">
+      <field property="txtFont" depends="required,minlength,maxlength">
+        <arg0 key="txt.FontName">
+        </arg0>
+        <arg1 name="minlength" key="${var:minlength}" resource="false">
+        </arg1>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>minlength</var-name>
+          <var-value>5</var-value>
+        </var>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>25</var-value>
+        </var>
+      </field>
+      <field property="txaFontDesc" depends="maxlength">
+        <arg0 key="txa.FontDesc">
+        </arg0>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>50</var-value>
+        </var>
+      </field>
+    </form>
+
+    <form name="fontCategoryForm">
+      <field property="txtFontCategory" depends="required,minlength,maxlength">
+        <arg0 key="txt.FontCategoryName">
+        </arg0>
+        <arg1 name="minlength" key="${var:minlength}" resource="false">
+        </arg1>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>minlength</var-name>
+          <var-value>5</var-value>
+        </var>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>25</var-value>
+        </var>
+      </field>
+      <field property="txaFontCategoryDesc" depends="maxlength">
+        <arg0 key="txa.FontCategoryDesc">
+        </arg0>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>50</var-value>
+        </var>
+      </field>
+    </form>
+  </formset>
+</form-validation>

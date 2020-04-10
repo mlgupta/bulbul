@@ -1,0 +1,86 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE>Add To Favourites</TITLE>
+<SCRIPT LANGUAGE=javascript>
+<!--
+/*********************MM_findObj starts***********************************/    
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+  d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+/************************ MM_findObj text ends ****************************/
+
+/************************MM_showHideLayers starts**************************/
+function MM_showHideLayers() { //v6.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+  if (obj.style) { obj=obj.style; v=(v=='show')?'':(v=='hide')?'none':v; }
+  obj.display=v; }
+}
+/******************** MM_showHideLayers text ends *************************/
+function btnNewSelect_onclick(){
+	if (MM_findObj('lyrSelect').style.display=='none'){
+		MM_showHideLayers('lyrSelect','','show','lyrNew','','hide');
+		document.forms[0].btnNewSelect.value='New';
+	}else{
+		MM_showHideLayers('lyrSelect','','hide','lyrNew','','show');
+		document.forms[0].btnNewSelect.value='Select';
+	}
+}
+//-->
+</SCRIPT>
+</HEAD>
+<BODY>
+<FORM action="" method=POST id=form1 name=form1>
+	<TABLE WIDTH=300px ALIGN=CENTER BORDER=0 CELLSPACING=1 CELLPADDING=1>
+		<TR>
+			<TH>Add To Favourites</TH>
+		</TR>
+		<TR>
+			<TD align="center"><I><B>Product Name</B></I></TD>
+		</TR>
+		<TR>
+			<TD>
+				<div id="lyrSelect" name="lyrSelect" style="display:''">
+					<TABLE WIDTH="100%" BORDER=0 CELLSPACING=1 CELLPADDING=1>
+						<TR>
+							<TD width="100px">
+								Select Category			
+							</TD>
+							<TD>
+								<SELECT id=cboCategory name=cboCategory style="width:100%">
+									<OPTION>Select Category</OPTION>
+								</SELECT>
+							</TD>
+						</TR>
+					</TABLE>
+				</div>
+				<div id="lyrNew" name="lyrNew" style="display:none">
+					<TABLE WIDTH="100%" BORDER=0 CELLSPACING=1 CELLPADDING=1>
+						<TR>
+							<TD width="100px">
+								New Category			
+							</TD>
+							<TD>
+								<INPUT type="text" id=txtCategory name=txtCategory style="width:100%">
+							</TD>
+						</TR>
+					</TABLE>
+				</div>
+			</TD>
+		</TR>
+		<TR>
+			<TD align="center">
+				<INPUT type="button" value="New" style="width:65px;height:23px" id=btnNewSelect name=btnNewSelect onclick="return btnNewSelect_onclick();">
+				<INPUT type="button" value="Add" style="width:65px;height:23px" id=btnAdd name=btnAdd onclick="window.location.replace('add_to_favourite_success.html')">
+				<INPUT type="button" value="Close" style="width:65px;height:23px" id=btnClose name=btnClose onclick="return window.close();">
+			</TD>
+		</TR>
+	</TABLE>
+</FORM>
+</BODY>
+</HTML>

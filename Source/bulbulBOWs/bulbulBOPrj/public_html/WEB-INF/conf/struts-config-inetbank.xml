@@ -1,0 +1,69 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+ 
+  <form-beans>
+   <form-bean name="inetBankListForm" type="bulbul.boff.inetbank.actionforms.InetBankListForm"/>
+   <form-bean name="inetBankForm" type="bulbul.boff.inetbank.actionforms.InetBankForm" />
+  </form-beans>
+
+  <global-forwards>
+   <forward name="inetBankList" path="/inetBankListAction.do" />
+   <forward name="inetBankAdd" path="/inet_bank_add.jsp" />
+   <forward name="inetBankEdit" path="/inet_bank_edit.jsp" />
+  </global-forwards>
+
+  <action-mappings>
+                          <!-- Internet Bank List Action -->
+   <action name="inetBankListForm" path="/inetBankListAction" input="globalErrorHandler" validate="false" type="bulbul.boff.inetbank.actions.InetBankListAction" scope="request" >
+    <forward name="success" path="/inet_bank_list.jsp"/>
+   </action>
+                          <!-- Internet Bank View Action -->
+   <action name="inetBankForm" path="/inetBankViewAction" input="inetBankList" validate="false" type="bulbul.boff.inetbank.actions.InetBankViewAction" scope="request" >
+    <forward name="success" path="/inet_bank_view.jsp"/>
+   </action>
+                          <!-- Internet Bank Add B4 Action -->
+   <action name="inetBankForm" path="/inetBankAddB4Action" input="inetBankList" validate="false" type="bulbul.boff.inetbank.actions.InetBankAddB4Action" scope="request" >
+    <forward name="success" path="/inet_bank_add.jsp"/>
+   </action>
+                          <!-- Internet Bank Add Action -->
+   <action name="inetBankForm" path="/inetBankAddAction" input="inetBankAdd" type="bulbul.boff.inetbank.actions.InetBankAddAction" scope="request" >
+    <forward name="success" path="/inetBankListAction.do"/>
+   </action>
+                          <!-- Internet Bank Edit B4 Action -->
+   <action name="inetBankForm" path="/inetBankEditB4Action" input="inetBankList" validate="false" type="bulbul.boff.inetbank.actions.InetBankEditB4Action" scope="request" >
+    <forward name="success" path="/inet_bank_edit.jsp"/>
+   </action>
+                          <!-- Internet Bank Edit Action -->
+   <action name="inetBankForm" path="/inetBankEditAction" input="inetBankEdit" type="bulbul.boff.inetbank.actions.InetBankEditAction" scope="request" >
+    <forward name="success" path="/inetBankListAction.do"/>
+   </action>
+                          <!-- Internet Bank Delete Actionv -->
+   <action name="inetBankListForm" path="/inetBankDeleteAction" input="inetBankList" type="bulbul.boff.inetbank.actions.InetBankDeleteAction" scope="request" >
+    <forward name="success" path="/inetBankListAction.do"/>
+   </action>
+                          <!-- Internet Bank Activate and Deactivate Action -->
+   <action name="inetBankListForm" path="/inetBankActDeactAction" input="inetBankList" type="bulbul.boff.inetbank.actions.InetBankActDeactAction" scope="request" >
+    <forward name="success" path="/inetBankListAction.do"/>
+   </action>
+                          <!-- Internet Bank Relay Action -->
+   <action name="inetBankListForm" path="/inetBankRelayAction" input="globalErrorHandler" type="bulbul.boff.inetbank.actions.InetBankRelayAction" scope="request" >
+    <forward name="list" path="/inetBankListAction.do"/>
+    <forward name="view" path="/inetBankViewAction.do"/>
+    <forward name="add" path="/inetBankAddB4Action.do"/>
+    <forward name="edit" path="/inetBankEditB4Action.do"/>
+    <forward name="delete" path="/inetBankDeleteAction.do"/>
+    <forward name="act_deact" path="/inetBankActDeactAction.do"/>
+    <forward name="search" path="/inetBankListAction.do"/>
+    <forward name="page" path="/inetBankListAction.do"/>
+   </action>
+   
+  </action-mappings>
+
+  <controller>
+    <set-property property="inputForward" value="true"/>
+  </controller>
+  
+</struts-config>

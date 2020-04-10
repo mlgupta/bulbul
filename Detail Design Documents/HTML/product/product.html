@@ -1,0 +1,143 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE>Product Name</TITLE>
+<SCRIPT LANGUAGE=javascript>
+<!--
+/***********************Opening Widnows Starts **************************/
+
+function openWindow(url,name,width,height,top,left,alignCenter,otherfeatures)
+{
+	if (alignCenter){
+				top=(window.screen.availHeight/2)-(height/2);
+				left=(window.screen.availWidth/2)-(width/2);
+	 }  
+    var features="width=" + width + "px,height=" + height +"px,";
+		features=features + "left=" + left + "px," + "top=" + top + "px,";    
+		features=features+otherfeatures;
+    return window.open (url,name,features);
+ }
+/***********************Opening Widnows Ends **************************/
+  
+function  btnAddFav_onclick(){
+	openWindow('add_to_favourite.html','add2fav',350,200,0,0,true,'');
+}
+//-->
+</SCRIPT>
+</HEAD>
+<BODY>
+<TABLE WIDTH=100% ALIGN=center BORDER=0 CELLSPACING=1 CELLPADDING=1>
+	<TR>
+		<TD WIDTH="50%" height="500px">
+			<TABLE WIDTH=100% HEIGHT=100% ALIGN=center BORDER=0 CELLSPACING=1 CELLPADDING=1>
+				<TR >
+					<TH HEIGHT="20px" align="center" style="border:1px solid green;">
+						Product Name [<a href="product_list.html" >Back</a>]
+					</TH>
+				</TR>
+			
+				<TR >
+					<TD HEIGHT="40%" align="center" style="border:1px solid green;">
+						<div style="border:1px solid red; width:200px;height:98%">Image Here</div>
+					</TD>
+				</TR>
+				<TR >
+					<TH HEIGHT="20px" align="center" style="border:1px solid green;">
+						<INPUT type="button" value="Add To Favourite" id=btnAddFav name=btnAddFav onclick="return btnAddFav_onclick();">
+					</TH>
+				</TR>
+				<TR >
+					<TD HEIGHT="60%" style="border:1px solid green;">
+					<b>Material:</b>100% cotton; 6.1 oz.<br>
+					<b>Guaranteed Delivery:</b> 14 days/7 rush
+					(quoted in <b>actual</b>, not "business" days)<br>
+					<b>Minimum Quantity:</b> 6 pieces<br>
+					<b>Decoration:</b> Screenprinting<br>
+					<b>Product Description:</b>  Pre-shrunk. Taped neck and shoulders. Double needle stitching throughout garment. (Sport Grey is 90% cotton 10% polyester.)<br>
+					<b>Comments:</b> Generous fit. High quality, heavyweight t-shirt at a
+					very good price. Best selling imprintable t-shirt in America. PLEASE
+					NOTE: recent changes by the manufacturer have increased the youth sizes
+					for this t-shirt.
+					</TD>
+				</TR>
+			</TABLE>
+		</TD>
+		<TD WIDTH="50%" height="500px">
+			<TABLE WIDTH=50% HEIGHT=100%  BORDER=0 CELLSPACING=1 CELLPADDING=1>
+				<TR>
+					<TD HEIGHT="50%" valign="top" style="border:1px solid green;">
+						<TABLE WIDTH=100% ALIGN=center BORDER=0 CELLSPACING=1 CELLPADDING=1>
+							<TR>
+								<TH colspan="3" style="border:1px solid blue;">Colors</TH>
+							</TR>
+							<TR>
+								<TD width="15px" style="border:1px solid blue;"><INPUT type="radio" id=radColor name=radColor></TD>
+								<TD width="15px" style="border:1px solid blue;">
+								<div style="width:20px;height:20px;border:1px solid green;">
+									<div style="width:10px;height:20px;float:left;background-color:#ff0000"></div>
+									<div style="width:10px;height:20px;float:left;background-color:#ffff00"></div>
+								</div>
+								</TD>
+								<TD style="border:1px solid blue;">Red/Yellow</TD>
+							</TR>
+							<TR>
+								<TD width="15px" style="border:1px solid blue;"><INPUT type="radio" id=radColor name=radColor></TD>
+								<TD width="15px" style="border:1px solid blue;">
+								<div style="width:20px;height:20px;border:1px solid green;">
+									<div style="width:10px;height:20px;float:left;background-color:#ff00ff"></div>
+									<div style="width:10px;height:20px;float:left;background-color:#00ff00"></div>
+								</div>
+								</TD>
+								<TD style="border:1px solid blue;">Pink/Green</TD>
+							</TR>
+							<TR>
+								<TD width="15px" style="border:1px solid blue;"><INPUT type="radio" id=radColor name=radColor></TD>
+								<TD width="15px" style="border:1px solid blue;">
+								<div style="width:20px;height:20px;border:1px solid green;">
+									<div style="width:10px;height:20px;float:left;background-color:#00ffff"></div>
+									<div style="width:10px;height:20px;float:left;background-color:#0000ff"></div>
+								</div>
+								</TD>
+								<TD style="border:1px solid blue;">WaterGreen/Blue</TD>
+							</TR>
+						</TABLE>
+					</TD>
+				</TR>
+				<TR>
+					<TD valign="top" HEIGHT="50%" style="border:1px solid green;">
+						<TABLE WIDTH=100% BORDER=0 CELLSPACING=1 CELLPADDING=1>
+							<TR>
+								<TH style="border:1px solid blue;">Size</TH>
+								<TH style="border:1px solid blue;">Price</TH>
+								<TH style="border:1px solid blue;">Discount</TH>
+								
+							</TR>
+							<TR>
+								<TD style="border:1px solid blue;">Adult XL</TD>
+								<TD style="border:1px solid blue;" align="right">Rs. 100/-</TD>
+								<TD style="border:1px solid blue;" align="center"><a href="#">...</a></TD>
+							</TR>
+							<TR>
+								<TD style="border:1px solid blue;">Adult XXL</TD>
+								<TD style="border:1px solid blue;" align="right">Rs. 300/-</TD>
+								<TD style="border:1px solid blue;" align="center"><a href="#">...</a></TD>
+							</TR>
+							<TR>
+								<TD style="border:1px solid blue;">Youth L</TD>
+								<TD style="border:1px solid blue;" align="right">Rs. 160/-</TD>
+								<TD style="border:1px solid blue;" align="center"><a href="#">...</a></TD>
+							</TR>
+							<TR>
+								<TD style="border:1px solid blue;">Youth M</TD>
+								<TD style="border:1px solid blue;" align="right">Rs. 600/-</TD>
+								<TD style="border:1px solid blue;" align="center"><a href="#">...</a></TD>
+							</TR>
+						</TABLE>
+					</TD>
+				</TR>
+			</TABLE>
+		</TD>
+	</TR>
+</TABLE>
+</BODY>
+</HTML>

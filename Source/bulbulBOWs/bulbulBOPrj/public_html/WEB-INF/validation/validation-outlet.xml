@@ -1,0 +1,115 @@
+<?xml version = '1.0' encoding = 'windows-1252'?>
+<!DOCTYPE form-validation PUBLIC "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.0//EN" "http://jakarta.apache.org/commons/dtds/validator_1_0.dtd"><form-validation>
+  <global>
+  </global>
+  <formset>
+    <form name="outletForm">
+      <field property="txtOutletId" depends="required,minlength,maxlength">
+        <arg0 key="txt.OutletId">
+        </arg0>
+        <arg1 name="minlength" key="${var:minlength}" resource="false">
+        </arg1>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>minlength</var-name>
+          <var-value>5</var-value>
+        </var>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>10</var-value>
+        </var>
+      </field>
+      <field property="txtOutletName" depends="required,minlength,maxlength">
+        <arg0 key="txt.OutletName">
+        </arg0>
+        <arg1 name="minlength" key="${var:minlength}" resource="false">
+        </arg1>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>minlength</var-name>
+          <var-value>5</var-value>
+        </var>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>25</var-value>
+        </var>
+      </field>
+      <field property="txaOutletDesc" depends="maxlength">
+        <arg0 key="txa.OutletDesc">
+        </arg0>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>50</var-value>
+        </var>
+      </field>
+      <field property="txtAddress1" depends="required,minlength,maxlength">
+        <arg0 key="txt.Address1">
+        </arg0>
+        <arg1 name="minlength" key="${var:minlength}" resource="false">
+        </arg1>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>minlength</var-name>
+          <var-value>5</var-value>
+        </var>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>25</var-value>
+        </var>
+      </field>
+      <field property="txtAddress2" depends="maxlength">
+        <arg0 key="txt.Address2">
+        </arg0>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>25</var-value>
+        </var>
+      </field>
+      <field property="txtAddress3" depends="maxlength">
+        <arg0 key="txt.Address3">
+        </arg0>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>25</var-value>
+        </var>
+      </field>
+      <field property="txtCity" depends="required">
+        <arg0 key="txt.City">
+        </arg0>
+      </field>
+      <field property="cboState" depends="required">
+        <arg0 key="cbo.State">
+        </arg0>
+      </field>
+      <field property="cboCountry" depends="required">
+        <arg0 key="cbo.Country">
+        </arg0>
+      </field>
+      <field property="txtPincode" depends="required,minlength,maxlength">
+        <arg0 key="txt.Pincode">
+        </arg0>
+        <arg1 name="minlength" key="${var:minlength}" resource="false">
+        </arg1>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>minlength</var-name>
+          <var-value>5</var-value>
+        </var>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>10</var-value>
+        </var>
+      </field>
+    </form>
+  </formset>
+</form-validation>

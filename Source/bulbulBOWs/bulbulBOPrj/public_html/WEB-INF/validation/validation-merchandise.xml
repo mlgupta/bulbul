@@ -1,0 +1,165 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE form-validation PUBLIC "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.0//EN" "http://jakarta.apache.org/commons/dtds/validator_1_0.dtd"><form-validation>
+  <global>
+  </global>
+  <formset>
+    <form name="merchandiseCategoryForm">
+      <field property="txtMerchandiseCategory" depends="required,minlength,maxlength">
+        <arg0 key="txt.MerchandiseCategoryName">
+        </arg0>
+        <arg1 name="minlength" key="${var:minlength}" resource="false">
+        </arg1>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>minlength</var-name> 
+          <var-value>5</var-value>
+        </var>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>10</var-value>
+        </var>
+      </field>
+      <field property="txaMerchandiseCategoryDesc" depends="maxlength">
+        <arg0 key="txa.MerchandiseCategoryDesc">
+        </arg0>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>25</var-value>
+        </var>
+      </field>
+    </form>
+    <form name="merchandiseForm">
+      <field property="txtMerchandise" depends="required,minlength,maxlength">
+        <arg0 key="txt.Merchandise">
+        </arg0>
+        <arg1 name="minlength" key="${var:minlength}" resource="false">
+        </arg1>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>minlength</var-name>
+          <var-value>5</var-value>
+        </var>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>25</var-value>
+        </var>
+      </field>
+      <field property="txaMerchandiseDesc" depends="maxlength">
+        <arg0 key="txa.MerchandiseDesc">
+        </arg0>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>250</var-value>
+        </var>
+      </field>
+      <field property="txaMerchandiseComm" depends="maxlength">
+        <arg0 key="txa.MerchandiseComm">
+        </arg0>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>350</var-value>
+        </var>
+      </field>
+      <field property="txaMaterialDetail" depends="maxlength">
+        <arg0 key="txa.MaterialDetail">
+        </arg0>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>100</var-value>
+        </var>
+      </field>
+      <field property="txtMinimumQuantity" depends="required">
+        <arg0 key="txt.MinimumQuantity">
+        </arg0>
+      </field>
+      <field property="txaDeliveryNote" depends="maxlength">
+        <arg0 key="txa.DeliveryNote">
+        </arg0>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>100</var-value>
+        </var>
+      </field>
+    </form>
+    <form name="pricePromotionForm">
+      <field property="txtStartDate" depends="required">
+        <arg0 key="txt.StartDate">
+        </arg0>
+      </field>
+      <field property="txtEndDate" depends="required">
+        <arg0 key="txt.EndDate">
+        </arg0>
+      </field>
+      <field property="txtThresholdQty" depends="required">
+        <arg0 key="txt.ThresholdQty">
+        </arg0>
+      </field>
+      <field property="txtDiscount" depends="required">
+        <arg0 key="txt.Discount">
+        </arg0>
+      </field>
+      <field property="radExclusiveByPass" depends="required">
+        <arg0 key="tbl.Flag">
+        </arg0>
+      </field>
+    </form>
+    <form name="merchandiseDecorationForm">
+      <field property="txtDecorationName" depends="required,minlength,maxlength">
+        <arg0 key="txt.DecorationName">
+        </arg0>
+        <arg1 name="minlength" key="${var:minlength}" resource="false">
+        </arg1>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>minlength</var-name>
+          <var-value>5</var-value>
+        </var>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>25</var-value>
+        </var>
+      </field>
+      <field property="txaDecorationDescription" depends="maxlength">
+        <arg0 key="txa.DecorationDescription">
+        </arg0>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>100</var-value>
+        </var>
+      </field>
+    </form>
+    <form name="printableAreaForm">
+      <field property="txtPrintableAreaName" depends="required,minlength,maxlength">
+        <arg0 key="txt.PrintableAreaName">
+        </arg0>
+        <arg1 name="minlength" key="${var:minlength}" resource="false">
+        </arg1>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>minlength</var-name>
+          <var-value>3</var-value>
+        </var>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>20</var-value>
+        </var>
+      </field>
+    </form>
+  </formset>
+</form-validation>

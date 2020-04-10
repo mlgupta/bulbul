@@ -1,0 +1,83 @@
+Hello Sudheer,
+
+Here is the example of how the pricing would work:
+
+Assumption:
+-----------
+1) We have a white T-Shirt we want to price.
+2) I am abbreviating all the filedname to save space
+3) I am leaving all the keys as XXX, YYY
+4) Minimum threshold is 6
+5) There are two kinds of discounts: qty based, and adhoc promotions with
+definite start and end dates.
+
+merchandise_price_tbl will have an entry like this:
+
+m_s_t_pk   m_s_t_fk  m_p_p_qty    is_act   created_on
+---------  --------  ---------    ------   ----------
+XXX        YYY       250          1        1901-01-01
+
+The other promotion table will have entries like this (for this
+merchandise):
+
+   Keys    pr_st_dt    pr_end_dt    qty_th  disc  ex_flg  byp_ex_flg
+   ----    ----------  ----------   ------  ----  ------  ----------
+1  YYY     1901-01-01  2099-12-31       6      0       1        0
+2  YYY     1901-01-01  2099-12-31      12     10       1        0
+3  YYY     1901-01-01  2099-12-31      18     15       1        0
+4  YYY     1901-01-01  2099-12-31      24     20       1        0
+
+5  YYY     2005-01-01  2005-01-15      12     10       0        1
+6  YYY     2005-01-05  2005-01-18      20     15       0        1
+7  YYY     2005-02-01  2005-02-14      25     10       0        1
+
+i) Rule 1-4 are mutually exclusive (i.e. only one out of these can be
+applied
+ii) Rule 5-7 are applied to give customer the best price.
+
+Let:
+A = 250.00
+B = A - (10% of A) = 225.00
+C = A - (15% of A) = 212.50
+D = A - (20% of A) = 200.00
+E = B - (10% of B) = 202.50
+F = C - (10% of C) = 191.25
+G = D - (10% of D) = 180.00
+H = C - (15% of C) = 180.65
+I = D - (15% of D) = 170.00
+J = H - (10% of H) = 162.55
+K = I - (10% of I) = 153.00
+
+Explantion:
+-----------
+Case I) If system date were 2004-12-25 and buyer want to purchase:
+        1)  6-11 : the price/qty would be Rs. 250.00   (Rule 1) (A)
+        2) 12-17 : the price/qty would be Rs. 225.00   (Rule 2) (B)
+        3) 18-23 : the price/qty would be Rs. 212.50   (Rule 3) (C)
+        4) 24-   : the price/qty would be Rs. 200.00   (Rule 4) (D)
+
+Case II) If system date were 2005-01-02 and buyer want to purchase:
+        1)  6-11 : the price/qty would be Rs. 250.00   (Rule 1)     (A)
+        2) 12-17 : the price/qty would be Rs. 202.50   (Rule 2 & 5) (E)
+        3) 18-23 : the price/qty would be Rs. 191.25   (Rule 3 & 5) (F)
+        4) 24-   : the price/qty would be Rs. 180.00   (Rule 4 & 5) (G)
+
+Case III) If system date were 2005-01-10 and buyer want to purchase:
+        1)  6-11 : the price/qty would be Rs. 250.00   (Rule 1)     (A)
+        2) 12-17 : the price/qty would be Rs. 202.50   (Rule 2 & 5) (E)
+        3) 18-19 : the price/qty would be Rs. 191.25   (Rule 3 & 5) (F)
+        4) 20-23 : the price/qty would be Rs. 162.55   (Rule 3,5,6) (J)
+        5) 24-   : the price/qty would be Rs. 153.00   (Rule 4,5,6) (K)
+
+Case IV) If system date were 2005-01-17 and buyer want to purchase:
+        1)  6-11 : the price/qty would be Rs. 250.00   (Rule 1)     (A)
+        2) 12-17 : the price/qty would be Rs. 225.00   (Rule 2)     (B)
+        3) 18-19 : the price/qty would be Rs. 212.50   (Rule 3)     (C)
+        4) 20-23 : the price/qty would be Rs. 180.65   (Rule 3 & 6) (H)
+        5) 24-   : the price/qty would be Rs. 170.00   (Rule 4 & 6) (I)
+
+I hope this clarifies the whole pricing algorithm.
+
+Kapil, please go through this and make comments.
+
+Manish 

@@ -1,0 +1,67 @@
+<HTML>
+   <HEAD>
+      <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252"/>
+      <TITLE>Progress Bar</TITLE>
+
+      <script>
+
+      function MM_findObj(n, d) { //v4.01
+        var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+          d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+        if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+        for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+        if(!x && d.getElementById) x=d.getElementById(n); return x;
+      }
+
+      </script>
+      <script src="progressbar.js"></script>
+      <style>
+      .barClass{
+        border:1px solid red;
+        background-color:gray;
+      }
+      .patelClass{
+        background-color:green;
+      }
+      </style>
+   </HEAD>
+   <BODY>
+    <table>
+      <tr><td>
+      <script>
+          varPGBar = new ProgessBar('varPGBar',100,10);
+          varPGBar.pgPatelWidth=10;
+          varPGBar.seperation=3;
+          varPGBar.pbBarClassName='barClass';
+          varPGBar.patelClassName='patelClass';
+          varPGBar.renderPgBar();
+
+       </script>   
+      </td></tr>
+      </table> 
+      <table>
+      <tr><td>
+      <input type="button" value="Start" onclick="return varPGBar.start();" >
+      <input type="button" value="Stop" onclick="return varPGBar.stop();" >
+      </td></tr>
+      </table>
+      
+      <table>
+      <tr><td>
+      <script>
+          varPGBar1 = new ProgessBar('varPGBar1',200,10);
+          varPGBar1.pgPatelWidth=10;
+          varPGBar1.continuous=true;
+          varPGBar1.renderPgBar();
+          
+       </script>   
+      </td></tr>
+      </table> 
+      <table>
+      <tr><td>
+      <input type="button" value="Start" onclick="return varPGBar1.start();" >
+      <input type="button" value="Stop" onclick="return varPGBar1.stop();" >
+      </td></tr>
+      </table>
+   </BODY>
+</HTML>

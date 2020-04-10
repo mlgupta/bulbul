@@ -1,0 +1,266 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE></TITLE>
+</HEAD>
+<BODY>
+<TABLE WIDTH=75% Align="center" BORDER=1 CELLSPACING=1 CELLPADDING=1>
+	<TR>
+		<TH colspan="4">Your Order</TH>
+	</TR>
+	<TR>
+		<TD align="right">Order Number</TD>
+		<TD>12354</TD>
+								
+		<TD align="right">Order Amount</TD>
+		<TD align="right">Rs.4000.00</TD>		
+	</TR>
+	<TR>		
+		<TD align="right">Order Gen. Date</TD>
+		<TD>10 Jan 2005</TD>		
+							
+		<TD align="right">Estimated Shipping Cost </TD>
+		<TD align="right">Rs.100.00</TD>
+	</TR>
+</TABLE>	
+<TABLE WIDTH=75% Align="center" BORDER=1 CELLSPACING=1 CELLPADDING=1>
+	<TR>
+		<TH>You Can Pay By Any Means</TH>
+	</TR>
+	<TR>
+		<TH align="left"><INPUT type="radio" id=radPaymentMode name=radPaymentMode>Pay By Credit Card</TH>
+	</TR>
+	<TR>
+		<TD>
+			Credit Card Logo Here Like Visa, American Express, ICICI etc
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<TABLE WIDTH=100% Align="center" BORDER=1 CELLSPACING=1 CELLPADDING=1>
+				<TR>
+					<TH>
+						Card Type
+					</TH>					
+					<TH>
+						Card Number
+					</TH>					
+					<TH>
+						CVV/CVC Code
+					</TH>			
+					<TH>
+						Expire Year
+					</TH>			
+					<TH>
+						Name Of Card Holder
+					</TH>					
+				</TR>
+				<TR>
+					<TH>
+						<SELECT id=cboCCType name=cboCCType>
+							<OPTION>Visa</OPTION>
+							<OPTION>American Express</OPTION>
+							<OPTION>ICICI</OPTION>
+							<OPTION>Citi Bank</OPTION>	
+						</SELECT>
+					</TD>					
+					<TD>
+						<INPUT type="text" id=txtCCNumber name=txtCCNumber>
+					</TD>					
+					<TD>
+						<INPUT type="text" id=txtCVVCode4CC name=txtCVVCode4CC>
+					</TD>			
+					<TD>
+						<SELECT id=cboExpMonth4CC name=cboExpMonth4CC>
+							<OPTION>Jan</OPTION>
+							<OPTION>Feb</OPTION>
+							<OPTION>Mar</OPTION>
+							<OPTION>Apr</OPTION>
+							<OPTION>...</OPTION>
+							<OPTION>Dec</OPTION>
+						</SELECT>									
+						<SELECT id=cboExpYear4CC name=cboExpYear4CC>
+							<OPTION>2006</OPTION>
+							<OPTION>2005</OPTION>
+							<OPTION>2007</OPTION>
+							<OPTION>2008</OPTION>
+						</SELECT>
+					</TD>			
+					<TD>
+						<INPUT type="text" id=txtCCHolderName name=txtCCHolderName>
+					</TD>					
+				</TR>						
+			</TABLE>									
+		</TD>
+	</TR>
+	<TR>
+		<TD align="center">
+			<INPUT type="button" value="Click To Pay" id=btnClick2Pay name=btnClick2Pay onclick="window.location.replace('post_payment.html')">
+		</TD>
+	</TR>		
+	<TR>
+		<TH align="left"><INPUT type="radio" id=radPaymentMode name=radPaymentMode>Pay By Debit Card</TH>
+	</TR>
+	<TR>
+		<TD>
+			Debit Card Logo Here Like Visa, American Express, ICICI etc
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<TABLE WIDTH=100% Align="center" BORDER=1 CELLSPACING=1 CELLPADDING=1>
+				<TR>
+					<TH>
+						Card Type
+					</TH>					
+					<TH>
+						Card Number
+					</TH>					
+					<TH>
+						CVV/CVC Code
+					</TH>			
+					<TH>
+						Expire Year
+					</TH>			
+					<TH>
+						Name Of Card Holder
+					</TH>					
+				</TR>
+				<TR>
+					<TH>
+						<SELECT id=cboDCType name=cboDCType>
+							<OPTION>Visa</OPTION>
+							<OPTION>American Express</OPTION>
+							<OPTION>ICICI</OPTION>
+							<OPTION>Citi Bank</OPTION>	
+						</SELECT>
+					</TD>					
+					<TD>
+						<INPUT type="text" id=txtDCNumber name=txtDCNumber>
+					</TD>					
+					<TD>
+						<INPUT type="text" id=txtCVVNumber4DC name=txtCVVNumber4DC>
+					</TD>			
+					<TD>
+						<SELECT id=cboExpMonth4DC name=cboExpMonth4DC>
+							<OPTION>Jan</OPTION>
+							<OPTION>Feb</OPTION>
+							<OPTION>Mar</OPTION>
+							<OPTION>Apr</OPTION>
+							<OPTION>...</OPTION>
+							<OPTION>Dec</OPTION>
+						</SELECT>									
+						<SELECT id=cboExpYear4DC name=cboExpYear4DC>
+							<OPTION>2006</OPTION>
+							<OPTION>2005</OPTION>
+							<OPTION>2007</OPTION>
+							<OPTION>2008</OPTION>
+						</SELECT>
+					</TD>			
+					<TD>
+						<INPUT type="text" id=txtDCHolderName name=txtDCHolderName>
+					</TD>					
+				</TR>						
+			</TABLE>									
+		</TD>
+	</TR>
+	<TR>
+		<TD align="center">
+			<INPUT type="button" value="Click To Pay" id=btnClick2Pay name=btnClick2Pay onclick="window.location.replace('post_payment.html')">
+		</TD>
+	</TR>		
+	<TR>
+		<TH align="left"><INPUT type="radio" id=radPaymentMode name=radPaymentMode>Pay By Internet</TH>
+	</TR>
+	<TR>
+		<TD>
+			<TABLE WIDTH=100% Align="center" BORDER=1 CELLSPACING=1 CELLPADDING=1>
+				<TR>
+					<TD width="50%" Height="90px" valign="top">
+						<SELECT size=5 id=lstInetBank name=lstInetBank style="width:100%">
+							<OPTION>ICICI Bank</OPTION>
+							<OPTION>SBI - State Bank Of India</OPTION>
+							<OPTION>UTI Bank </OPTION>
+							<OPTION>IDBI Bank</OPTION>
+							<OPTION>Bill Junction</OPTION>
+						</SELECT>
+					</TD>
+					<TD align="center" width="50%">
+						Logo OF the Bank Here 
+					</TD>
+				<TR>
+			</TABLE>
+		</TD>
+	</TR>	
+	<TR>
+		<TD align="center">
+			<INPUT type="button" value="Click To Pay" id=btnClick2Pay name=btnClick2Pay onclick="window.location.replace('post_payment.html')">
+		</TD>
+	</TR>	
+	<TR>
+		<TH align="left"><INPUT type="radio" id=radPaymentMode name=radPaymentMode>Pay By Cheque/Demand Draft(DD)</TH>
+	</TR>
+	<TR>
+		<TD>
+			Pay In favour of <B>Printoon.com</B> [We Accept Cheques/Demand Drafts of Any Banks Located in India Only]<br>
+			Add @10.0% of the Total Amount against Cheque Collection Charges 
+			No Additional Charges against Demand Draft
+		</TD>
+	</TR>
+	<TR>
+		<TD align="center">
+			<INPUT type="button" value="Click To Pay" id=btnClick2Pay name=btnClick2Pay onclick="window.location.replace('post_payment.html')">
+		</TD>
+	</TR>	
+	<TR>
+		<TH align="left"><INPUT type="radio" id=radPaymentMode name=radPaymentMode>Pay By Cash At Points</TH>
+	</TR>
+	<TR>
+		<TD>
+			Pay Cash at any Cash Points Listed Below [We Accept Cash at Cash Points located In Selected Cities of India  ]
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<TABLE WIDTH=100% Align="center" BORDER=1 CELLSPACING=1 CELLPADDING=1>
+				<TR>
+					<TD width="50%" Height="90px" valign="top">
+						<SELECT id=cboCity4CashPt name=cboCity4CashPt style="width:100%">
+							<OPTION>City 1</OPTION>
+							<OPTION>City 2</OPTION>
+							<OPTION>City 3</OPTION>
+							<OPTION>City 4</OPTION>
+							<OPTION>City 5</OPTION>
+						</SELECT>
+						<SELECT size=5 id=lstCashPt name=lstCashPt style="width:100%">
+							<OPTION>Name Of Cash Point 1</OPTION>
+							<OPTION>Name Of Cash Point 2</OPTION>
+							<OPTION>Name Of Cash Point 3</OPTION>
+							<OPTION>Name Of Cash Point 4</OPTION>
+							<OPTION>Name Of Cash Point 5</OPTION>
+						</SELECT>
+					</TD>
+					<TD align="center" width="50%">
+						Address Of Cash Point Here 
+					</TD>
+				<TR>
+			</TABLE>
+		</TD>
+	</TR>	
+	<TR>
+		<TD align="center">
+			<INPUT type="button" value="Click To Pay" id=btnClick2Pay name=btnClick2Pay onclick="window.location.replace('post_payment.html')">
+		</TD>
+	</TR>	
+	<TR>
+		<TH align="left"><INPUT type="radio" id=radPaymentMode name=radPaymentMode>Cash On Goods Delivery</TH>
+
+	</TR>
+	<TR>
+		<TD align="center">
+			<INPUT type="button" value="Click To Pay" id=btnClick2Pay name=btnClick2Pay onclick="window.location.replace('post_payment.html')">
+		</TD>
+	</TR>	
+</TABLE>
+</BODY>
+</HTML>

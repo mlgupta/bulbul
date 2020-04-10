@@ -1,0 +1,95 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+  
+  <form-beans>
+   <form-bean name="userProfileListForm" type="bulbul.boff.user.actionforms.UserProfileListForm" />
+   <form-bean name="userProfileForm" type="bulbul.boff.user.actionforms.UserProfileForm" />
+   <form-bean name="userPreferencesForm" type="bulbul.boff.user.actionforms.UserPreferencesForm" />
+   <form-bean name="changePasswordForm" type="bulbul.boff.user.actionforms.ChangePasswordForm" />
+  </form-beans>
+
+  <global-forwards>
+   <forward name="userProfileList" path="/userProfileListAction.do" />
+   <forward name="userProfileAdd" path="/user_profile_add.jsp" />
+   <forward name="userProfileEdit" path="/user_profile_edit.jsp" />
+   <forward name="userPreferences" path="/user_preferences.jsp" />
+   <forward name="changePassword" path="/user_change_password.jsp" />
+  </global-forwards>
+
+  <action-mappings>
+                          <!-- User Profile List Action -->
+   <action name="userProfileListForm" path="/userProfileListAction" input="globalErrorHandler" validate="false" type="bulbul.boff.user.actions.UserProfileListAction" scope="request">
+    <forward name="success" path="/user_profile_list.jsp"/>
+   </action>
+                          <!-- User Profile View Action -->
+   <action name="userProfileForm" path="/userProfileViewAction" input="userProfileList" validate="false" type="bulbul.boff.user.actions.UserProfileViewAction" scope="request">
+    <forward name="success" path="/user_profile_view.jsp"/>
+   </action>
+                         <!-- User Profile Add As Action -->
+   <action name="userProfileForm" path="/userProfileAddAsAction" input="userProfileList" validate="false" type="bulbul.boff.user.actions.UserProfileAddAsAction" scope="request">
+    <forward name="success" path="/user_profile_add.jsp"/>
+   </action>
+                          <!-- User Profile Add B4 Action -->
+   <action name="userProfileForm" path="/userProfileAddB4Action" input="userProfileList" validate="false" type="bulbul.boff.user.actions.UserProfileAddB4Action" scope="request">
+    <forward name="success" path="/user_profile_add.jsp"/>
+   </action>
+                          <!-- User Profile Add Action -->
+   <action name="userProfileForm" path="/userProfileAddAction" input="userProfileAdd" type="bulbul.boff.user.actions.UserProfileAddAction" scope="request">
+    <forward name="success" path="/userProfileListAction.do"/>
+   </action>
+                          <!-- User Profile Edit B4 Action -->
+   <action name="userProfileForm" path="/userProfileEditB4Action" input="userProfileList" validate="false" type="bulbul.boff.user.actions.UserProfileEditB4Action" scope="request">
+    <forward name="success" path="/user_profile_edit.jsp"/>
+   </action>
+                          <!-- User Profile Edit Action -->
+   <action name="userProfileForm" path="/userProfileEditAction" input="userProfileEdit" type="bulbul.boff.user.actions.UserProfileEditAction" scope="request">
+    <forward name="success" path="/userProfileListAction.do"/>
+   </action>
+                          <!-- User Profile Delete Action -->
+   <action name="userProfileListForm" path="/userProfileDeleteAction" input="userProfileList" type="bulbul.boff.user.actions.UserProfileDeleteAction" scope="request">
+    <forward name="success" path="/userProfileListAction.do"/>
+   </action>
+                          <!-- User Profile Activate and Deactivate Action -->
+   <action name="userProfileListForm" path="/userProfileActDeactAction" input="userProfileList" type="bulbul.boff.user.actions.UserProfileActDeactAction" scope="request">
+    <forward name="success" path="/userProfileListAction.do"/>
+   </action>
+                          <!-- Change Password B4 Action -->
+   <action name="changePasswordForm" path="/changePasswordB4Action" input="globalErrorHandler" validate="false" type="bulbul.boff.user.actions.ChangePasswordB4Action" scope="request">
+    <forward name="success" path="/user_change_password.jsp"/>
+   </action>
+                          <!-- Change Password Action -->
+   <action name="changePasswordForm" path="/changePasswordAction" input="changePassword" type="bulbul.boff.user.actions.ChangePasswordAction" scope="request">
+    <forward name="success" path="/userPreferencesB4Action.do"/>
+   </action>
+                          <!-- User Preferences B4 Action -->
+   <action name="userPreferencesForm" path="/userPreferencesB4Action" input="globalErrorHandler" validate="false" type="bulbul.boff.user.actions.UserPreferencesB4Action" scope="request">
+    <forward name="success" path="/user_preferences.jsp"/>
+   </action>
+                          <!-- User Preferences Action -->
+   <action name="userPreferencesForm" path="/userPreferencesAction" input="userPreferences" type="bulbul.boff.user.actions.UserPreferencesAction" scope="request">
+    <forward name="success" path="/main.jsp"/>
+   </action>
+                          <!-- User Profile Relay Action -->
+   <action name="userProfileListForm" path="/userProfileRelayAction" input="globalErrorHandler" type="bulbul.boff.user.actions.UserProfileRelayAction" scope="request">
+    <forward name="list" path="/userProfileListAction.do"/>
+    <forward name="view" path="/userProfileViewAction.do"/>
+    <forward name="add" path="/userProfileAddB4Action.do"/>
+    <forward name="addas" path="/userProfileAddAsAction.do"/>
+    <forward name="edit" path="/userProfileEditB4Action.do"/>
+    <forward name="delete" path="/userProfileDeleteAction.do"/>
+    <forward name="act_deact" path="/userProfileActDeactAction.do"/>
+    <forward name="search" path="/userProfileListAction.do"/>
+    <forward name="page" path="/userProfileListAction.do"/>
+    <forward name="preferences" path="/userPreferencesB4Action.do"/>
+   </action>
+  
+  </action-mappings>
+
+  <controller>
+    <set-property property="inputForward" value="true"/>
+  </controller>
+  
+</struts-config>

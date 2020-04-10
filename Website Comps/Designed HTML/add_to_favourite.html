@@ -1,0 +1,88 @@
+<HTML>
+<HEAD>
+<TITLE>Add To Favourite...</TITLE>
+<link href="main.css" rel="stylesheet" type="text/css">
+<link href="catalogue.css" rel="stylesheet" type="text/css">
+<SCRIPT LANGUAGE=javascript>
+<!--
+/*********************MM_findObj starts***********************************/    
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+  d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+/************************ MM_findObj text ends ****************************/
+
+/************************MM_showHideLayers starts**************************/
+function MM_showHideLayers() { //v6.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+  if (obj.style) { obj=obj.style; v=(v=='show')?'':(v=='hide')?'none':v; }
+  obj.display=v; }
+}
+/******************** MM_showHideLayers text ends *************************/
+function btnNewSelect_onclick(){
+	if (MM_findObj('lyrSelect').style.display=='none'){
+		MM_showHideLayers('lyrSelect','','show','lyrNew','','hide');
+		document.forms[0].btnNewSelect.value='New';
+	}else{
+		MM_showHideLayers('lyrSelect','','hide','lyrNew','','show');
+		document.forms[0].btnNewSelect.value='Select';
+	}
+}
+//-->
+</SCRIPT>
+</HEAD>
+<BODY>
+<FORM action="" method=POST id=form1 name=form1>
+<table width="100%" height="100%"  border="0" cellpadding="1" cellspacing="1">
+  <tr>
+    <td valign="middle">
+	<table width="300"  border="0" align="center" cellpadding="0" cellspacing="0">
+	  <tr>
+		<td width="24px" height="17px"><img src="images/catalogue_pan_corner_lt.gif" width="24px" height="17px"></td>
+		<td width="271px" background="images/catalogue_pan_tile17px.gif" class="heading_pan">Add to Favorite :</td>
+		<td width="5px"><img src="images/catalogue_pan_corner_rt.gif" width="5px" height="17px"></td>
+	  </tr>
+	  <tr>
+		<td height="30px" bgcolor="#FFFFFF" colspan="3" class="bdrLeftColor_007C94 bdrRightColor_007C94 bdrTopColor_007C94 text_007C94"><div align="center">Product Name </div></td>
+	  </tr>
+	  <tr>
+		<td bgcolor="#FFFFFF" colspan="3" class="bdrLeftColor_007C94 bdrRightColor_007C94">
+		<table width="260px" height="75px"  border="0" align="center" cellpadding="1" cellspacing="1" class="bdrColor_007C94 bgColor_DDF3FF">
+		  <tr>
+			<td align="center" id="lyrSelect" name="lyrSelect" style="display:''">Select Category:<br><br>
+			<SELECT id=cboCategory name=cboCategory style="width:190px">
+				<OPTION>*****Select Category*****</OPTION>
+			</SELECT>		</td>
+		  </tr>
+		  <tr>
+			<td align="center" id="lyrNew" name="lyrNew" style="display:none">New Category:<br><br>
+			<INPUT type="text" id=txtCategory name=txtCategory style="width:190px">		</td>
+		  </tr>
+		</table>
+		</td>
+	  </tr>
+	  <tr>
+		<td height="30px" bgcolor="#FFFFFF" colspan="3" class="bdrLeftColor_007C94 bdrRightColor_007C94">
+		<div align="center">
+			<input name=btnNewSelect2 type="button" class="buttons" id=btnNewSelect style="width:50px; height:20px" onClick="return btnNewSelect_onclick();" value="New" title="Create New Category">
+			<input name=btnAdd2 type="button" class="buttons" id=btnAdd style="width:50px; height:20px" onClick="window.location.replace('add_to_favourite_success.html')" value="Add" title="Add to category list">
+			<input name=btnClose2 type="button" class="buttons" id=btnClose style="width:50px; height:20px" onClick="return window.close();" value="Close" title="Close Window">
+		  </div>
+		</td>
+	  </tr>
+	  <tr>
+		<td height="3px"><img src="images/catalogue_pan_corner_lb.gif" width="24" height="3"></td>
+		<td bgcolor="#FFFFFF" background="images/catalogue_pan_tile3px.gif"></td>
+		<td><img src="images/catalogue_pan_corner_rb.gif" width="5" height="3"></td>
+	  </tr>
+	</table>
+	</td>
+  </tr>
+</table>
+</FORM>
+</BODY>
+</HTML>

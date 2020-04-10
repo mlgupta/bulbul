@@ -1,0 +1,291 @@
+<html>
+<head>
+<title>Payment</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="main.css" rel="stylesheet" type="text/css">
+<link href="studio.css" rel="stylesheet" type="text/css">
+</head>
+
+<body><br>
+<form>
+<table width="725px" border="0" align="center" cellpadding="0" cellspacing="0" id="panRevisiting">
+      <tr>
+        <td width="24" height="17px"><img src="images/studio_pan_corner_lt.gif" width="24" height="17"></td>
+        <td width="696" background="images/studio_pan_tile17px.gif" class="heading_pan">My Order &gt; Pre-payment :</td>
+        <td width="5"><img src="images/studio_pan_corner_rt.gif" width="5" height="17"></td>
+      </tr>
+	  <tr>
+	    <td height="20px" bgcolor="#FFFFFF" colspan="3" class="bdrLeftColor_CC6A00 bdrRightColor_CC6A00 bdrTopColor_CC6A00 text_bold12">
+		  <table width="600"  border="0" align="center" cellpadding="2" cellspacing="1" class="bgColor_CC6A00" style="margin-top:15px; margin-bottom:15px">
+            <tr bgcolor="#FFFFFF">
+              <td colspan="4" align="center" class="th_F89627">My Order</td>
+            </tr>
+            <tr bgcolor="#FFFFFF">
+              <td width="27%" align="right">Order Number :</td>
+              <td width="23%">12354</td>
+              <td width="33%" align="right">Order Amount :</td>
+              <td width="17%" align="right">Rs.<span class="text_008000">4000.00</span></td>
+            </tr>
+            <tr bgcolor="#FFFFFF">
+              <td align="right">Order Gen. Date :</td>
+              <td>10 Jan 2005</td>
+              <td align="right">Estimated Shipping Cost :</td>
+              <td align="right">Rs.100.00</td>
+            </tr>
+          </table>
+	    </td>
+	  </tr>
+	  <tr>
+	    <td bgcolor="#FFFFFF" colspan="3" class="bdrLeftColor_CC6A00 bdrRightColor_CC6A00 text_bold12">
+		<table width="600px" border="0" align="center" cellpadding="2" cellspacing="1" class="bgColor_CC6A00" style="margin-bottom:15px ">
+          <tr bgcolor="#FFFFFF">
+            <td width="49%" align="center" class="th_F89627" >Choose Your Payment Option Below (You Can Pay By Any Means)</td>
+          </tr>
+          <tr bgcolor="#FFFFFF">
+            <td>
+              <table width=100% align="center" borderR=1 cellspacing="1" cellpadding="1">
+                <tr>
+                  <td colspan="2">
+                    <input id="radio" name="radPaymentMode" type="radio" value="radiobutton">
+                    <span class="text_008000">Pay By Credit Card</span></td>
+                  <td width="49%" rowspan="7" align="center"><img src="images/creditcards_collage.gif" width="199" height="68"> </td>
+                </tr>
+                <tr>
+                  <td width="24%" align="right"> Card Type:</td>
+                  <td width="27%">
+                    <select id="cboCCType" name="cboCCType" style="width:150px">
+                      <option selected>Visa</option>
+                      <option>American Express</option>
+                      <option>ICICI</option>
+                      <option>Citi Bank</option>
+                    </select> 
+                  </td>
+                </tr>
+                <tr>
+                  <td align="right">Card Number:</td>
+                  <td>
+                    <input type="text" id="txtCCNumber" name="txtCCNumber" style="width:150px">
+                  </td>
+                </tr>
+                <tr>
+                  <td align="right">CVV/CVC Code:</td>
+                  <td>
+                    <input type="text" id="txtCVVCode4CC" name="txtCVVCode4CC" style="width:150px">
+                  </td>
+                </tr>
+                <tr>
+                  <td align="right">Expire Year</td>
+                  <td>
+                    <select id="cboExpYear4CC" name="cboExpYear4CC" style="width:73px">
+                      <option selected>Jan</option>
+                      <option>Feb</option>
+                      <option>Mar</option>
+                      <option>Apr</option>
+                      <option>...</option>
+                      <option>Dec</option>
+                    </select>
+                    <select id="select5" name="cboExpYear4CC" style="width:73px">
+                      <option selected>2006</option>
+                      <option>2005</option>
+                      <option>2007</option>
+                      <option>2008</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="right">Name Of Card Holder:</td>
+                  <td>
+                    <input type="text" id="txtCCHolderName" name="txtCCHolderName" style="width:150px">
+                  </td>
+                </tr>
+				<tr>
+                  <td align="right">&nbsp;</td>
+                  <td align="right">
+                    <input type="button" value="Click To Pay" id="btnClick2Pay7" name="btnClick2Pay" class="buttons" style="width:90px; margin-right:8px" onClick="window.location.replace('post_payment.html')">
+				  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr bgcolor="#FFFFFF">
+            <td>
+              <table width=100% align="center" borderR=1 cellspacing="1" cellpadding="1">
+                <tr>
+                  <td colspan="2">
+                    <input id="radio2" name="radPaymentMode" type="radio" value="radiobutton">
+                    <span class="text_008000">Pay By Debit Card</span></td>
+                  <td width="49%" rowspan="7" align="center"><img src="images/debitcards_collage.gif" width="199" height="67"></td>
+                </tr>
+                <tr>
+                  <td width="24%" align="right"> Card Type:</td>
+                  <td width="27%">
+                    <select id="cboDCType" name="cboDCType" style="width:150px">
+                      <option selected>Visa</option>
+                      <option>American Express</option>
+                      <option>ICICI</option>
+                      <option>Citi Bank</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="right">Card Number:</td>
+                  <td>
+                    <input type="text" id="txtDCNumber" name="txtDCNumber" style="width:150px">
+                  </td>
+                </tr>
+                <tr>
+                  <td align="right">CVV/CVC Code:</td>
+                  <td>
+                    <input type="text" id="txtCVVNumber4DC" name="txtCVVNumber4DC" style="width:150px">
+                  </td>
+                </tr>
+                <tr>
+                  <td align="right">Expire Year</td>
+                  <td>
+                    <select id="cboExpYear4DC" name="cboExpYear4DC" style="width:73px">
+                      <option selected>Jan</option>
+                      <option>Feb</option>
+                      <option>Mar</option>
+                      <option>Apr</option>
+                      <option>...</option>
+                      <option>Dec</option>
+                    </select>
+                    <select id="select8" name="select" style="width:73px">
+                      <option selected>2006</option>
+                      <option>2005</option>
+                      <option>2007</option>
+                      <option>2008</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="right">Name Of Card Holder:</td>
+                  <td>
+                    <input type="text" id="txtDCHolderName" name="txtDCHolderName" style="width:150px">
+                  </td>
+                </tr>
+                <tr>
+                  <td align="right">&nbsp;</td>
+                  <td align="right">
+                    <input type="button" value="Click To Pay" id="btnClick2Pay22" name="btnClick2Pay2" class="buttons" style="width:90px; margin-right:8px" onClick="window.location.replace('post_payment.html')">
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr bgcolor="#FFFFFF">
+           <td>
+             <table width=100% align="center" borderR=1 cellspacing="1" cellpadding="1">
+               <tr>
+                   <td>
+                     <input id="radio3" name="radPaymentMode" type="radio" value="radiobutton">
+                     <span class="text_008000">Pay By Internet Banking</span></td>
+                  <td width="50%" rowspan="3" align="center"><img src="images/logo_icici.gif" width="199" height="67"></td>
+               </tr>
+               <tr>
+                 <td width="50%">
+                   <select size=5 id="select13" name="lstInetBank" style="width:100%">
+                     <option>ICICI Bank</option>
+                     <option>SBI - State Bank Of India</option>
+                     <option>UTI Bank </option>
+                     <option>IDBI Bank</option>
+                     <option>Bill Junction</option>
+                   </select>
+</td>
+                </tr>
+               <tr>
+                 <td align="right">
+                   <input type="button" value="Click To Pay" id="btnClick2Pay32" name="btnClick2Pay3" class="buttons" style="width:90px" onClick="window.location.replace('post_payment.html')">
+                 </td>
+                </tr>
+             </table>
+           </td>
+          </tr>
+          <tr bgcolor="#FFFFFF">
+            <td>
+              <table width="100%"  border="0" cellspacing="1" cellpadding="1">
+                <tr>
+                    <td>
+                      <input id="radio4" name="radPaymentMode" type="radio" value="radiobutton">
+                      <span class="text_008000">Pay By Cheque/Demand Draft(DD)</span></td>
+                  <td width="50%" rowspan="3" align="center"><img src="images/dd.jpg" width="199" height="75"></td>
+                </tr>
+                <tr>
+                  <td width="50%">Pay In favour of <strong>Printoon.com </strong> [We Accept Cheques/Demand Drafts of Any Banks Located in India Only] Add @10.0% of the Total Amount against Cheque Collection Charges No Additional Charges against Demand Draft</td>
+                </tr>
+                <tr>
+                  <td align="right" style="margin-right:8px">
+                    <input type="button" value="Click To Pay" id="btnClick2Pay42" name="btnClick2Pay4" class="buttons" style="width:90px" onClick="window.location.replace('post_payment.html')">
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr bgcolor="#FFFFFF">
+           <td>
+             <table width=100% align="center" borderR=1 cellspacing="1" cellpadding="1">
+               <tr>
+                   <td colspan="2">
+                     <input id="radio5" name="radPaymentMode" type="radio" value="radiobutton">
+                     <span class="text_008000">Pay At Cash Points</span> 
+                  [We Accept Cash at Cash Points located In Selected Cities of India ]</td>
+                </tr>
+               <tr>
+                 <td width="50%">
+                   <select id="cboCity4CashPt" name="cboCity4CashPt" style="width:100%">
+                     <option selected>City 1</option>
+                     <option>City 2</option>
+                     <option>City 3</option>
+                     <option>City 4</option>
+                     <option>City 5</option>
+                   </select>
+                   <select size=5 id="lstCashPt" name="lstCashPt" style="width:100%">
+                     <option>Name Of Cash Point 1</option>
+                     <option>Name Of Cash Point 2</option>
+                     <option>Name Of Cash Point 3</option>
+                     <option>Name Of Cash Point 4</option>
+                     <option>Name Of Cash Point 5</option>
+                   </select>
+                 </td>
+                 <td width="50%" rowspan="2" align="center"><img src="images/cash_point.jpg" width="45" height="67"></td>
+               </tr>
+               <tr>
+                 <td align="right">
+                   <input type="button" value="Click To Pay" id="btnClick2Pay52" name="btnClick2Pay5" class="buttons" style="width:90px" onClick="window.location.replace('post_payment.html')">
+                 </td>
+                </tr>
+             </table>
+           </td>
+          </tr>
+          <tr bgcolor="#FFFFFF">
+            <td>
+              <table width="100%"  border="0" cellspacing="1" cellpadding="1">
+                <tr>
+                    <td>
+                      <input id="radio6" name="radPaymentMode" type="radio" value="radiobutton">
+                      <span class="text_008000">Cash On Delivery</span></td>
+                  <td width="50%" rowspan="3" align="center"><img src="images/cash_on_delivery.jpg" width="106" height="67"></td>
+                </tr>
+                <tr>
+                  <td width="50%">Pay to the courier service, after your good is delifered right at your doorstep!</td>
+                </tr>
+                <tr>
+                  <td align="right" style="margin-right:8px">
+                    <input type="button" value="Click To Pay" id="btnClick2Pay6" name="btnClick2Pay6" class="buttons" style="width:90px" onClick="window.location.replace('post_payment.html')">
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+		</td>
+    </tr>
+    <tr>
+        <td height="3px"><img src="images/studio_pan_corner_lb.gif" width="24" height="3"></td>
+        <td bgcolor="#FFFFFF" background="images/studio_pan_tile3px.gif"></td>
+        <td><img src="images/studio_pan_corner_rb.gif" width="5" height="3"></td>
+    </tr>
+</table>
+</form>
+</body>
+</html>

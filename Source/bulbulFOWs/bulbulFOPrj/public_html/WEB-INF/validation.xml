@@ -1,0 +1,436 @@
+<?xml version = '1.0' encoding = 'windows-1252'?>
+<!DOCTYPE form-validation PUBLIC "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.0//EN" "http://jakarta.apache.org/commons/dtds/validator_1_0.dtd"><form-validation>
+  <global>
+  </global>
+  <formset>
+    <form name="customerRegisterForm">
+      <field property="txtCustomerEmailId" depends="required,email">
+        <arg0 key="txt.CustomerEmailId">
+        </arg0>
+      </field>
+      <field property="txtCustomerPassword" depends="required,minlength,maxlength">
+        <arg0 key="txt.CustomerPassword">
+        </arg0>
+        <arg1 name="minlength" key="${var:minlength}" resource="false">
+        </arg1>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>minlength</var-name>
+          <var-value>5</var-value>
+        </var>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>20</var-value>
+        </var>
+      </field>
+      <field property="txtConfirmPassword" depends="required,minlength,maxlength">
+        <arg0 key="txt.ConfirmPassword">
+        </arg0>
+        <arg1 name="minlength" key="${var:minlength}" resource="false">
+        </arg1>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>minlength</var-name>
+          <var-value>5</var-value>
+        </var>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>20</var-value>
+        </var>
+      </field>
+      <field property="txtDateOfBirth" depends="required">
+        <arg0 key="txt.DateOfBirth">
+        </arg0>
+      </field>
+      <field property="txtPwdHintAnswer" depends="required,minlength,maxlength">
+        <arg0 key="txt.PwdHintAnswer">
+        </arg0>
+        <arg1 name="minlength" key="${var:minlength}" resource="false">
+        </arg1>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>minlength</var-name>
+          <var-value>5</var-value>
+        </var>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>50</var-value>
+        </var>
+      </field>
+    </form>
+    <form name="myGraphicsModifyForm">
+      <field property="txtGraphicsTitle" depends="required,minlength,maxlength">
+        <arg0 key="txt.GraphicsTitle">
+        </arg0>
+        <arg1 name="minlength" key="${var:minlength}" resource="false">
+        </arg1>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>minlength</var-name>
+          <var-value>5</var-value>
+        </var>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>15</var-value>
+        </var>
+      </field>
+      <field property="txaGraphicsDescription" depends="required,maxlength">
+        <arg0 key="txa.GraphicsDescription">
+        </arg0>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>100</var-value>
+        </var>
+      </field>
+    </form>
+    <form name="shippingAddressForm">
+      <field property="txtFullName" depends="required,maxlength">
+        <arg0 key="txt.FullName">
+        </arg0>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>100</var-value>
+        </var>
+      </field>
+      <field property="txtAddressLine1" depends="required,maxlength">
+        <arg0 key="txt.AddressLine1">
+        </arg0>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>100</var-value>
+        </var>
+      </field>
+      <field property="txtAddressLine2" depends="maxlength">
+        <arg0 key="txt.AddressLine2">
+        </arg0>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>100</var-value>
+        </var>
+      </field>
+      <field property="txtCity" depends="required,maxlength">
+        <arg0 key="txt.City">
+        </arg0>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>50</var-value>
+        </var>
+      </field>
+      <field property="txtPincode" depends="required,maxlength">
+        <arg0 key="txt.Pincode">
+        </arg0>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>10</var-value>
+        </var>
+      </field>
+      <field property="txtPhone" depends="required,maxlength">
+        <arg0 key="txt.Phone">
+        </arg0>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>20</var-value>
+        </var>
+      </field>
+      <field property="txtEmailId" depends="required,maxlength,email">
+        <arg0 key="txt.EmailId">
+        </arg0>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>100</var-value>
+        </var>
+      </field>
+    </form>
+    <form name="customerProfileForm">
+      <field property="txtFirstName" depends="maxlength">
+        <arg0 key="txt.FirstName">
+        </arg0>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>20</var-value>
+        </var>
+      </field>
+      <field property="txtLastName" depends="maxlength">
+        <arg0 key="txt.LastName">
+        </arg0>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>20</var-value>
+        </var>
+      </field>
+      <field property="txtAge" depends="integer">
+        <arg0 key="txt.Age">
+        </arg0>
+      </field>
+      <field property="txtAddress1" depends="maxlength">
+        <arg0 key="txt.Address1">
+        </arg0>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>100</var-value>
+        </var>
+      </field>
+      <field property="txtAddress2" depends="maxlength">
+        <arg0 key="txt.Address2">
+        </arg0>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>100</var-value>
+        </var>
+      </field>
+      <field property="txtAddress3" depends="maxlength">
+        <arg0 key="txt.Address3">
+        </arg0>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>100</var-value>
+        </var>
+      </field>
+      <field property="txtCity" depends="maxlength">
+        <arg0 key="txt.City">
+        </arg0>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>25</var-value>
+        </var>
+      </field>
+      <field property="txtState" depends="maxlength">
+        <arg0 key="cbo.State">
+        </arg0>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>25</var-value>
+        </var>
+      </field>
+      <field property="txtCountry" depends="maxlength">
+        <arg0 key="cbo.Country">
+        </arg0>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>25</var-value>
+        </var>
+      </field>
+      <field property="txtPincode" depends="maxlength">
+        <arg0 key="txt.Pincode">
+        </arg0>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>10</var-value>
+        </var>
+      </field>
+    </form>
+    <form name="changePasswordForm">
+      <field property="txtOldPassword" depends="required">
+        <arg0 key="txt.OldPassword">
+        </arg0>
+      </field>
+      <field property="txtNewPassword" depends="required,minlength,maxlength">
+        <arg0 key="txt.NewPassword">
+        </arg0>
+        <arg1 name="minlength" key="${var:minlength}" resource="false">
+        </arg1>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>minlength</var-name>
+          <var-value>5</var-value>
+        </var>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>20</var-value>
+        </var>
+      </field>
+      <field property="txtConfirmPassword" depends="required,minlength,maxlength">
+        <arg0 key="txt.ConfirmNewPassword">
+        </arg0>
+        <arg1 name="minlength" key="${var:minlength}" resource="false">
+        </arg1>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>minlength</var-name>
+          <var-value>5</var-value>
+        </var>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>20</var-value>
+        </var>
+      </field>
+    </form>
+    <form name="changeEmailIdForm">
+      <field property="txtOldEmailId" depends="required,email">
+        <arg0 key="txt.OldEmailId">
+        </arg0>
+      </field>
+      <field property="txtNewEmailId" depends="required,minlength,maxlength,email">
+        <arg0 key="txt.NewEmailId">
+        </arg0>
+        <arg1 name="minlength" key="${var:minlength}" resource="false">
+        </arg1>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>minlength</var-name>
+          <var-value>5</var-value>
+        </var>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>50</var-value>
+        </var>
+      </field>
+      <field property="txtConfirmEmailId" depends="required,minlength,maxlength,email">
+        <arg0 key="txt.ConfirmNewEmailId">
+        </arg0>
+        <arg1 name="minlength" key="${var:minlength}" resource="false">
+        </arg1>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>minlength</var-name>
+          <var-value>5</var-value>
+        </var>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>50</var-value>
+        </var>
+      </field>
+    </form>
+    <form name="designSaveForm">
+      <field property="txtDesignName" depends="required,minlength,maxlength">
+        <arg0 key="txt.DesignName">
+        </arg0>
+        <arg1 name="minlength" key="${var:minlength}" resource="false">
+        </arg1>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>minlength</var-name>
+          <var-value>5</var-value>
+        </var>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>15</var-value>
+        </var>
+      </field>
+      <field property="txtYourEmailId" depends="required,minlength,maxlength,email">
+        <arg0 key="txt.YourEmailId">
+        </arg0>
+        <arg1 name="minlength" key="${var:minlength}" resource="false">
+        </arg1>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>minlength</var-name>
+          <var-value>5</var-value>
+        </var>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>50</var-value>
+        </var>
+      </field>
+    </form>
+    <form name="paymentByCCForm">
+      <field property="txtCCNumber" depends="required,creditCard">
+        <arg0 key="txt.CardNumber">
+        </arg0>
+      </field>
+      <field property="txtCVVCode4CC" depends="required,minlength,maxlength">
+        <arg0 key="txt.CVV/CVCCode">
+        </arg0>
+        <arg1 name="minlength" key="${var:minlength}" resource="false">
+        </arg1>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>minlength</var-name>
+          <var-value>3</var-value>
+        </var>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>3</var-value>
+        </var>
+      </field>
+      <field property="txtCCHolderName" depends="required">
+        <arg0 key="txt.NameOfCardHolder">
+        </arg0>       
+      </field>
+    </form>
+    <form name="paymentByDCForm">
+      <field property="txtDCNumber" depends="required,creditCard">
+        <arg0 key="txt.CardNumber">
+        </arg0>
+      </field>
+      <field property="txtCVVCode4DC" depends="required,minlength,maxlength">
+        <arg0 key="txt.CVV/CVCCode">
+        </arg0>
+        <arg1 name="minlength" key="${var:minlength}" resource="false">
+        </arg1>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false">
+        </arg1>
+        <var>
+          <var-name>minlength</var-name>
+          <var-value>3</var-value>
+        </var>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>3</var-value>
+        </var>
+      </field>
+      <field property="txtDCHolderName" depends="required">
+        <arg0 key="txt.NameOfCardHolder">
+        </arg0>       
+      </field>
+    </form>
+    <form name="paymentByInetForm">
+      <field property="lstInetBank" depends="required">
+        <arg0 key="lst.InetBank">
+        </arg0>
+      </field>      
+    </form>
+    <form name="paymentByCashAtCashPtForm">
+      <field property="lstCashPt" depends="required">
+        <arg0 key="lst.CashPt">
+        </arg0>
+      </field>      
+    </form>
+  </formset>
+</form-validation>
+

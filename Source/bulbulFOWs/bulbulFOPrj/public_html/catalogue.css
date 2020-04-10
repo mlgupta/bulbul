@@ -1,0 +1,98 @@
+body {
+	background-color: #CFCEF8;
+	background-image: url("images/catalogue_bgtile_stars.jpg");
+	/*background-repeat:repeat-y;*/
+}
+.bgColor_DDF3FF {
+	background-color: #DDF3FF;
+}
+.bgColor_007C94 {
+	background-color: #007C94;
+}
+.th_01A0BF {
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 11px; font-weight:bold;
+	color:#FFFFFF;
+	background-color:#01A0BF;
+}
+.bdrColor_007C94 {
+	border:1px solid #007C94;
+	font-size: 11px;
+}
+.bdrBottomColor_007C94 {
+	border-bottom:1px solid #007C94;
+}
+.bdrLeftColor_007C94 {
+	border-left:1px solid #007C94;
+}
+.bdrTopColor_007C94 {
+	border-top:1px solid #007C94;
+}
+.bdrRightColor_007C94 {
+	border-Right:1px solid #007C94;
+}
+.heading_pan {
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FFFFFF;
+	font-weight:bold;
+}
+.buttons {
+	/*BORDER-RIGHT: 1px solid #006600; BORDER-BOTTOM: 1px solid #006600;
+	BORDER-LEFT: 1px solid #006600; BORDER-TOP: 1px solid #006600;*/
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	FONT-WEIGHT: normal; FONT-SIZE: 11px; color: #333333; 
+	BACKGROUND-IMAGE: url(images/butt_tile_catalogue.gif); BACKGROUND-REPEAT: repeat-x;
+}
+A.linkMenu:link {
+	FONT-WEIGHT: bold;FONT-SIZE: 12px;TEXT-DECORATION: none;font-family: Arial, Verdana, Helvetica, sans-serif;color: #007C94;
+}
+A.linkMenu:visited {
+		FONT-WEIGHT: bold;FONT-SIZE: 12px;TEXT-DECORATION: none;font-family: Arial, Verdana, Helvetica, sans-serif;color: #007C94;
+}
+A.linkMenu:hover {
+		FONT-WEIGHT: bold;FONT-SIZE: 12px;TEXT-DECORATION: none;font-family: Arial, Verdana, Helvetica, sans-serif;color: #FFFFFF; background-color:#01A0BF
+}
+A.linkMenu:active {
+		FONT-WEIGHT: bold;FONT-SIZE: 12px;TEXT-DECORATION: none;font-family: Arial, Verdana, Helvetica, sans-serif;color: #007C94;
+}
+
+/*********** Following classes are for page navigation  ************/
+A.linkPageNav:link {
+	FONT-WEIGHT: normal;FONT-SIZE: 9px;TEXT-DECORATION:underline; font-family: Verdana, Arial, Helvetica, sans-serif;color: #333333;
+}
+A.linkPageNav:visited {
+		FONT-WEIGHT: normal;FONT-SIZE: 9px;TEXT-DECORATION:underline; font-family: Verdana, Arial, Helvetica, sans-serif;color: #333333;
+}
+A.linkPageNav:hover {
+		FONT-WEIGHT: normal;FONT-SIZE: 9px;TEXT-DECORATION:none; font-family: Verdana, Arial, Helvetica, sans-serif;color: #333333;
+}
+A.linkPageNav:active {
+		FONT-WEIGHT: normal;FONT-SIZE: 9px;TEXT-DECORATION:underline; font-family: Verdana, Arial, Helvetica, sans-serif;color: #333333;
+}
+
+.linkPageNavCurrentPage {
+		FONT-WEIGHT: bold;FONT-SIZE: 9px;TEXT-DECORATION:none; font-family: Verdana, Arial, Helvetica, sans-serif;color: #007C94;
+}
+/*****/
+/*********** Following classes are for table row link  ************/
+A.linkTableRow:link {
+	FONT-WEIGHT: normal;FONT-SIZE: 11px;TEXT-DECORATION:underline; font-family: Verdana, Arial, Helvetica, sans-serif;color: #007C94;
+}
+A.linkTableRow:visited {
+		FONT-WEIGHT: normal;FONT-SIZE: 11px;TEXT-DECORATION:none; font-family: Verdana, Arial, Helvetica, sans-serif;color: #007C94;
+}
+A.linkTableRow:hover {
+		FONT-WEIGHT: normal;FONT-SIZE: 11px;TEXT-DECORATION:none; font-family: Verdana, Arial, Helvetica, sans-serif;color: #007C94;
+}
+A.linkTableRow:active {
+		FONT-WEIGHT: normal;FONT-SIZE: 11px;TEXT-DECORATION:none; font-family: Verdana, Arial, Helvetica, sans-serif;color: #007C94;
+}
+/*****/
+
+.text_007C94 {
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #007C94;
+	font-weight:bold;
+}

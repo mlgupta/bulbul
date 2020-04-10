@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<user-access>
+  <module id="001" name="User">
+      <permission id="001" name="View"/>
+      <permission id="002" name="Add"/>
+      <permission id="003" name="Edit"/>
+      <permission id="004" name="Delete"/>
+      <permission id="005" name="Activate/Deactivate"/>
+      <permission id="006" name="AddAs"/>
+  </module>
+  <module id="002" name="Outlet">
+      <permission id="001" name="View"/>
+      <permission id="002" name="Add"/>
+      <permission id="003" name="Edit"/>
+      <permission id="004" name="Delete"/>
+      <permission id="005" name="Activate/Deactivate"/>
+  </module>
+  <module id="003" name="Internet Bank">
+      <permission id="001" name="View"/>
+      <permission id="002" name="Add"/>
+      <permission id="003" name="Edit"/>
+      <permission id="004" name="Delete"/>
+      <permission id="005" name="Activate/Deactivate"/>
+  </module>
+  <module id="004" name="Font">
+      <permission id="001" name="View"/>
+      <permission id="002" name="Add"/>
+      <permission id="003" name="Edit"/>
+      <permission id="004" name="Delete"/>
+      <permission id="005" name="Activate/Deactivate"/>
+      <permission id="006" name="Move"/>
+  </module>
+  <module id="005" name="Clipart">
+      <permission id="001" name="View"/>
+      <permission id="002" name="Add"/>
+      <permission id="003" name="Edit"/>
+      <permission id="004" name="Delete"/>
+      <permission id="005" name="Activate/Deactivate"/>
+      <permission id="006" name="Move"/>
+  </module>
+  <module id="006" name="Merchandise">
+      <permission id="001" name="View"/>
+      <permission id="002" name="Add"/>
+      <permission id="003" name="Edit"/>
+      <permission id="004" name="Delete"/>
+      <permission id="005" name="Activate/Deactivate"/>
+      <permission id="006" name="Move"/>
+      <permission id="007" name="Copy"/>
+  </module>
+  <module id="007" name="Size Type">
+      <permission id="001" name="View"/>
+      <permission id="002" name="Add"/>
+      <permission id="003" name="Edit"/>
+      <permission id="004" name="Delete"/>
+      <permission id="005" name="Activate/Deactivate"/>
+  </module>
+  <module id="008" name="Size">
+      <permission id="001" name="View"/>
+      <permission id="002" name="Add"/>
+      <permission id="003" name="Edit"/>
+      <permission id="004" name="Delete"/>
+      <permission id="005" name="Activate/Deactivate"/>
+  </module>
+  <module id="009" name="Price Promotion">
+      <permission id="001" name="View"/>
+      <permission id="002" name="Add"/>
+      <permission id="003" name="Edit"/>
+      <permission id="004" name="Delete"/>
+      <permission id="005" name="Activate/Deactivate"/>
+  </module>
+  <module id="010" name="Decoration">
+      <permission id="001" name="View"/>
+      <permission id="002" name="Add"/>
+      <permission id="003" name="Edit"/>
+      <permission id="004" name="Delete"/>
+      <permission id="005" name="Activate/Deactivate"/>
+  </module>
+  <module id="011" name="Printable Area">
+      <permission id="001" name="View"/>
+      <permission id="002" name="Add"/>
+      <permission id="003" name="Edit"/>
+      <permission id="004" name="Delete"/>
+      <permission id="005" name="Activate/Deactivate"/>
+  </module>
+  
+</user-access>

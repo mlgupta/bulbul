@@ -1,0 +1,165 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+
+  <form-beans>
+    <form-bean name="clipartCategoryListForm" type="bulbul.boff.ca.clipart.actionforms.ClipartCategoryListForm"/>
+    <form-bean name="clipartListForm" type="bulbul.boff.ca.clipart.actionforms.ClipartListForm"/>
+    <form-bean name="clipartCategoryForm" type="bulbul.boff.ca.clipart.actionforms.ClipartCategoryForm"/>
+    <form-bean name="clipartForm" type="bulbul.boff.ca.clipart.actionforms.ClipartForm"/>
+  </form-beans>
+  
+  <global-forwards>
+    <forward name="clipartList" path="/clipartListAction.do"/>
+    <forward name="clipartCategoryAdd" path="/clipart_category_add.jsp"/>
+    <forward name="clipartCategoryEdit" path="/clipart_category_edit.jsp"/>
+    <forward name="clipartAdd" path="/clipart_add.jsp"/>
+    <forward name="clipartEdit" path="/clipart_edit.jsp"/>
+  </global-forwards>
+
+  <action-mappings>
+                          <!-- Clipart Category List Action -->                   
+    <action name="clipartListForm" path="/clipartCategoryListAction" input="globalErrorHandler" type="bulbul.boff.ca.clipart.actions.ClipartCategoryListAction" scope="request">
+     <forward name="success" path="/clipart_category_list.jsp"/>
+    </action>
+                          <!-- Clipart List Action --> 
+    <action name="clipartListForm" path="/clipartListAction" input="globalErrorHandler" validate="false" type="bulbul.boff.ca.clipart.actions.ClipartListAction" scope="request">
+     <forward name="success" path="/clipart_list.jsp"/>
+    </action>
+                          <!-- Clipart Category View Action -->
+    <action name="clipartCategoryForm" path="/clipartCategoryViewAction" input="clipartList" validate="false" type="bulbul.boff.ca.clipart.actions.ClipartCategoryViewAction" scope="request">
+     <forward name="success" path="/clipart_category_view.jsp"/>
+    </action>       
+                          <!-- Clipart Category Add B4 Action -->
+    <action name="clipartCategoryForm" path="/clipartCategoryAddB4Action" input="clipartList" validate="false" type="bulbul.boff.ca.clipart.actions.ClipartCategoryAddB4Action" scope="request">
+      <forward name="success" path="/clipart_category_add.jsp"/>
+    </action>                      
+                          <!-- Clipart Category Add Action -->
+    <action name="clipartCategoryForm" path="/clipartCategoryAddAction" input="clipartCategoryAdd" type="bulbul.boff.ca.clipart.actions.ClipartCategoryAddAction" scope="request">    
+     <forward name="success" path="/clipartListAction.do"/>
+    </action>                          
+                          <!-- Clipart Category Edit B4 Action -->
+    <action name="clipartCategoryForm" path="/clipartCategoryEditB4Action" input="clipartList" validate="false" type="bulbul.boff.ca.clipart.actions.ClipartCategoryEditB4Action" scope="request">
+     <forward name="success" path="/clipart_category_edit.jsp"/>
+    </action>
+                          <!-- Clipart Category Edit Action -->
+    <action name="clipartCategoryForm" path="/clipartCategoryEditAction" input="clipartCategoryEdit" type="bulbul.boff.ca.clipart.actions.ClipartCategoryEditAction" scope="request">
+     <forward name="success" path="/clipartListAction.do"/>
+    </action>
+                          <!-- Clipart Category Delete Action -->
+    <action name="clipartListForm" path="/clipartCategoryDeleteAction" input="clipartList" type="bulbul.boff.ca.clipart.actions.ClipartCategoryDeleteAction" scope="request">
+     <forward name="success" path="/clipartListAction.do"/>
+    </action>
+                          <!-- Clipart Category Activate and Deactivate Action -->
+    <action name="clipartListForm" path="/clipartCategoryActDeactAction" input="clipartList" type="bulbul.boff.ca.clipart.actions.ClipartCategoryActDeactAction" scope="request">
+     <forward name="success" path="/clipartListAction.do"/>
+    </action>
+                          <!-- Clipart Category Move B4 Action -->
+    <action name="clipartCategoryListForm" path="/clipartCategoryMoveB4Action" input="clipartList" type="bulbul.boff.ca.clipart.actions.ClipartCategoryMoveB4Action" scope="request">
+     <forward name="success" path="/clipartCategoryListAction.do"/>
+    </action>
+                          <!-- Clipart Category Move Action -->
+    <action name="clipartCategoryListForm" path="/clipartCategoryMoveAction" input="clipartList" type="bulbul.boff.ca.clipart.actions.ClipartCategoryMoveAction" scope="request">
+     <forward name="success" path="/clipartListAction.do"/>
+    </action>
+                          <!-- Clipart View Action -->  
+    <action name="clipartForm" path="/clipartViewAction" input="clipartList" validate="false" type="bulbul.boff.ca.clipart.actions.ClipartViewAction" scope="request">
+     <forward name="success" path="/clipart_view.jsp"/>
+    </action>
+                          <!-- Clipart Add B4 Action -->
+    <action name="clipartForm" path="/clipartAddB4Action" input="clipartList" validate="false" type="bulbul.boff.ca.clipart.actions.ClipartAddB4Action" scope="request">
+     <forward name="success" path="/clipart_add.jsp"/>
+    </action>
+                          <!-- Clipart Add Action -->
+    <action name="clipartForm" path="/clipartAddAction" input="clipartAdd" type="bulbul.boff.ca.clipart.actions.ClipartAddAction" scope="request">
+     <forward name="success" path="/clipartListAction.do"/>
+    </action>
+                          <!-- Clipart Edit B4 Action -->
+    <action name="clipartForm" path="/clipartEditB4Action" input="clipartList" validate="false" type="bulbul.boff.ca.clipart.actions.ClipartEditB4Action" scope="request">
+     <forward name="success" path="/clipart_edit.jsp"/>
+    </action>
+                          <!-- Clipart Edit Action -->
+    <action name="clipartForm" path="/clipartEditAction" input="clipartEdit" type="bulbul.boff.ca.clipart.actions.ClipartEditAction" scope="request">
+     <forward name="success" path="/clipartListAction.do"/>
+    </action>
+                          <!-- Clipart Delete Action -->
+    <action name="clipartListForm" path="/clipartDeleteAction" input="clipartList" type="bulbul.boff.ca.clipart.actions.ClipartDeleteAction" scope="request">
+     <forward name="success" path="/clipartListAction.do"/>
+    </action>
+                          <!-- Clipart Activate and Deactivate Action -->
+    <action name="clipartListForm" path="/clipartActDeactAction" input="clipartList" type="bulbul.boff.ca.clipart.actions.ClipartActDeactAction" scope="request">
+     <forward name="success" path="/clipartListAction.do"/>
+    </action>
+                          <!-- Clipart Move B4 Action -->
+    <action name="clipartCategoryListForm" path="/clipartMoveB4Action" input="clipartList" type="bulbul.boff.ca.clipart.actions.ClipartMoveB4Action" scope="request">
+     <forward name="success" path="/clipartCategoryListAction.do"/>
+    </action>
+                          <!-- Clipart Move Action -->
+    <action name="clipartCategoryListForm" path="/clipartMoveAction" input="clipartList" type="bulbul.boff.ca.clipart.actions.ClipartMoveAction" scope="request">
+     <forward name="success" path="/clipartListAction.do"/>
+    </action>
+    
+                          <!-- Clipart Preview Action -->
+    <action name="clipartForm" path="/clipartPreviewAction" type="bulbul.boff.ca.clipart.actions.ClipartPreviewAction" validate="false" scope="request"/>
+
+                          <!-- Clipart Diplay Action -->
+    <action  path="/clipartDisplayAction" type="bulbul.boff.ca.clipart.actions.ClipartDisplayAction"  scope="request"/>
+
+                          <!-- Clipart TreeView Action -->
+   <action  path="/clipartTreeViewAction" input="globalErrorHandler" type="bulbul.boff.ca.clipart.actions.ClipartTreeViewAction" scope="request">
+    <forward name="success" path="/clipart_treeview.jsp"/>
+   </action>
+                          <!-- Clipart TreeView Append Action -->
+   <action  path="/clipartTreeViewAppendAction" input="globalErrorHandler" type="bulbul.boff.ca.clipart.actions.ClipartTreeViewAppendAction" scope="request">
+    <forward name="success" path="/clipart_treeview.jsp"/>
+   </action>
+                          <!-- Clipart Category Up Action -->     
+   <action name="clipartListForm" path="/clipartUpAction" input="globalErrorHandler" validate="false" type="bulbul.boff.ca.clipart.actions.ClipartUpAction" scope="request">
+    <forward name="success" path="/clipartListAction.do"/>
+   </action>
+                          <!-- Clipart Category TreeView Action -->
+   <action  path="/clipartCategoryTreeViewAction" input="globalErrorHandler" type="bulbul.boff.ca.clipart.actions.ClipartCategoryTreeViewAction" scope="request">
+    <forward name="success" path="/clipart_category_treeview.jsp"/>
+   </action>
+                          <!-- Clipart Category TreeView Append Action -->
+   <action  path="/clipartCategoryTreeViewAppendAction" input="globalErrorHandler" type="bulbul.boff.ca.clipart.actions.ClipartCategoryTreeViewAppendAction" scope="request">
+    <forward name="success" path="/clipart_category_treeview.jsp"/>
+   </action>
+    
+                          <!-- Clipart Relay Action -->
+    <action name="clipartListForm" path="/clipartRelayAction" input="globalErrorHandler" type="bulbul.boff.ca.clipart.actions.ClipartRelayAction" scope="request">
+      <forward name="cat_list" path="/clipartCategoryListAction.do"/>
+      <forward name="clipart_list" path="/clipartListAction.do"/>
+      <forward name="cat_view" path="/clipartCategoryViewAction.do"/>
+      <forward name="cat_add" path="/clipartCategoryAddB4Action.do"/>
+      <forward name="cat_edit" path="/clipartCategoryEditB4Action.do"/>
+      <forward name="cat_delete" path="/clipartCategoryDeleteAction.do"/>
+      <forward name="cat_act_deact" path="/clipartCategoryActDeactAction.do"/>
+      <forward name="cat_moveB4" path="/clipartCategoryMoveB4Action.do"/>
+      <forward name="clipart_view" path="/clipartViewAction.do"/>
+      <forward name="clipart_add" path="/clipartAddB4Action.do"/>
+      <forward name="clipart_edit" path="/clipartEditB4Action.do"/>
+      <forward name="clipart_delete" path="/clipartDeleteAction.do"/>
+      <forward name="clipart_act_deact" path="/clipartActDeactAction.do"/>
+      <forward name="clipart_moveB4" path="/clipartMoveB4Action.do"/>
+      <forward name="search" path="/clipartListAction.do"/>
+      <forward name="page" path="/clipartListAction.do"/>
+      <forward name="clipart_up" path="/clipartUpAction.do"/>
+      <forward name="clipart_tree_view" path="/clipartTreeViewAction.do"/>
+      <forward name="clipart_category_tree_view" path="/clipartCategoryTreeViewAction.do"/>
+      <forward name="clipart_tree_view_append" path="/clipartTreeViewAppendAction.do"/>
+      <forward name="clipart_category_tree_view_append" path="/clipartCategoryTreeViewAppendAction.do"/>
+    </action>
+                       <!-- Clipart Category Relay Action -->
+    <action name="clipartCategoryListForm" path="/clipartCategoryRelayAction" input="globalErrorHandler" type="bulbul.boff.ca.clipart.actions.ClipartCategoryRelayAction" scope="request">
+      <forward name="cat_move" path="/clipartCategoryMoveAction.do"/>
+      <forward name="clipart_move" path="/clipartMoveAction.do"/>
+    </action>
+  </action-mappings>
+
+  <controller>
+    <set-property property="inputForward" value="true"/>
+  </controller>
+  
+  
+</struts-config>

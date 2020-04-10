@@ -1,0 +1,143 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+  <data-sources>
+    <data-source type="org.apache.commons.dbcp.BasicDataSource">
+      <set-property property="driverClassName" value="org.postgresql.Driver"/>
+      <set-property property="url" value="jdbc:postgresql://192.168.0.6/employees"/>
+      <set-property property="username" value="amit"/>
+      <set-property property="password" value="amit"/>
+    </data-source>
+  </data-sources>
+
+  <form-beans>
+   <form-bean name="fontCategoryListForm" type="bulbul.boff.ca.font.actionforms.FontCategoryListForm" />
+   <form-bean name="fontListForm" type="bulbul.boff.ca.font.actionforms.FontListForm" />
+   <form-bean name="fontCategoryForm" type="bulbul.boff.ca.font.actionforms.FontCategoryForm" />
+   <form-bean name="fontForm" type="bulbul.boff.ca.font.actionforms.FontForm" />
+  </form-beans>
+
+  <global-forwards>
+   <forward name="fontList" path="/fontListAction.do" />
+   <forward name="fontCategoryAdd" path="/font_category_add.jsp" />
+   <forward name="fontCategoryEdit" path="/font_category_edit.jsp" />
+   <forward name="fontAdd" path="/font_add.jsp" />
+   <forward name="fontEdit" path="/font_edit.jsp" />
+  </global-forwards>
+
+  <action-mappings>
+                          <!-- Font Category List Action -->
+   <action name="fontListForm" path="/fontCategoryListAction" input="globalErrorHandler" type="bulbul.boff.ca.font.actions.FontCategoryListAction" scope="request">
+    <forward name="success" path="/font_category_list.jsp"/>
+   </action>
+                          <!-- Font List Action -->     
+   <action name="fontListForm" path="/fontListAction" input="globalErrorHandler" type="bulbul.boff.ca.font.actions.FontListAction" scope="request">
+    <forward name="success" path="/font_list.jsp"/>
+   </action>
+                          <!-- Font Category View Action -->
+   <action name="fontCategoryForm" path="/fontCategoryViewAction" input="fontList" type="bulbul.boff.ca.font.actions.FontCategoryViewAction" scope="request">
+    <forward name="success" path="/font_category_view.jsp"/>
+   </action>
+                          <!-- Font Category Add B4 Action -->  
+   <action name="fontCategoryForm" path="/fontCategoryAddB4Action" input="fontList" type="bulbul.boff.ca.font.actions.FontCategoryAddB4Action" scope="request">
+    <forward name="success" path="/font_category_add.jsp"/>
+   </action>
+                          <!-- Font Category Add Action -->
+   <action name="fontCategoryForm" path="/fontCategoryAddAction" input="fontCategoryAdd" type="bulbul.boff.ca.font.actions.FontCategoryAddAction" scope="request">
+    <forward name="success" path="/fontListAction.do"/>
+   </action>
+                          <!-- Font Category Edit B4 Action -->
+   <action name="fontCategoryForm" path="/fontCategoryEditB4Action" input="fontList" type="bulbul.boff.ca.font.actions.FontCategoryEditB4Action" scope="request">
+    <forward name="success" path="/font_category_edit.jsp"/>
+   </action>
+                          <!-- Font Category Edit Action -->
+   <action name="fontCategoryForm" path="/fontCategoryEditAction" input="fontCategoryEdit" type="bulbul.boff.ca.font.actions.FontCategoryEditAction" scope="request">
+    <forward name="success" path="/fontListAction.do"/>
+   </action>
+                          <!-- Font Category Delete Action -->
+   <action name="fontListForm" path="/fontCategoryDeleteAction" input="fontList" type="bulbul.boff.ca.font.actions.FontCategoryDeleteAction" scope="request">
+    <forward name="success" path="/fontListAction.do"/>
+   </action>
+                          <!-- Font Category Activate and Deactivate Action -->  
+   <action name="fontListForm" path="/fontCategoryActDeactAction" input="fontList" type="bulbul.boff.ca.font.actions.FontCategoryActDeactAction" scope="request">
+    <forward name="success" path="/fontListAction.do"/>
+   </action>
+                          <!-- Font Category Move B4 Action -->
+   <action name="fontListForm" path="/fontCategoryMoveB4Action" input="fontList" type="bulbul.boff.ca.font.actions.FontCategoryMoveB4Action" scope="request">
+    <forward name="success" path="/fontCategoryListAction.do"/>
+   </action>
+                          <!-- Font Category Move Action -->
+   <action name="fontCategoryListForm" path="/fontCategoryMoveAction" input="fontList" type="bulbul.boff.ca.font.actions.FontCategoryMoveAction" scope="request">
+    <forward name="success" path="/fontListAction.do"/>
+   </action>
+                          <!-- Font View Action -->
+   <action name="fontForm" path="/fontViewAction" input="fontList" type="bulbul.boff.ca.font.actions.FontViewAction" scope="request">
+    <forward name="success" path="/font_view.jsp"/>
+   </action>
+                          <!-- Font Add B4 Action -->
+   <action name="fontForm" path="/fontAddB4Action" input="fontList" type="bulbul.boff.ca.font.actions.FontAddB4Action" scope="request">
+    <forward name="success" path="/font_add.jsp"/>
+   </action>
+                          <!-- Font Add Action -->   
+   <action name="fontForm" path="/fontAddAction" input="fontAdd" type="bulbul.boff.ca.font.actions.FontAddAction" scope="request">
+    <forward name="success" path="/fontListAction.do"/>
+   </action>
+                          <!-- Font Edit B4 Action -->
+   <action name="fontForm" path="/fontEditB4Action" input="fontList" type="bulbul.boff.ca.font.actions.FontEditB4Action" scope="request">
+    <forward name="success" path="/font_edit.jsp"/>
+   </action>
+                          <!-- Font Edit Action -->
+   <action name="fontForm" path="/fontEditAction" input="fontEdit" type="bulbul.boff.ca.font.actions.FontEditAction" scope="request">
+    <forward name="success" path="/fontListAction.do"/>
+   </action>
+                          <!-- Font Delete Action -->
+   <action name="fontListForm" path="/fontDeleteAction" input="fontList" type="bulbul.boff.ca.font.actions.FontDeleteAction" scope="request">
+    <forward name="success" path="/fontListAction.do"/>
+   </action>
+                          <!-- Font Activate and Deactivate Action -->
+   <action name="fontListForm" path="/fontActDeactAction" input="fontList" type="bulbul.boff.ca.font.actions.FontActDeactAction" scope="request">
+    <forward name="success" path="/fontListAction.do"/>
+   </action>
+                          <!-- Font Move B4 Action -->
+   <action name="fontListForm" path="/fontMoveB4Action" input="fontList" type="bulbul.boff.ca.font.actions.FontMoveB4Action" scope="request">
+    <forward name="success" path="/fontCategoryListAction.do"/>
+   </action>
+                          <!-- Font Move Action -->
+   <action name="fontCategoryListForm" path="/fontCategoryMoveAction" input="fontList" type="bulbul.boff.ca.font.actions.FontCategoryMoveAction" scope="request">
+    <forward name="success" path="/fontListAction.do"/>
+   </action>
+                          <!-- Font Relay Action -->
+   <action name="fontListForm" path="/fontRelayAction" input="globalErrorHandler" type="bulbul.boff.ca.font.actions.FontRelayAction" scope="request">
+    <forward name="cat_list" path="/fontCategoryListAction.do"/>
+    <forward name="font_list" path="/fontListAction.do"/>
+    <forward name="cat_view" path="/fontCategoryViewAction.do"/>
+    <forward name="cat_add" path="/fontCategoryAddB4Action.do"/>
+    <forward name="cat_edit" path="/fontCategoryEditB4Action.do"/>
+    <forward name="cat_delete" path="/fontCategoryDeleteAction.do"/>
+    <forward name="cat_act_deact" path="/fontCategoryActDeactAction.do"/>
+    <forward name="cat_move" path="/fontCategoryMoveB4Action.do"/>
+    <forward name="font_view" path="/fontViewAction.do"/>
+    <forward name="font_add" path="/fontAddB4Action.do"/>
+    <forward name="font_edit" path="/fontEditB4Action.do"/>
+    <forward name="font_delete" path="/fontDeleteAction.do"/>
+    <forward name="font_act_deact" path="/fontActDeactAction.do"/>
+    <forward name="font_move" path="/fontMoveB4Action.do"/>
+    <forward name="search" path="/fontListAction.do"/>
+    <forward name="page" path="/fontListAction.do"/>
+   </action>
+   
+  </action-mappings>
+
+  <controller>
+    <set-property property="inputForward" value="true"/>
+  </controller>
+  
+  <message-resources parameter="bulbul.boff.ca.font.resources.ApplicationResources"/>
+  
+  <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+    <set-property property="pathnames" value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"/>
+  </plug-in>
+
+</struts-config>

@@ -1,0 +1,10 @@
+1.login_admin_test_case.doc
+2.user_profile_test_case.doc
+3.user_preferences_test_case.doc  
+4.outlet_test_case.doc
+5.inetbank_test_case.doc
+6.size_type_and_size_test_case.doc
+7.font_test_case.doc 
+8.clipart_test_case.doc
+9.merchandise_test_case.doc
+

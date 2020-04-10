@@ -1,0 +1,199 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+
+  <data-sources>
+    <data-source type="org.apache.commons.dbcp.BasicDataSource">
+      <set-property property="driverClassName" value="org.postgresql.Driver"/>
+      <set-property property="url" value="jdbc:postgresql://192.168.0.6/employees"/>
+      <set-property property="username" value="amit"/>
+      <set-property property="password" value="amit"/>
+    </data-source>
+  </data-sources>
+
+  <form-beans>
+   <form-bean name="merchandiseCategoryListForm" type="bulbul.boff.ca.merchand.actionforms.MerchandiseCategoryListForm"/>
+   <form-bean name="merchandiseListForm" type="bulbul.boff.ca.merchand.actionforms.MerchandiseListForm"/>
+   <form-bean name="merchandiseCategoryForm" type="bulbul.boff.ca. merchand.actionforms.MerchandiseCategoryForm"/>
+   <form-bean name="merchandiseForm" type="bulbul.boff.ca. merchand.actionforms.MerchandiseForm"/>
+   <form-bean name="pricePromotionListForm" type="bulbul.boff.ca.merchand.actionforms.PricePromotionListForm"/>
+   <form-bean name="pricePromotionForm" type="bulbul.boff.ca.merchand.actionforms.PricePromotionForm"/>
+  </form-beans>
+
+  <global-forwards>
+   <forward name="merchandiseList" path="/merchandiseListAction.do"/>
+   <forward name="merchandiseCategoryAdd" path="/merchandise_category_add.jsp"/>
+   <forward name="merchandiseCategoryEdit" path="/merchandise_category_edit.jsp"/>
+   <forward name="merchandiseAdd" path="/merchandise_add.jsp"/>
+   <forward name="merchandiseEdit" path="/merchandise_edit.jsp"/>
+   <forward name="pricePromotionList" path="/pricePromotionList.do"/>
+   <forward name="pricePromotionAdd" path="/price_promotion_add.jsp"/>
+   <forward name="pricePromotionEdit" path="/price_promotion_edit.jsp"/>   
+  </global-forwards>
+
+  <action-mappings>
+                          <!-- Merchandise Category List Action -->
+   <action name="merchandiseListForm" path="/merchandiseCategoryListAction" input="globalErrorHandler" type="bulbul.boff.ca.merchand.actions.MerchandiseCategoryListAction" scope="request">
+    <forward name="success" path="/merchandise_category_list.jsp"/>
+   </action>
+                          <!-- Merchandise List Action -->
+   <action name="merchandiseListForm" path="/merchandiseListAction" input="globalErrorHandler" type="bulbul.boff.ca.merchand.actions.MerchandiseListAction" scope="request">
+    <forward name="success" path="/merchandise_list.jsp"/>
+   </action>
+                          <!-- Merchandise Category View Action -->
+   <action name="merchandiseCategoryForm " path="/merchandiseCategoryViewAction" input="merchandiseList" type="bulbul.boff.ca.merchand.actions.MerchandiseCategoryViewAction" scope="request">
+    <forward name="success" path="/merchandise_category_view.jsp"/>
+   </action>
+                          <!-- Merchandise Category Add B4 Action -->
+   <action name="merchandiseCategoryForm" path="/merchandiseCategoryAddB4Action" input="merchandiseList" type="bulbul.boff.ca.merchand.actions.MerchandiseCategoryAddB4Action" scope="request">
+    <forward name="success" path="/merchandise_category_add.jsp"/>
+   </action>
+                          <!-- Merchandise Category Add Action -->
+   <action name="merchandiseCategoryForm" path="/merchandiseCategoryAddAction" input="merchandiseCategoryAdd" type="bulbul.boff.ca.merchand.actions.MerchandiseCategoryAddAction" scope="request">
+    <forward name="success" path="/merchandiseListAction.do"/>
+   </action>
+                          <!-- Merchandise Category Edit B4 Action -->
+   <action name="merchandiseCategoryForm" path="/merchandiseCategoryEditB4Action" input="merchandiseList" type="bulbul.boff.ca.merchand.actions.MerchandiseCategoryEditB4Action" scope="request">
+    <forward name="success" path="/merchandise_category_edit.jsp"/>
+   </action>
+                          <!-- Merchandise Category Edit Action -->
+   <action name="merchandiseCategoryForm" path="/merchandiseCategoryEditAction" input="merchandiseCategoryEdit" type="bulbul.boff.ca.merchand.actions.MerchandiseCategoryEditAction" scope="request">
+    <forward name="success" path="/merchandiseListAction.do"/>
+   </action>
+                          <!-- Merchandise Category Delete Action -->
+   <action name="merchandiseListForm" path="/merchandiseCategoryDeleteAction" input="merchandiseList" type="bulbul.boff.ca.merchand.actions.MerchandiseCategoryDeleteAction" scope="request">
+    <forward name="success" path="/merchandiseListAction.do"/>
+   </action>
+                          <!-- Merchandise Category Activate and Deactivate Action -->
+   <action name="merchandiseListForm" path="/merchandiseCategoryActDeactAction" input="merchandiseList" type="bulbul.boff.ca.merchand.actions.MerchandiseCategoryActDeactAction" scope="request">
+    <forward name="success" path="/merchandiseListAction.do"/>
+   </action>
+                          <!-- Merchandise Category Move B4 Action -->
+   <action name="merchandiseListForm" path="/merchandiseCategoryMoveB4Action" input="merchandiseList" type="bulbul.boff.ca.merchand.actions.MerchandiseCategoryMoveB4Action" scope="request">
+    <forward name="success" path="/merchandiseListAction.do"/>
+   </action>
+                          <!-- Merchandise Category Move Action -->  
+   <action name="merchandiseListForm" path="/merchandiseCategoryMoveAction" input="merchandiseList" type="bulbul.boff.ca.merchand.actions.MerchandiseCategoryMoveAction" scope="request">
+    <forward name="success" path="/merchandiseListAction.do"/>
+   </action>
+                          <!-- Merchandise View Action -->
+   <action name="merchandiseForm" path="/merchandiseViewAction" input="merchandiseList" type="bulbul.boff.ca.merchand.actions.MerchandiseViewAction" scope="request">
+    <forward name="success" path="/merchandise_view.jsp"/>
+   </action>
+                          <!-- Merchandise Add B4 Action -->
+   <action name="merchandiseForm" path="/merchandiseAddB4Action" input="merchandiseList" type="bulbul.boff.ca.merchand.actions.MerchandiseAddB4Action" scope="request">
+    <forward name="success" path="/merchandise_add.jsp"/>
+   </action>
+                          <!-- Merchandise Add Action -->   
+   <action name="merchandiseForm" path="/merchandiseAddAction" input="merchandiseAdd" type="bulbul.boff.ca.merchand.actions.MerchandiseAddAction" scope="request">
+    <forward name="success" path="/merchandiseListAction.do"/>
+   </action>
+                          <!-- Merchandise Edit B4 Action -->
+   <action name="merchandiseForm" path="/merchandiseEditB4Action" input="merchandiseList" type="bulbul.boff.ca.merchand.actions.MerchandiseEditB4Action" scope="request">
+    <forward name="success" path="/merchandise_edit.jsp"/>
+   </action>
+                          <!-- Merchandise Edit Action --> 
+   <action name="merchandiseForm" path="/merchandiseEditAction" input="merchandiseEdit" type="bulbul.boff.ca.merchand.actions.MerchandiseEditAction" scope="request">
+    <forward name="success" path="/merchandiseListAction.do"/>
+   </action>
+                          <!-- Merchandise Delete Action -->
+   <action name="merchandiseListForm" path="/merchandiseDeleteAction" input="merchandiseList" type="bulbul.boff.ca.merchand.actions.MerchandiseDeleteAction" scope="request">
+    <forward name="success" path="/merchandiseListAction.do"/>
+   </action>
+                          <!-- Merchandise Activate and Deactivate Actionv -->
+   <action name="merchandiseListForm" path="/merchandiseActDeactAction" input="merchandiseList" type="bulbul.boff.ca.merchand.actions.MerchandiseActDeactAction" scope="request">
+    <forward name="success" path="/merchandiseListAction.do"/>
+   </action>
+                          <!-- Merchandise Move B4 Action -->
+   <action name="merchandiseListForm" path="/merchandiseMoveB4Action" input="merchandiseList" type="bulbul.boff.ca.merchand.actions.MerchandiseMoveB4Action" scope="request">
+    <forward name="success" path="/merchandiseListAction.do"/>
+   </action>
+                          <!-- Merchandise Move Action -->
+   <action name="merchandiseListForm" path="/merchandiseMoveAction" input="merchandiseList" type="bulbul.boff.ca.merchand.actions.MerchandiseMoveAction" scope="request">
+    <forward name="success" path="/merchandiseListAction.do"/>
+   </action>
+                          <!-- Merchandise Copy B4 Action -->  
+   <action name="merchandiseListForm" path="/merchandiseCopyB4Action" input="merchandiseList" type="bulbul.boff.ca.merchand.actions.MerchandiseCopyB4Action" scope="request">
+    <forward name="success" path="/merchandiseListAction.do"/>
+   </action>
+                          <!-- Merchandise Copy Action -->
+   <action name="merchandiseListForm" path="/merchandiseCopyAction" input="merchandiseList" type="bulbul.boff.ca.merchand.actions.MerchandiseCopyAction" scope="request">
+    <forward name="success" path="/merchandiseListAction.do"/>
+   </action>
+                          <!-- Price Promotion List Action -->
+   <action name="pricePromotionListForm" path="/pricePromotionListAction" input="globalErrorHandler" type="bulbul.boff.ca.merchand.actions.PricePromotionListAction" scope="request">
+    <forward name="success" path="/price_promotion_list.jsp"/>
+   </action>
+                          <!-- Price Promotion View Action -->
+   <action name="pricePromotionForm" path="/pricePromotionViewAction" input="pricePromotionList" type="bulbul.boff.ca.merchand.actions.PricePromotionViewAction" scope="request">
+    <forward name="success" path="/price_promotion_view.jsp"/>
+   </action>
+                          <!-- Price Promotion Add B4 Action -->
+   <action name="pricePromotionForm" path="/pricePromotionAddB4Action" input="pricePromotionList" type="bulbul.boff.ca.merchand.actions.PricePromotionAddB4Action" scope="request">
+    <forward name="success" path="/price_promotion_add.jsp"/>
+   </action>
+                          <!-- Price Promotion Bank Add Action -->
+   <action name="pricePromotionForm" path="/pricePromotionAddAction" input="pricePromotionAdd" type="bulbul.boff.ca.merchand.actions. pricePromotionAddAction" scope="request">
+    <forward name="success" path="/pricePromotionListAction.do"/>
+   </action>
+                          <!-- Price Promotion Bank Edit B4 Action -->
+   <action name="pricePromotionForm" path="/pricePromotionEditB4Action" input="pricePromotionList" type="bulbul.boff.ca.merchand.actions.pricePromotionEditB4Action" scope="request">
+    <forward name="success" path="/price_promotion_edit.jsp"/>
+   </action>
+                          <!-- Price Promotion Bank Edit Action -->
+   <action name="pricePromotionForm" path="/pricePromotionEditAction" input="pricePromotionEdit" type="bulbul.boff.ca.merchand.actions.PricePromotionEditAction" scope="request">
+    <forward name="success" path="/pricePromotionListAction.do"/>
+   </action>
+                          <!-- Price Promotion Bank Delete Action -->
+   <action name="pricePromotionListForm" path="/pricePromotionDeleteAction" input="pricePromotionList" type="bulbul.boff.ca.merchand.actions.PricePromotionDeleteAction" scope="request">
+    <forward name="success" path="/pricePromotionListAction.do"/>
+   </action>
+                          <!-- Price Promotion Activate and Deactivate Action -->
+   <action name="pricePromotionListForm" path="/pricePromotionActDeactAction" input="pricePromotionList" type="bulbul.boff.ca.merchand.actions.PricePromotionActDeactAction" scope="request">
+    <forward name="success" path="/pricePromotionListAction.do"/>
+   </action>
+                          <!-- Price Promotion Bank Relay Action -->
+   <action name="pricePromotionListForm" path="/pricePromotionRelayAction" input="globalErrorHandler" type="bulbul.boff.ca.merchand.actions. pricePromotionRelayAction" scope="request">
+    <forward name="list" path="/pricePromotionListAction.do"/>
+    <forward name="view" path="/pricePromotionViewAction.do"/>
+    <forward name="add" path="/pricePromotionAddB4Action.do"/>
+    <forward name="edit" path="/pricePromotionEditB4Action.do"/>
+    <forward name="delete" path="/pricePromotionDeleteAction.do"/>
+    <forward name="act_deact" path="/pricePromotionActDeactAction.do"/>
+    <forward name="search" path="/pricePromotionListAction.do"/>
+    <forward name="page" path="/pricePromotionListAction.do"/>
+   </action>
+                          <!-- Merchandise Relay Action -->  
+   <action name="merchandiseListForm" path="/merchandiseRelayAction" input="globalErrorHandler" type="bulbul.boff.ca.merchand.actions.MerchandiseRelayAction" scope="request">
+    <forward name="cat_list" path="/merchandiseCategoryListAction.do"/>
+    <forward name="merchand_list" path="/merchandiseListAction.do"/>
+    <forward name="cat_view" path="/merchandiseCategoryViewAction.do"/>
+    <forward name="cat_add" path="/merchandiseCategoryAddB4Action.do"/>
+    <forward name="cat_edit" path="/merchandiseCategoryEditB4Action.do"/>
+    <forward name="cat_delete" path="/merchandiseCategoryDeleteAction.do"/>
+    <forward name="cat_act_deact" path="/merchandiseCategoryActDeactAction.do"/>
+    <forward name="cat_move" path="/merchandiseCategoryMoveB4Action.do"/>
+    <forward name="merchand_view" path="/merchandiseViewAction.do"/>
+    <forward name="merchand_add" path="/merchandiseAddB4Action.do"/>
+    <forward name="merchand_edit" path="/merchandiseEditB4Action.do"/>
+    <forward name="merchand_delete" path="/merchandiseDeleteAction.do"/>
+    <forward name="merchand_act_deact" path="/merchandiseActDeactAction.do"/>
+    <forward name="merchand_move" path="/merchandiseMoveB4Action.do"/>
+    <forward name="merchand_copy" path="/merchandiseCopyB4Action.do"/>
+    <forward name="search" path="/merchandiseListAction.do"/>
+    <forward name="page" path="/merchandiseListAction.do"/>
+   </action>
+   
+  </action-mappings>
+
+  <controller>
+    <set-property property="inputForward" value="true"/>
+  </controller> 
+  
+  <message-resources parameter="bulbul.boff.ca.merchand.resources.ApplicationResources"/>
+  
+  <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+    <set-property property="pathnames" value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"/>
+  </plug-in>
+  
+</struts-config>

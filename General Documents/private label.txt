@@ -1,0 +1,41 @@
+Regarding Private Lables
+
+
+1. we can categorize customers like ..
+
+	a. instant - general customer who select products, customise, enters the credential,
+	   saves the design and place orders [may not have profile. Once he creates a profile , he will be individual 	   	   customer]
+
+	b. individual -  creates his profile in a properway,upload his pre-designed merchandise to publish.
+			He can also design, save design and  place orders.
+
+	c. organisation(School/College/Institute) - creates profile in a properway,upload pre-designed merchandise images to 				publish. Can also design, save design and  place orders.
+
+	d. patner - creates profile in a properway,upload pre-designed merchandise to publish. 
+		Can also design, save design and  place orders.
+
+	Changes need to be done in back-end. Not Much changes just we can have cusotmer-category flag. [based on which
+		we can offer different facilities depending upon the cusotmer-category in future. ]
+
+2. Provision for customizing a privated label based design.
+
+	1. There will be restrictions when a visitor customizes these pre-designed images, so while uploading such 	   	   	   pre-designed images we can give a provision to define the logos or private labels and their restriction.
+	
+	Changes need to be done in back-end. Here we have to add a table -- associated_logo_tbl, wherein we can define the 		logos and their restrictions 
+
+3. Front end /User Interface.
+
+	1. Flexibility  towards the userinterface will be normally interms of color-combination, not interms layout change or 	   site element placement. If the customization of the site, as per client requirement, is only in color-combination 	   	   then  it can be used without any modification. Every thing can be dynamic. If client requirements speaks about the 	   change in page content, variations in page layout or change in number of site elements, then we have to have a 	   	   different set of pages for each client with same functionality.
+
+
+
+With these fewer changes we can manage to accomadate the private label requirement in the current design specification.
+
+
+
+	
+
+ 
+
+
+

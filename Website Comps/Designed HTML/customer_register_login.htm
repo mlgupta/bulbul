@@ -1,0 +1,170 @@
+<html>
+<head>
+<title>Customer Register/Login</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="main.css" rel="stylesheet" type="text/css">
+<link href="myprntn.css" rel="stylesheet" type="text/css">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_showHideLayers() { //v6.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'':(v=='hide')?'none':v; }
+    obj.display=v; }
+}
+//-->
+</script>
+</head>
+
+<body><br>
+<table width="725px" border="0" align="center" cellpadding="0" cellspacing="0" id="panLogin">
+      <tr>
+        <td width="24" height="17px"><img src="images/myprntn_pan_corner_lt.gif" width="24" height="17"></td>
+        <td width="696" background="images/myprntn_pan_tile17px.gif" class="heading_pan">Login :</td>
+        <td width="5"><img src="images/myprntn_pan_corner_rt.gif" width="5" height="17"></td>
+      </tr>
+	  <tr>
+        <td height="35px" bgcolor="#FFFFFF" colspan="3" class="bdrLeftColor_006600 bdrRightColor_006600 bdrTopColor_006600 text_bold14">
+		&nbsp;&nbsp;Already a Printoonite? <a href="#" onClick="MM_findObj('loginDrop').style.display=='none'?MM_showHideLayers('loginDrop','','show'):MM_showHideLayers('loginDrop','','hide')">Sign In</a></td>
+      </tr>
+      <tr id="loginDrop" style="display:yes;">
+        <td bgcolor="#FFFFFF" colspan="3" class="bdrLeftColor_006600 bdrRightColor_006600">
+		<form>
+	  <table width="100%"  border="0">
+        <tr>
+          <td width="23%"><div align="right">Email ID: </div></td>
+          <td width="77%"><input id="txtLoginEmailId" name="txtLoginEmailId" type="text" style="width:200px"></td>
+        </tr>
+        <tr>
+          <td><div align="right">Password:</div></td>
+          <td><input id="txtLoginPassword" type="text" name="txtLoginPassword" style="width:200px"></td>
+        </tr>
+        <tr>
+          <td height="30px"></td>
+          <td><input id="btnLogin" name="btnLogin" type="button" class="buttons" value="Sign-In" style="margin-left:76px">
+            <input id="btnLoginCancel" name="btnLoginCancel" type="reset" class="buttons" value="Cancel">
+		  </td>
+        </tr>
+       </table>
+	</form>
+		</td>
+      </tr>
+      <tr>
+        <td height="3px"><img src="images/myprntn_pan_corner_lb.gif" width="24" height="3"></td>
+        <td background="images/myprntn_pan_tile3px.gif"></td>
+        <td><img src="images/myprntn_pan_corner_rb.gif" width="5" height="3"></td>
+      </tr>
+</table>
+<br>
+<table width="725px" border="0" align="center" cellpadding="0" cellspacing="0" id="panRevisiting">
+      <tr>
+        <td width="24" height="17px"><img src="images/myprntn_pan_corner_lt.gif" width="24" height="17"></td>
+        <td width="696" background="images/myprntn_pan_tile17px.gif" class="heading_pan">Revisiting :</td>
+        <td width="5"><img src="images/myprntn_pan_corner_rt.gif" width="5" height="17"></td>
+      </tr>
+	  <tr>
+        <td height="35px" bgcolor="#FFFFFF" colspan="3" class="bdrLeftColor_006600 bdrRightColor_006600 bdrTopColor_006600 text_bold14">
+		<span class="text_bold14">&nbsp;&nbsp;Are You Revisiting Printoon</span>? <a href="#" onClick="MM_findObj('revisitingDrop').style.display=='none'?MM_showHideLayers('revisitingDrop','','show'):MM_showHideLayers('revisitingDrop','','hide')">Sign In</a></td>
+      </tr>
+      <tr id="revisitingDrop" style="display:yes;">
+        <td bgcolor="#FFFFFF" colspan="3" class="bdrLeftColor_006600 bdrRightColor_006600">
+		<form>
+	  <table width="100%"  border="0">
+        <tr>
+          <td width="23%"><div align="right">Email ID: </div></td>
+          <td width="77%"><input id="txtLoginEmailId2" name="txtLoginEmailId2" type="text" style="width:200px"></td>
+        </tr>
+        <tr>
+          <td><div align="right">Code:</div></td>
+          <td><input id="txtLoginPassword2" type="text" name="txtLoginPassword2" style="width:200px"></td>
+        </tr>
+        <tr>
+          <td height="30px"></td>
+          <td><input id="btnLogin2" name="btnLogin2" type="button" class="buttons" style="margin-left:76px" value="Sign-In">
+            <input id="btnLoginCancel2" name="btnLoginCancel2" type="reset" class="buttons" value="Cancel"></td>
+        </tr>
+       </table>
+	</form>
+		</td>
+      </tr>
+      <tr>
+        <td height="3px"><img src="images/myprntn_pan_corner_lb.gif" width="24" height="3"></td>
+        <td background="images/myprntn_pan_tile3px.gif"></td>
+        <td><img src="images/myprntn_pan_corner_rb.gif" width="5" height="3"></td>
+      </tr>
+</table>
+<br>
+<table width="725px" border="0" align="center" cellpadding="0" cellspacing="0" id="panRevisiting">
+      <tr>
+        <td width="24" height="17px"><img src="images/myprntn_pan_corner_lt.gif" width="24" height="17"></td>
+        <td width="696" background="images/myprntn_pan_tile17px.gif" class="heading_pan">Register :</td>
+        <td width="5"><img src="images/myprntn_pan_corner_rt.gif" width="5" height="17"></td>
+      </tr>
+	  <tr>
+        <td height="35px" bgcolor="#FFFFFF" colspan="3" class="bdrLeftColor_006600 bdrRightColor_006600 bdrTopColor_006600 text_bold14">
+		<span class="text_bold14">&nbsp;&nbsp;Be a Printoonite! Register</span> <a href="#" onClick="MM_findObj('registeringDrop').style.display=='none'?MM_showHideLayers('registeringDrop','','show'):MM_showHideLayers('registeringDrop','','hide')">Here</a></td>
+      </tr>
+      <tr id="registeringDrop" style="display:yes;">
+        <td bgcolor="#FFFFFF" colspan="3" class="bdrLeftColor_006600 bdrRightColor_006600">
+		<form>
+	      <table width="100%"  border="0">
+            <tr>
+              <td width="23%"><div align="right"><span class="text_FF3300">*</span> Email ID: </div></td>
+              <td width="77%"><input id="txtCustomerEmailId" type="text" name="txtCustomerEmailId" style="width:200px"></td>
+            </tr>
+            <tr>
+              <td><div align="right"><span class="text_FF3300">*</span> Password:</div></td>
+              <td><input id="txtCustomerPassword" type="password" name="txtCustomerPassword" style="width:200px"></td>
+            </tr>
+            <tr>
+              <td><div align="right"><span class="text_FF3300">*</span> Confirm Password: </div></td>
+              <td><input id="txtConfirmPassword" type="password" name="txtConfirmPassword" style="width:200px"></td>
+            </tr>
+            <tr>
+              <td><div align="right"><span class="text_FF3300">*</span> Date Of Birth: </div></td>
+              <td><input id="txtDateOfBirth" type="text" name="txtDateOfBirth" style="width:200px"></td>
+            </tr>
+            <tr>
+              <td><div align="right"><span class="text_FF3300">*</span> Password Hint Question: </div></td>
+              <td>
+                <select id="cboPwdHintQuestion" name="cboPwdHintQuestion" style="width:200px">
+                  <option selected>-- Select a hint question --</option>
+              </select></td>
+            </tr>
+            <tr>
+              <td><div align="right"><span class="text_FF3300">*</span> Password Hint Answer: </div></td>
+              <td><input id="txtPwdHintAnswer" type="text" name="txtPwdHintAnswer" style="width:200px"></td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>
+                <input id="chkNewsLetter" name="chkNewsLetter" type="checkbox" value="checkbox" checked>
+      I would like to receive occasional news updates and special offers from Printoon. <br>
+      (Your information remains absolutely private and you can unsubscribe at any time)</td>
+            </tr>
+            <tr>
+              <td height="30px"></td>
+              <td><input id="btnRegister" name="btnRegister" type="button" class="buttons" value="Register" style="margin-left:76px">
+                  <input id="btnRegisterCancel" name="btnRegisterCancel" type="reset" class="buttons" value="Cancel"></td>
+            </tr>
+          </table>
+		</form>
+		</td>
+      </tr>
+      <tr>
+        <td height="3px"><img src="images/myprntn_pan_corner_lb.gif" width="24" height="3"></td>
+        <td background="images/myprntn_pan_tile3px.gif"></td>
+        <td><img src="images/myprntn_pan_corner_rb.gif" width="5" height="3"></td>
+      </tr>
+</table>
+</body>
+</html>

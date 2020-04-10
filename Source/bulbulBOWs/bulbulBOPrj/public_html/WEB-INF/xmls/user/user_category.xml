@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<user-categories>
+  <user-category id="001" name="Admin" description="Administrator"/>
+  <user-category id="002" name="Merchandiser" description="Merchandiser"/>
+  <user-category id="003" name="Printer" description="Printer"/>
+  <user-category id="004" name="Sample" description="Sample User"/>
+</user-categories>

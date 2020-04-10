@@ -1,0 +1,370 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+
+  <form-beans>
+   <form-bean name="merchandiseCategoryListForm" type="bulbul.boff.ca.merchand.actionforms.MerchandiseCategoryListForm"/>
+   <form-bean name="merchandiseListForm" type="bulbul.boff.ca.merchand.actionforms.MerchandiseListForm"/>
+   <form-bean name="merchandiseDecorationListForm" type="bulbul.boff.ca.merchand.actionforms.MerchandiseDecorationListForm"/>
+   <form-bean name="merchandiseDecorationForm" type="bulbul.boff.ca.merchand.actionforms.MerchandiseDecorationForm"/>
+   <form-bean name="merchandiseCategoryForm" type="bulbul.boff.ca.merchand.actionforms.MerchandiseCategoryForm"/>
+   <form-bean name="merchandiseForm" type="bulbul.boff.ca.merchand.actionforms.MerchandiseForm"/>
+   <form-bean name="merchandisePrintableAreaForm" type="bulbul.boff.ca.merchand.actionforms.MerchandisePrintableAreaForm"/>
+   <form-bean name="pricePromotionListForm" type="bulbul.boff.ca.merchand.actionforms.PricePromotionListForm"/>
+   <form-bean name="pricePromotionForm" type="bulbul.boff.ca.merchand.actionforms.PricePromotionForm"/>
+   <form-bean name="sizeTypeListSelectForm" type="bulbul.boff.size.actionforms.SizeTypeListForm"/>
+   <form-bean name="printableAreaListForm" type="bulbul.boff.ca.merchand.actionforms.PrintableAreaListForm"/>
+   <form-bean name="printableAreaForm" type="bulbul.boff.ca.merchand.actionforms.PrintableAreaForm"/>
+   <form-bean name="printableAreaPriorityForm" type="bulbul.boff.ca.merchand.actionforms.PrintableAreaPriorityForm"/>
+  </form-beans>
+
+  <global-forwards>
+   <forward name="merchandiseList" path="/merchandiseListAction.do"/>
+   <forward name="merchandiseDecorationList" path="/merchandiseDecorationListAction.do"/>
+   <forward name="merchandiseDecorationAdd" path="/merchandise_decoration_add.jsp"/>
+   <forward name="merchandiseDecorationEdit" path="/merchandise_decoration_edit.jsp"/>
+   <forward name="merchandiseCategoryAdd" path="/merchandise_category_add.jsp"/>
+   <forward name="merchandiseCategoryEdit" path="/merchandise_category_edit.jsp"/>
+   <forward name="merchandiseAdd" path="/merchandise_add.jsp"/>
+   <forward name="merchandiseEdit" path="/merchandise_edit.jsp"/>
+   <forward name="pricePromotionList" path="/pricePromotionListAction.do"/>
+   <forward name="pricePromotionAdd" path="/price_promotion_add.jsp"/>
+   <forward name="pricePromotionEdit" path="/price_promotion_edit.jsp"/>
+   <forward name="printableAreaList" path="/printableAreaListAction.do"/>
+   <forward name="printableAreaAdd" path="/printable_area_add.jsp"/>
+   <forward name="printableAreaPriority" path="/printable_area_priority.jsp"/>
+   <forward name="printableAreaEdit" path="/printable_area_edit.jsp"/>
+   <forward name="merchandisePrintableAreaAdd" path="/merchandisePrintableAreaAddB4Action.do"/>
+   <forward name="merchandisePrintableAreaEdit" path="/merchandise_printable_area_edit.jsp"/>
+  </global-forwards>
+
+  <action-mappings>
+                          <!-- Merchandise Category List Action -->
+   <action name="merchandiseListForm" path="/merchandiseCategoryListAction" input="globalErrorHandler" validate="false" type="bulbul.boff.ca.merchand.actions.MerchandiseCategoryListAction" scope="request">
+    <forward name="success" path="/merchandise_category_list.jsp"/>
+   </action>
+                          <!-- Merchandise List Action -->
+   <action name="merchandiseListForm" path="/merchandiseListAction" input="globalErrorHandler" type="bulbul.boff.ca.merchand.actions.MerchandiseListAction" scope="request">
+    <forward name="success" path="/merchandise_list.jsp"/>
+   </action>
+                          <!-- Merchandise Category View Action -->
+   <action name="merchandiseCategoryForm" path="/merchandiseCategoryViewAction" input="merchandiseList" validate="false" type="bulbul.boff.ca.merchand.actions.MerchandiseCategoryViewAction" scope="request">
+    <forward name="success" path="/merchandise_category_view.jsp"/>
+   </action>
+                          <!-- Merchandise Category Add B4 Action -->
+   <action name="merchandiseCategoryForm" path="/merchandiseCategoryAddB4Action" input="merchandiseList" validate="false" type="bulbul.boff.ca.merchand.actions.MerchandiseCategoryAddB4Action" scope="request">
+    <forward name="success" path="/merchandise_category_add.jsp"/>
+   </action>
+                          <!-- Merchandise Category Add Action -->
+   <action name="merchandiseCategoryForm" path="/merchandiseCategoryAddAction" input="merchandiseCategoryAdd" type="bulbul.boff.ca.merchand.actions.MerchandiseCategoryAddAction" scope="request">
+    <forward name="success" path="/merchandiseListAction.do"/>
+   </action>
+                          <!-- Merchandise Category Edit B4 Action -->
+   <action name="merchandiseCategoryForm" path="/merchandiseCategoryEditB4Action" input="merchandiseList" validate="false" type="bulbul.boff.ca.merchand.actions.MerchandiseCategoryEditB4Action" scope="request">
+    <forward name="success" path="/merchandise_category_edit.jsp"/>
+   </action>
+                          <!-- Merchandise Category Edit Action -->
+   <action name="merchandiseCategoryForm" path="/merchandiseCategoryEditAction" input="merchandiseCategoryEdit" type="bulbul.boff.ca.merchand.actions.MerchandiseCategoryEditAction" scope="request">
+    <forward name="success" path="/merchandiseListAction.do"/>
+   </action>
+                          <!-- Merchandise Category Delete Action -->
+   <action name="merchandiseListForm" path="/merchandiseCategoryDeleteAction" input="merchandiseList" type="bulbul.boff.ca.merchand.actions.MerchandiseCategoryDeleteAction" scope="request">
+    <forward name="success" path="/merchandiseListAction.do"/>
+   </action>
+                          <!-- Merchandise Category Activate and Deactivate Action -->
+   <action name="merchandiseListForm" path="/merchandiseCategoryActDeactAction" input="merchandiseList" type="bulbul.boff.ca.merchand.actions.MerchandiseCategoryActDeactAction" scope="request">
+    <forward name="success" path="/merchandiseListAction.do"/>
+   </action>
+                          <!-- Merchandise Category Move B4 Action -->
+   <action name="merchandiseCategoryListForm" path="/merchandiseCategoryMoveB4Action" input="merchandiseList" type="bulbul.boff.ca.merchand.actions.MerchandiseCategoryMoveB4Action" scope="request">
+    <forward name="success" path="/merchandiseCategoryListAction.do"/>
+   </action>
+                          <!-- Merchandise Category Move Action -->  
+   <action name="merchandiseCategoryListForm" path="/merchandiseCategoryMoveAction" input="merchandiseList" type="bulbul.boff.ca.merchand.actions.MerchandiseCategoryMoveAction" scope="request">
+    <forward name="success" path="/merchandiseListAction.do"/>
+   </action>
+                          <!-- Merchandise Category Size Type Select List Action -->
+   <action name="sizeTypeListSelectForm" path="/merchandiseCategorySizeTypeSelectListAction" input="globalErrorHandler" validate="false" type="bulbul.boff.ca.merchand.actions.MerchandiseCategorySizeTypeSelectListAction" scope="request">
+    <forward name="success" path="/merchandise_category_size_type_select_list.jsp"/>
+   </action>
+                          <!-- Merchandise Category Up Action -->     
+   <action name="merchandiseListForm" path="/merchandiseUpAction" input="globalErrorHandler" validate="false" type="bulbul.boff.ca.merchand.actions.MerchandiseUpAction" scope="request">
+    <forward name="success" path="/merchandiseListAction.do"/>
+   </action>
+                          <!-- Merchandise Category Preview Action -->
+    <action name="merchandiseCategoryForm" path="/merchandiseCategoryPreviewAction" type="bulbul.boff.ca.merchand.actions.MerchandiseCategoryPreviewAction" validate="false" scope="request"/>   
+
+                          <!-- Merchandise Category Diplay Action -->
+    <action  path="/merchandiseCategoryDisplayAction" type="bulbul.boff.ca.merchand.actions.MerchandiseCategoryDisplayAction"  scope="request"/>
+
+                          <!-- Merchandise Category TreeView Action -->
+   <action  path="/merchandiseCategoryTreeViewAction" input="globalErrorHandler" type="bulbul.boff.ca.merchand.actions.MerchandiseCategoryTreeViewAction" scope="request">
+    <forward name="success" path="/merchandise_category_treeview.jsp"/>
+   </action>
+                          <!-- Merchandise Category TreeView Append Action -->
+   <action  path="/merchandiseCategoryTreeViewAppendAction" input="globalErrorHandler" type="bulbul.boff.ca.merchand.actions.MerchandiseCategoryTreeViewAppendAction" scope="request">
+    <forward name="success" path="/merchandise_category_treeview.jsp"/>
+   </action>   
+                          <!-- Merchandise View Action -->
+   <action name="merchandiseForm" path="/merchandiseViewAction" input="merchandiseList" validate="false" type="bulbul.boff.ca.merchand.actions.MerchandiseViewAction" scope="request">
+    <forward name="success" path="/merchandise_view.jsp"/>
+   </action>
+                          <!-- Merchandise Add B4 Action -->
+   <action name="merchandiseForm" path="/merchandiseAddB4Action" input="merchandiseList" validate="false" type="bulbul.boff.ca.merchand.actions.MerchandiseAddB4Action" scope="request">
+    <forward name="success" path="/merchandise_add.jsp"/>
+   </action>
+                          <!-- Merchandise Add Action -->   
+   <action name="merchandiseForm" path="/merchandiseAddAction" input="merchandiseAdd" type="bulbul.boff.ca.merchand.actions.MerchandiseAddAction" scope="request">
+    <forward name="success" path="/merchandisePrintableAreaAddB4Action.do"/>
+    <forward name="cancel" path="/merchandiseListAction.do"/>
+   </action>
+                          <!-- Merchandise Edit B4 Action -->
+   <action name="merchandiseForm" path="/merchandiseEditB4Action" input="merchandiseList" validate="false" type="bulbul.boff.ca.merchand.actions.MerchandiseEditB4Action" scope="request">
+    <forward name="success" path="/merchandise_edit.jsp"/>
+   </action>
+                          <!-- Merchandise Edit Action --> 
+   <action name="merchandiseForm" path="/merchandiseEditAction" input="merchandiseEdit" type="bulbul.boff.ca.merchand.actions.MerchandiseEditAction" scope="request">
+    <forward name="success" path="/merchandisePrintableAreaEditB4Action.do"/>
+    <forward name="cancel" path="/merchandiseListAction.do"/>
+   </action>
+                          <!-- Merchandise Delete Action -->
+   <action name="merchandiseListForm" path="/merchandiseDeleteAction" input="merchandiseList" type="bulbul.boff.ca.merchand.actions.MerchandiseDeleteAction" scope="request">
+    <forward name="success" path="/merchandiseListAction.do"/>
+   </action>
+                          <!-- Merchandise Activate and Deactivate Actionv -->
+   <action name="merchandiseListForm" path="/merchandiseActDeactAction" input="merchandiseList" type="bulbul.boff.ca.merchand.actions.MerchandiseActDeactAction" scope="request">
+    <forward name="success" path="/merchandiseListAction.do"/>
+   </action>
+                          <!-- Merchandise Move B4 Action -->
+   <action name="merchandiseCategoryListForm" path="/merchandiseMoveB4Action" input="merchandiseList" type="bulbul.boff.ca.merchand.actions.MerchandiseMoveB4Action" scope="request">
+    <forward name="success" path="/merchandiseCategoryListAction.do"/>
+   </action>
+                          <!-- Merchandise Move Action -->
+   <action name="merchandiseCategoryListForm" path="/merchandiseMoveAction" input="merchandiseList" type="bulbul.boff.ca.merchand.actions.MerchandiseMoveAction" scope="request">
+    <forward name="success" path="/merchandiseListAction.do"/>
+   </action>
+                          <!-- Merchandise Copy B4 Action -->  
+   <action name="merchandiseCategoryListForm" path="/merchandiseCopyB4Action" input="merchandiseList" type="bulbul.boff.ca.merchand.actions.MerchandiseCopyB4Action" scope="request">
+    <forward name="success" path="/merchandiseCategoryListAction.do"/>
+   </action>
+                          <!-- Merchandise Copy Action -->
+   <action name="merchandiseCategoryListForm" path="/merchandiseCopyAction" input="merchandiseList" type="bulbul.boff.ca.merchand.actions.MerchandiseCopyAction" scope="request">
+    <forward name="success" path="/merchandiseListAction.do"/>
+   </action>
+                          <!-- Merchandise TreeView Action -->
+   <action  path="/merchandiseTreeViewAction" input="globalErrorHandler" type="bulbul.boff.ca.merchand.actions.MerchandiseTreeViewAction" scope="request">
+    <forward name="success" path="/merchandise_treeview.jsp"/>
+   </action>
+                          <!-- Merchandise TreeView Append Action -->
+   <action  path="/merchandiseTreeViewAppendAction" input="globalErrorHandler" type="bulbul.boff.ca.merchand.actions.MerchandiseTreeViewAppendAction" scope="request">
+    <forward name="success" path="/merchandise_treeview.jsp"/>
+   </action>   
+                            <!--Image Display Action-->
+    <action  path="/imageDisplayAction" type="bulbul.boff.general.ImageDisplayAction" validate="false" scope="request">
+    </action>
+                          <!-- Merchandise Display Image Preview Action -->
+    <action name="merchandiseForm" path="/merchandiseDisplayImgPreviewAction" type="bulbul.boff.ca.merchand.actions.MerchandiseDisplayImgPreviewAction" validate="false" scope="request"/>
+
+                              <!-- Merchandise Design Image Preview Action -->
+    <action name="merchandiseForm" path="/merchandiseDesignImgPreviewAction" type="bulbul.boff.ca.merchand.actions.MerchandiseDesignImgPreviewAction" validate="false" scope="request"/>
+
+                          <!-- Merchandise Display Image Diplay Action -->
+    <action  path="/merchandiseDisplayImgDisplayAction" type="bulbul.boff.ca.merchand.actions.MerchandiseDisplayImgDisplayAction"  scope="request"/>
+
+                          <!-- Merchandise Design Image Diplay Action -->
+    <action  path="/merchandiseDesignImgDisplayAction" type="bulbul.boff.ca.merchand.actions.MerchandiseDesignImgDisplayAction"  scope="request"/>
+
+                          <!-- Price Promotion List Action -->
+   <action name="pricePromotionListForm" path="/pricePromotionListAction" input="globalErrorHandler" validate="false" type="bulbul.boff.ca.merchand.actions.PricePromotionListAction" scope="request">
+    <forward name="success" path="/price_promotion_list.jsp"/>
+   </action>
+                          <!-- Price Promotion View Action -->
+   <action name="pricePromotionForm" path="/pricePromotionViewAction" input="pricePromotionList" validate="false" type="bulbul.boff.ca.merchand.actions.PricePromotionViewAction" scope="request">
+    <forward name="success" path="/price_promotion_view.jsp"/>
+   </action>
+                          <!-- Price Promotion Add B4 Action -->
+   <action name="pricePromotionForm" path="/pricePromotionAddB4Action" input="pricePromotionList" validate="false" type="bulbul.boff.ca.merchand.actions.PricePromotionAddB4Action" scope="request">
+    <forward name="success" path="/price_promotion_add.jsp"/>
+   </action>
+                          <!-- Price Promotion Add Action -->
+   <action name="pricePromotionForm" path="/pricePromotionAddAction" input="pricePromotionAdd" type="bulbul.boff.ca.merchand.actions.PricePromotionAddAction" scope="request">
+    <forward name="success" path="/pricePromotionListAction.do"/>
+   </action>
+                          <!-- Price Promotion Edit B4 Action -->
+   <action name="pricePromotionForm" path="/pricePromotionEditB4Action" input="pricePromotionList" validate="false" type="bulbul.boff.ca.merchand.actions.PricePromotionEditB4Action" scope="request">
+    <forward name="success" path="/price_promotion_edit.jsp"/>
+   </action>
+                          <!-- Price Promotion Edit Action -->
+   <action name="pricePromotionForm" path="/pricePromotionEditAction" input="pricePromotionEdit" type="bulbul.boff.ca.merchand.actions.PricePromotionEditAction" scope="request">
+    <forward name="success" path="/pricePromotionListAction.do"/>
+   </action>
+                          <!-- Price Promotion Delete Action -->
+   <action name="pricePromotionListForm" path="/pricePromotionDeleteAction" input="pricePromotionList" type="bulbul.boff.ca.merchand.actions.PricePromotionDeleteAction" scope="request">
+    <forward name="success" path="/pricePromotionListAction.do"/>
+   </action>
+                          <!-- Price Promotion Activate and Deactivate Action -->
+   <action name="pricePromotionListForm" path="/pricePromotionActDeactAction" input="pricePromotionList" type="bulbul.boff.ca.merchand.actions.PricePromotionActDeactAction" scope="request">
+    <forward name="success" path="/pricePromotionListAction.do"/>
+   </action>
+                          <!-- Merchandise Decoration List Action -->
+   <action name="merchandiseDecorationListForm" path="/merchandiseDecorationListAction" input="globalErrorHandler" validate="false" type="bulbul.boff.ca.merchand.actions.MerchandiseDecorationListAction" scope="request">
+    <forward name="success" path="/merchandise_decoration_list.jsp"/>
+   </action>
+                          <!-- Merchandise Decoration Add B4 Action -->
+   <action name="merchandiseDecorationForm" path="/merchandiseDecorationAddB4Action" input="merchandiseDecorationList" validate="false" type="bulbul.boff.ca.merchand.actions.MerchandiseDecorationAddB4Action" scope="request">
+    <forward name="success" path="/merchandise_decoration_add.jsp"/>
+   </action>   
+                          <!-- Merchandise Decoration Add Action -->
+   <action name="merchandiseDecorationForm" path="/merchandiseDecorationAddAction" input="merchandiseDecorationAdd" type="bulbul.boff.ca.merchand.actions.MerchandiseDecorationAddAction" scope="request">
+    <forward name="success" path="/merchandiseDecorationListAction.do"/>
+   </action>
+                          <!-- Merchandise Decoration Edit B4 Action -->
+   <action name="merchandiseDecorationForm" path="/merchandiseDecorationEditB4Action" input="merchandiseDecorationList" validate="false" type="bulbul.boff.ca.merchand.actions.MerchandiseDecorationEditB4Action" scope="request">
+    <forward name="success" path="/merchandise_decoration_edit.jsp"/>
+   </action>   
+                          <!-- Merchandise Decoration Edit Action -->
+   <action name="merchandiseDecorationForm" path="/merchandiseDecorationEditAction" input="merchandiseDecorationEdit"  type="bulbul.boff.ca.merchand.actions.MerchandiseDecorationEditAction" scope="request">
+    <forward name="success" path="/merchandiseDecorationListAction.do"/>
+   </action>
+                          <!-- Merchandise Decoration View Action -->
+   <action name="merchandiseDecorationForm" path="/merchandiseDecorationViewAction" validate="false" input="merchandiseDecorationList"  type="bulbul.boff.ca.merchand.actions.MerchandiseDecorationViewAction" scope="request">
+    <forward name="success" path="/merchandise_decoration_view.jsp"/>
+   </action>
+                          <!-- Merchandise Decoration Delete Action -->
+   <action name="merchandiseDecorationListForm" path="/merchandiseDecorationDeleteAction" input="merchandiseDecorationList" type="bulbul.boff.ca.merchand.actions.MerchandiseDecorationDeleteAction" scope="request">
+    <forward name="success" path="/merchandiseDecorationListAction.do"/>
+   </action>
+                          <!-- Merchandise Decoration Activate and Deactivate Action -->
+   <action name="merchandiseDecorationListForm" path="/merchandiseDecorationActDeactAction" input="merchandiseDecorationList" type="bulbul.boff.ca.merchand.actions.MerchandiseDecorationActDeactAction" scope="request">
+    <forward name="success" path="/merchandiseDecorationListAction.do"/>
+   </action>
+                          <!-- Printable Area List Action -->
+   <action name="printableAreaListForm" path="/printableAreaListAction" input="globalErrorHandler" validate="false" type="bulbul.boff.ca.merchand.actions.PrintableAreaListAction" scope="request">
+    <forward name="success" path="/printable_area_list.jsp"/>
+   </action>
+                          <!-- Printable Area View Action -->
+   <action name="printableAreaForm" path="/printableAreaViewAction" validate="false" input="printableAreaList"  type="bulbul.boff.ca.merchand.actions.PrintableAreaViewAction" scope="request">
+    <forward name="success" path="/printable_area_view.jsp"/>
+   </action>
+                          <!-- Printable Area Add B4 Action -->
+   <action name="printableAreaForm" path="/printableAreaAddB4Action" input="printableAreaList" validate="false" type="bulbul.boff.ca.merchand.actions.PrintableAreaAddB4Action" scope="request">
+    <forward name="success" path="/printable_area_add.jsp"/>
+   </action>   
+                          <!-- Printable Area Add Action -->
+   <action name="printableAreaForm" path="/printableAreaAddAction" input="printableAreaAdd" type="bulbul.boff.ca.merchand.actions.PrintableAreaAddAction" scope="request">
+    <forward name="success" path="/printableAreaListAction.do"/>
+   </action>
+                          <!-- Printable Area Edit B4 Action -->
+   <action name="printableAreaForm" path="/printableAreaEditB4Action" input="printableAreaList" validate="false" type="bulbul.boff.ca.merchand.actions.PrintableAreaEditB4Action" scope="request">
+    <forward name="success" path="/printable_area_edit.jsp"/>
+   </action>   
+                          <!-- Printable Area Edit Action -->
+   <action name="printableAreaForm" path="/printableAreaEditAction" input="printableAreaEdit"  type="bulbul.boff.ca.merchand.actions.PrintableAreaEditAction" scope="request">
+    <forward name="success" path="/printableAreaListAction.do"/>
+   </action>
+                          <!-- Printable Area Delete Action -->
+   <action name="printableAreaListForm" path="/printableAreaDeleteAction" input="printableAreaList" type="bulbul.boff.ca.merchand.actions.PrintableAreaDeleteAction" scope="request">
+    <forward name="success" path="/printableAreaListAction.do"/>
+   </action>
+                          <!-- Printable Area Activate and Deactivate Action -->
+   <action name="printableAreaListForm" path="/printableAreaActDeactAction" input="printableAreaList" type="bulbul.boff.ca.merchand.actions.PrintableAreaActDeactAction" scope="request">
+    <forward name="success" path="/printableAreaListAction.do"/>
+   </action>
+                          <!-- Printable Area Priority B4 Action -->
+   <action name="printableAreaPriorityForm" path="/printableAreaPriorityB4Action" input="printableAreaList" validate="false" type="bulbul.boff.ca.merchand.actions.PrintableAreaPriorityB4Action" scope="request">
+    <forward name="success" path="/printable_area_priority.jsp"/>
+   </action>
+                          <!-- Printable Area Priority Action -->
+   <action name="printableAreaPriorityForm" path="/printableAreaPriorityAction" input="printableAreaPriority" validate="false" type="bulbul.boff.ca.merchand.actions.PrintableAreaPriorityAction" scope="request">
+    <forward name="success" path="/printableAreaListAction.do"/>
+   </action>
+
+                             <!-- Merchandise Printable Area Add B4 Action -->
+   <action name="merchandiseForm" path="/merchandisePrintableAreaAddB4Action" input="merchandiseAdd" validate="false" type="bulbul.boff.ca.merchand.actions.MerchandisePrintableAreaAddB4Action" scope="request">
+    <forward name="success" path="/merchandise_printable_area_add.jsp"/>
+   </action>   
+                          <!-- Merchandise Printable Area Add Action -->
+   <action name="merchandiseForm" path="/merchandisePrintableAreaAddAction" input="merchandisePrintableAreaAdd" validate="false" type="bulbul.boff.ca.merchand.actions.MerchandisePrintableAreaAddAction" scope="request">
+    <forward name="success" path="/merchandiseListAction.do"/>
+   </action>
+                             <!-- Merchandise Printable Area Edit B4 Action -->
+   <action name="merchandiseForm" path="/merchandisePrintableAreaEditB4Action" input="merchandiseEdit" validate="false" type="bulbul.boff.ca.merchand.actions.MerchandisePrintableAreaEditB4Action" scope="request">
+    <forward name="success" path="/merchandise_printable_area_edit.jsp"/>
+   </action>   
+                          <!-- Merchandise Printable Area Edit Action -->
+   <action name="merchandiseForm" path="/merchandisePrintableAreaEditAction" input="merchandisePrintableAreaEdit" validate="false" type="bulbul.boff.ca.merchand.actions.MerchandisePrintableAreaEditAction" scope="request">
+    <forward name="success" path="/merchandiseListAction.do"/>
+   </action>
+                          <!-- Price Promotion Bank Relay Action -->
+   <action name="pricePromotionListForm" path="/pricePromotionRelayAction" input="globalErrorHandler" type="bulbul.boff.ca.merchand.actions.PricePromotionRelayAction" scope="request">
+    <forward name="list" path="/pricePromotionListAction.do"/>
+    <forward name="view" path="/pricePromotionViewAction.do"/>
+    <forward name="add" path="/pricePromotionAddB4Action.do"/>
+    <forward name="edit" path="/pricePromotionEditB4Action.do"/>
+    <forward name="delete" path="/pricePromotionDeleteAction.do"/>
+    <forward name="act_deact" path="/pricePromotionActDeactAction.do"/>
+    <forward name="search" path="/pricePromotionListAction.do"/>
+    <forward name="page" path="/pricePromotionListAction.do"/>
+   </action>
+                          <!-- Merchandise Relay Action -->  
+    <action name="merchandiseListForm" path="/merchandiseRelayAction" input="globalErrorHandler" type="bulbul.boff.ca.merchand.actions.MerchandiseRelayAction" scope="request">
+      <forward name="cat_list" path="/merchandiseCategoryListAction.do"/>
+      <forward name="merchand_list" path="/merchandiseListAction.do"/>
+      <forward name="cat_view" path="/merchandiseCategoryViewAction.do"/>
+      <forward name="cat_add" path="/merchandiseCategoryAddB4Action.do"/>
+      <forward name="cat_edit" path="/merchandiseCategoryEditB4Action.do"/>
+      <forward name="cat_delete" path="/merchandiseCategoryDeleteAction.do"/>
+      <forward name="cat_act_deact" path="/merchandiseCategoryActDeactAction.do"/>
+      <forward name="cat_moveB4" path="/merchandiseCategoryMoveB4Action.do"/>
+      <forward name="merchand_view" path="/merchandiseViewAction.do"/>
+      <forward name="merchand_add" path="/merchandiseAddB4Action.do"/>
+      <forward name="merchand_edit" path="/merchandiseEditB4Action.do"/>
+      <forward name="merchand_delete" path="/merchandiseDeleteAction.do"/>
+      <forward name="merchand_act_deact" path="/merchandiseActDeactAction.do"/>
+      <forward name="merchand_moveB4" path="/merchandiseMoveB4Action.do"/>
+      <forward name="merchand_up" path="/merchandiseUpAction.do"/>
+      <forward name="merchand_copyB4" path="/merchandiseCopyB4Action.do"/>
+      <forward name="merchand_promotion" path="/pricePromotionRelayAction.do?hdnSearchOperation=list"/>
+      <forward name="search" path="/merchandiseListAction.do"/>
+      <forward name="page" path="/merchandiseListAction.do"/>
+      <forward name="merchand_tree_view" path="/merchandiseTreeViewAction.do"/>
+      <forward name="merchand_category_tree_view" path="/merchandiseCategoryTreeViewAction.do"/>
+      <forward name="merchand_tree_view_append" path="/merchandiseTreeViewAppendAction.do"/>
+      <forward name="merchand_category_tree_view_append" path="/merchandiseCategoryTreeViewAppendAction.do"/>
+    </action>
+                       <!-- Merchandise Category Relay Action -->
+    <action name="merchandiseCategoryListForm" path="/merchandiseCategoryRelayAction" input="globalErrorHandler" type="bulbul.boff.ca.merchand.actions.MerchandiseCategoryRelayAction" scope="request">
+      <forward name="cat_move" path="/merchandiseCategoryMoveAction.do"/>
+      <forward name="merchand_move" path="/merchandiseMoveAction.do"/>
+      <forward name="merchand_copy" path="/merchandiseCopyAction.do"/>
+    </action>
+                            <!-- Decoration Relay Action -->
+   <action name="merchandiseDecorationListForm" path="/merchandiseDecorationRelayAction" input="globalErrorHandler" type="bulbul.boff.ca.merchand.actions.MerchandiseDecorationRelayAction" scope="request">
+    <forward name="list" path="/merchandiseDecorationListAction.do"/>
+    <forward name="view" path="/merchandiseDecorationViewAction.do"/>
+    <forward name="add" path="/merchandiseDecorationAddB4Action.do"/>
+    <forward name="edit" path="/merchandiseDecorationEditB4Action.do"/>
+    <forward name="delete" path="/merchandiseDecorationDeleteAction.do"/>
+    <forward name="act_deact" path="/merchandiseDecorationActDeactAction.do"/>
+    <forward name="search" path="/merchandiseDecorationListAction.do"/>
+    <forward name="page" path="/merchandiseDecorationListAction.do"/>
+   </action>
+                               <!-- Printable Area Relay Action -->
+   <action name="printableAreaListForm" path="/printableAreaRelayAction" input="globalErrorHandler" type="bulbul.boff.ca.merchand.actions.PrintableAreaRelayAction" scope="request">
+    <forward name="list" path="/printableAreaListAction.do"/>
+    <forward name="view" path="/printableAreaViewAction.do"/>
+    <forward name="add" path="/printableAreaAddB4Action.do"/>
+    <forward name="edit" path="/printableAreaEditB4Action.do"/>
+    <forward name="delete" path="/printableAreaDeleteAction.do"/>
+    <forward name="act_deact" path="/printableAreaActDeactAction.do"/>
+    <forward name="search" path="/printableAreaListAction.do"/>
+    <forward name="page" path="/printableAreaListAction.do"/>
+    <forward name="priority" path="/printableAreaPriorityB4Action.do"/>
+   </action>
+  </action-mappings>
+
+  <controller>
+    <set-property property="inputForward" value="true"/>
+  </controller> 
+  
+</struts-config>

@@ -1,0 +1,81 @@
+<html>
+<head>
+<title>Upload Images</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="main.css" rel="stylesheet" type="text/css">
+<link href="myprntn.css" rel="stylesheet" type="text/css">
+</head>
+
+<body><br>
+<form enctype="multipart/form-data">
+<table width="725px" border="0" align="center" cellpadding="0" cellspacing="0" id="panRevisiting">
+      <tr>
+        <td width="24" height="17px"><img src="images/myprntn_pan_corner_lt.gif" width="24" height="17"></td>
+        <td width="696" background="images/myprntn_pan_tile17px.gif" class="heading_pan">My Images &gt; Upload Image(s) :</td>
+        <td width="5"><img src="images/myprntn_pan_corner_rt.gif" width="5" height="17"></td>
+      </tr>
+	  <tr>
+	    <td height="20px" bgcolor="#FFFFFF" colspan="3" class="bdrLeftColor_006600 bdrRightColor_006600 bdrTopColor_006600 text_bold12">&nbsp;</td>
+  </tr>
+	   <tr>
+        <td bgcolor="#FFFFFF" colspan="3" class="bdrLeftColor_006600 bdrRightColor_006600">
+		   <table width="100%"  border="0" cellpadding="1" cellspacing="1" style="background-image:url(images/icon_uploading.gif); background-repeat:no-repeat; background-position: 20px 0px; ">
+            <tr>
+              <td height="10px" colspan="3">&nbsp;</td>
+            </tr>
+			<tr>
+              <td height="30px">&nbsp;</td>
+              <td valign="top">Total size of the uploading files should not exceed 10 MB.</td>
+            </tr>
+            <tr>
+              <td><div align="right">File:</div></td>
+              <td><input type="file" id="fleGraphics" name="fleGraphics" onkeypress="return false;" size="50"></td>
+            </tr>
+            <tr>
+              <td width="25%"><div align="right">Title:</div></td>
+              <td width="75%"><input type="text" id="txtTitle" name="txtTitle" style="width:400px"></td>
+             </tr>
+            <tr>
+              <td valign="top"><div align="right">Description:</div></td>
+              <td valign="top"><textarea id="txtDescription" name="txtDescription" rows="5" style="width:400px; height:75px"></textarea></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><input id="btnAdd" name="btnAdd" type="button" class="buttons" value="Attach" style="width:64px; height:20px; margin-left:268px">
+              <input id="btnRemove" name="btnRemove" type="button" class="buttons" value="Remove" style="width:64px; height:20px"></td>
+            </tr>
+            <tr>
+              <td valign="top"><div align="right">File(s) attached: </div></td>
+              <td>
+			  <select size=6 id="lstFiles" name="lstFiles" style="width:400px; height:150px">
+				<option></option>
+				<option></option>
+				<option></option>
+			</select>
+			  </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><input id="btnUpload" name="btnUpload" type="button" class="buttons" value="Upload" style="width:64px; height:20px; margin-left:268px">
+              <input id="btnCancel" name="btnCancel" type="button" class="buttons" value="Cancel" style="width:64px; height:20px"></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Please be patient, uploading will take some time ! </td>
+            </tr>
+            <tr>
+              <td height="20px" colspan="3">&nbsp;</td>
+            </tr>
+          </table>
+		
+		</td>
+      </tr>
+      <tr>
+        <td height="3px"><img src="images/myprntn_pan_corner_lb.gif" width="24" height="3"></td>
+        <td background="images/myprntn_pan_tile3px.gif"></td>
+        <td><img src="images/myprntn_pan_corner_rb.gif" width="5" height="3"></td>
+      </tr>
+</table>
+</form>
+</body>
+</html>

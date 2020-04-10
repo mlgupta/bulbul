@@ -1,0 +1,79 @@
+<HTML>
+   <HEAD>
+     
+      <TITLE>User Profile Add</TITLE>
+   </HEAD>
+   <BODY>
+      <H1>User Profile Add</H1>
+      User Id: <input type="text" id="txtUserId" name="txtUserId" value=""><br>
+      First Name: <input type="text" id="txtUserFirstName" name="txtUserFirstName" value=""><br>
+      Last Name: <input type="text" id="TxtUserLastName" name="TxtUserLastName" value=""><br>
+      Category: <select id="cboUserCategory"  name="cboUserCategory" style="width:100px"></select><br><br>
+
+     <table border="1" cellpadding="1" cellspacing="1">
+       <tr>
+         <td>
+           <table border="1" cellpadding="1" cellspacing="1">
+             <tr>
+               <td>Access</td>
+             </tr>
+             <tr>
+              <td><select id="lstUserAccessFrom"  name="lstUserAccessFrom" style="width:100px" size="5"></select>  <br></td>
+             </tr>
+           </table>
+         </td>
+         <td>
+            <input type="button" id="btn2RtAccess" name="btn2RtAccess" value=">" > <br><br>
+            <input type="button" id="btn2LtAccess" name="btn2LtAccess" value="<" >
+         </td>
+         <td>
+            <table border="1" cellpadding="1" cellspacing="1">
+             <tr>
+               <td>Assigned Access</td>
+             </tr>
+             <tr>
+              <td><select id="lstUserAccessTo"  name="lstUserAccessTo" style="width:100px" size="5"></select></td>
+             </tr>
+           </table>
+         </td>
+       </tr>
+     </table><br><br>
+
+     <table border="1" cellpadding="1" cellspacing="1">
+       <tr>
+         <td>
+           <table border="1" cellpadding="1" cellspacing="1">
+             <tr>
+               <td>Permission</td>
+             </tr>
+             <tr>
+              <td><select id="lstUserPermissionFrom"  name="lstUserPermissionFrom" style="width:100px" size="5"></select></td>
+             </tr>
+           </table>
+         </td>
+         <td>
+            <input type="button" id="btn2RtAccess" name="btn2RtAccess" value=">" > <br><br>
+            <input type="button" id="btn2LtAccess" name="btn2LtAccess" value="<" >
+         </td>
+         <td>
+            <table border="1" cellpadding="1" cellspacing="1">
+             <tr>
+               <td>Assigned Permission</td>
+             </tr>
+             <tr>
+              <td><select id="LstUserPermissionTo"  name="LstUserPermissionTo" style="width:100px" size="5"></select></td>
+             </tr>
+           </table>
+         </td>
+       </tr>
+     </table>
+
+
+
+      
+     <br>
+      <input type="button" id="btnSave" name="btnSave" value="Save">
+      <input type="button" id="btnCancel" name="btnCancel" value="Cancel">
+      <input type="button" id="btnClear" name="btnClear" value="Clear">
+   </BODY>
+</HTML>

@@ -1,0 +1,99 @@
+body {
+	background-color: #CFCEF8;
+	background-image: url("images/myprntn_bgtile_stars.jpg");
+	/*background-repeat:repeat-y;*/
+}
+.bgColor_EBFFE9 {
+	background-color: #EBFFE9;
+}
+.bgColor_006600 {
+	background-color: #006600;
+}
+.th_0A8A09 {
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 11px; font-weight:bold;
+	color:#FFFFFF;
+	background-color:#0A8A09;
+}
+.bdrColor_006600 {
+	border:1px solid #006600;
+	font-size: 11px;
+}
+.bdrBottomColor_006600 {
+	border-bottom:1px solid #006600;
+}
+.bdrLeftColor_006600 {
+	border-left:1px solid #006600;
+}
+.bdrTopColor_006600 {
+	border-top:1px solid #006600;
+}
+.bdrRightColor_006600 {
+	border-Right:1px solid #006600;
+}
+.heading_pan {
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FFFFFF;
+	font-weight:bold;
+}
+.buttons {
+	/*BORDER-RIGHT: 1px solid #006600; BORDER-BOTTOM: 1px solid #006600;
+	BORDER-LEFT: 1px solid #006600; BORDER-TOP: 1px solid #006600;*/
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	FONT-WEIGHT: normal; FONT-SIZE: 11px; color: #333333; 
+	BACKGROUND-IMAGE: url(images/butt_tile_myprntn.gif); BACKGROUND-REPEAT: repeat-x;
+}
+A.linkMenu:link {
+	FONT-WEIGHT: bold;FONT-SIZE: 12px;TEXT-DECORATION: none;font-family: Arial, Verdana, Helvetica, sans-serif;color: #006600;
+}
+A.linkMenu:visited {
+		FONT-WEIGHT: bold;FONT-SIZE: 12px;TEXT-DECORATION: none;font-family: Arial, Verdana, Helvetica, sans-serif;color: #006600;
+}
+A.linkMenu:hover {
+		FONT-WEIGHT: bold;FONT-SIZE: 12px;TEXT-DECORATION: none;font-family: Arial, Verdana, Helvetica, sans-serif;color: #FFFFFF; background-color:#006600
+}
+A.linkMenu:active {
+		FONT-WEIGHT: bold;FONT-SIZE: 12px;TEXT-DECORATION: none;font-family: Arial, Verdana, Helvetica, sans-serif;color: #006600;
+}
+.linkMenu {
+		FONT-WEIGHT: bold;FONT-SIZE: 12px;TEXT-DECORATION: none;font-family: Arial, Verdana, Helvetica, sans-serif;color: #006600;
+}
+/*********** Following classes are for page navigation  ************/
+A.linkPageNav:link {
+	FONT-WEIGHT: normal;FONT-SIZE: 9px;TEXT-DECORATION:underline; font-family: Verdana, Arial, Helvetica, sans-serif;color: #333333;
+}
+A.linkPageNav:visited {
+		FONT-WEIGHT: normal;FONT-SIZE: 9px;TEXT-DECORATION:underline; font-family: Verdana, Arial, Helvetica, sans-serif;color: #333333;
+}
+A.linkPageNav:hover {
+		FONT-WEIGHT: normal;FONT-SIZE: 9px;TEXT-DECORATION:none; font-family: Verdana, Arial, Helvetica, sans-serif;color: #333333;
+}
+A.linkPageNav:active {
+		FONT-WEIGHT: normal;FONT-SIZE: 9px;TEXT-DECORATION:underline; font-family: Verdana, Arial, Helvetica, sans-serif;color: #333333;
+}
+
+.linkPageNavCurrentPage {
+		FONT-WEIGHT: bold;FONT-SIZE: 9px;TEXT-DECORATION:none; font-family: Verdana, Arial, Helvetica, sans-serif;color: #006600;
+}
+/*****/
+/*********** Following classes are for table row link  ************/
+A.linkTableRow:link {
+	FONT-WEIGHT: normal;FONT-SIZE: 11px;TEXT-DECORATION:underline; font-family: Verdana, Arial, Helvetica, sans-serif;color: #333333;
+}
+A.linkTableRow:visited {
+		FONT-WEIGHT: normal;FONT-SIZE: 11px;TEXT-DECORATION:none; font-family: Verdana, Arial, Helvetica, sans-serif;color: #333333;
+}
+A.linkTableRow:hover {
+		FONT-WEIGHT: normal;FONT-SIZE: 11px;TEXT-DECORATION:none; font-family: Verdana, Arial, Helvetica, sans-serif;color: #333333;
+}
+A.linkTableRow:active {
+		FONT-WEIGHT: normal;FONT-SIZE: 11px;TEXT-DECORATION:none; font-family: Verdana, Arial, Helvetica, sans-serif;color: #333333;
+}
+/*****/
+.text_006600 {
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #006600;
+	font-weight:bold;
+}

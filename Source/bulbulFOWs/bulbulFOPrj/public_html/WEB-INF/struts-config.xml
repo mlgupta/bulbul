@@ -1,0 +1,456 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+
+  <data-sources>
+    <data-source key="FOKey" type="org.apache.commons.dbcp.BasicDataSource" >
+      <set-property property="driverClassName" value="org.postgresql.Driver"/>
+      <set-property property="url" value="jdbc:postgresql://192.168.0.12/bulbulfo"/>
+      <set-property property="username" value="bulbul"/>
+      <set-property property="password" value="bbl9901"/>
+      <set-property property="maxActive" value="10"/>
+      <set-property property="maxWait" value="5000"/>
+      <set-property property="defaultAutoCommit" value="true"/>
+      <set-property property="defaultReadOnly" value="false"/>
+    </data-source>
+  
+    <data-source key="BOKey" type="org.apache.commons.dbcp.BasicDataSource" >
+      <set-property property="driverClassName" value="org.postgresql.Driver"/>
+      <set-property property="url" value="jdbc:postgresql://192.168.0.12/bulbulbo"/>
+      <set-property property="username" value="bulbul"/>
+      <set-property property="password" value="bbl9901"/>
+      <set-property property="maxActive" value="10"/>
+      <set-property property="maxWait" value="5000"/>
+      <set-property property="defaultAutoCommit" value="true"/>
+      <set-property property="defaultReadOnly" value="false"/>
+    </data-source>
+  </data-sources>
+ 
+  <form-beans>
+    <form-bean name="customerLoginForm" type="bulbul.foff.customer.myprofile.actionforms.CustomerLoginForm"/>
+    <form-bean name="customerRegisterForm" type="bulbul.foff.customer.myprofile.actionforms.CustomerRegisterForm"/>
+    <form-bean name="customerProfileForm" type="bulbul.foff.customer.myprofile.actionforms.CustomerProfileForm"/>
+    <form-bean name="changePasswordForm" type="bulbul.foff.customer.myprofile.actionforms.ChangePasswordForm"/>
+    <form-bean name="changeEmailIdForm" type="bulbul.foff.customer.myprofile.actionforms.ChangeEmailIdForm"/>
+    <form-bean name="myGraphicsUploadForm" type="bulbul.foff.customer.mygraphics.actionforms.MyGraphicsUploadForm"/>
+    <form-bean name="myGraphicsModifyForm" type="bulbul.foff.customer.mygraphics.actionforms.MyGraphicsModifyForm"/>
+    <form-bean name="addToFavouriteForm" type="bulbul.foff.pcatalogue.actionforms.AddToFavouriteForm"/>
+    <form-bean name="shippingAddressForm" type="bulbul.foff.customer.myaddress.actionforms.ShippingAddressForm"/>
+    <form-bean name="designSaveForm" type="bulbul.foff.studio.actionforms.DesignSaveForm"/>
+    <form-bean name="orderItemForm" type="bulbul.foff.order.actionforms.OrderItemForm"/>
+    <form-bean name="trackDesignForm" type="bulbul.foff.studio.actionforms.TrackDesignForm"/>
+    <form-bean name="trackOrderForm" type="bulbul.foff.studio.actionforms.TrackOrderForm"/>
+    <form-bean name="multipleAddressForm" type="bulbul.foff.order.actionforms.MultipleAddressForm"/>
+    <form-bean name="paymentByCCForm" type="bulbul.foff.order.actionforms.PaymentByCCForm"/>
+    <form-bean name="paymentByDCForm" type="bulbul.foff.order.actionforms.PaymentByDCForm"/>
+    <form-bean name="paymentByInetForm" type="bulbul.foff.order.actionforms.PaymentByInetForm"/>
+    <form-bean name="paymentByCashAtCashPtForm" type="bulbul.foff.order.actionforms.PaymentByCashAtCashPtForm"/>
+    <form-bean name="paymentByCashOnDeliveryForm" type="bulbul.foff.order.actionforms.PaymentByCashOnDeliveryForm"/>
+    <form-bean name="paymentByChequeOrDDForm" type="bulbul.foff.order.actionforms.PaymentByChequeOrDDForm"/>
+    <form-bean name="customImageUploadForm" type="bulbul.foff.studio.actionforms.CustomImageUploadForm"/>
+  </form-beans>
+
+  <global-forwards>
+  
+    <forward name="home" path="/home.jsp"/>
+    <forward name="customerRegisterLogin" path="/customer_register_login.jsp"/>
+    <forward name="customerProfile" path="/customer_profile.jsp"/>
+    <forward name="changePassword" path="/customer_change_password.jsp"/>
+    <forward name="changeEmailId" path="/customer_change_email.jsp"/>
+    <forward name="myprintoonIntroduction" path="/myprintoon_intro.jsp"/>
+    <forward name="myGraphicsList" path="/myGraphicsListAction.do"/>
+    <forward name="myGraphicsUpload" path="/mygraphics_upload.jsp"/>
+    <forward name="myGraphicsModify" path="/mygraphics_modify.jsp"/>
+    <forward name="productList" path="/product_list.jsp"/>
+    <forward name="myFavouriteList" path="/myfavourite_list.jsp"/>
+    <forward name="product" path="/product.jsp"/>
+    <forward name="addToFavourite" path="/add_to_favourite.jsp"/>
+    <forward name="shippingAddressBook" path="/shipping_address_book.jsp"/>
+    <forward name="shippingAddressNew" path="/shipping_address_new.jsp"/>
+    <forward name="shippingAddressModify" path="/shipping_address_modify.jsp"/>
+    
+    <forward name="myShippingAddressBook" path="/myshipping_address_book.jsp"/>
+    <forward name="myShippingAddressNew" path="/myshipping_address_new.jsp"/>
+    <forward name="myShippingAddressModify" path="/myshipping_address_modify.jsp"/>
+    
+    <forward name="postProductCustomise" path="/post_product_customise.jsp"/>
+    <forward name="productCustomise" path="/product_customise.jsp"/>
+    
+    <forward name="shippingAddress" path="/shipping_address.jsp"/>
+    <forward name="multipleShippingAddress" path="/multiple_shipping_address.jsp"/>
+    <forward name="orderCreate" path="/order_create.jsp" />
+    <forward name="orderModify" path="/order_modify.jsp"/>
+    <forward name="orderList" path="/order_list.jsp"/>
+    <forward name="payment" path="/prePaymentAction.do"/>
+    <forward name="prePayment" path="/prePayment.jsp"/>
+    <forward name="postPayment" path="/postPayment.jsp"/>
+    <forward name="track" path="/track.jsp"/>
+    <forward name="trackedOrder" path="/tracked_order.jsp"/>    
+    <forward name="trackedDesign" path="/tracked_design.jsp"/>
+    <forward name="designEngine" path="/design_engine.jsp"/>
+    
+  </global-forwards> 
+  
+  <action-mappings>
+                              <!--Customer Register Login Action-->
+    <action path="/customerRegisterLoginAction" type="bulbul.foff.customer.myprofile.actions.CustomerRegisterLoginAction" scope="request">
+      <forward name="success" path="/customer_register_login.jsp"/>
+    </action>
+                            <!--Customer Register Action-->
+    <action name="customerRegisterForm" path="/customerRegisterAction" input="customerRegisterLogin" type="bulbul.foff.customer.myprofile.actions.CustomerRegisterAction" scope="request">
+      <forward name="success" path="/customer_register_success.jsp"/>
+    </action>
+                           <!--Customer Login Action--> 
+    <action name="customerLoginForm" path="/customerLoginAction" input="customerRegisterLogin" type="bulbul.foff.customer.myprofile.actions.CustomerLoginAction" scope="request">
+      <forward name="success" path="/myprintoon_intro.jsp"/>
+    </action>
+                            <!--Customer Logout Action--> 
+    <action path="/customerLogoutAction" type="bulbul.foff.customer.myprofile.actions.CustomerLogoutAction" scope="request">
+      <forward name="success" path="/myprintoon_intro.jsp"/>
+    </action>
+                            <!--Home Login Action--> 
+    <action name="customerLoginForm" path="/homeLoginAction"  input="home" type="bulbul.foff.customer.myprofile.actions.CustomerLoginAction" scope="request">
+      <forward name="success" path="/home.jsp"/>
+    </action>
+                            <!--Home Logout Action--> 
+    <action path="/homeLogoutAction" type="bulbul.foff.customer.myprofile.actions.CustomerLogoutAction" scope="request">
+      <forward name="success" path="/home.jsp"/>
+    </action>
+                            <!--Customer Profile B4 Action-->
+    <action name="customerProfileForm" path="/customerProfileB4Action" validate="false" input="myprintoonIntroduction" type="bulbul.foff.customer.myprofile.actions.CustomerProfileB4Action" scope="request">
+      <forward name="success" path="/customer_profile.jsp"/>
+    </action>
+                            <!--Customer Profile Action-->
+    <action name="customerProfileForm" path="/customerProfileAction" input="customerProfile" type="bulbul.foff.customer.myprofile.actions.CustomerProfileAction" scope="request">
+      <forward name="success" path="/myprintoon_intro.jsp"/>
+    </action>
+                            <!--Customer Profile Image Preview Action-->
+    <action name="customerProfileForm" path="/imagePreviewAction" type="bulbul.foff.customer.myprofile.actions.ImagePreviewAction" validate="false" scope="request">
+    </action>
+                            <!--Change Password B4 Action-->
+    <action name="changePasswordForm" path="/changePasswordB4Action" validate="false" input="myprintoonIntroduction" type="bulbul.foff.customer.myprofile.actions.ChangePasswordB4Action" scope="request">
+      <forward name="success" path="/customer_change_password.jsp"/>
+    </action>
+                            <!--Change Password Action-->
+    <action name="changePasswordForm" path="/changePasswordAction" input="changePassword" type="bulbul.foff.customer.myprofile.actions.ChangePasswordAction" scope="request">
+      <forward name="success" path="/customerProfileB4Action.do"/>
+    </action>
+                            <!--Change Email Id B4 Action-->
+    <action name="changeEmailIdForm" path="/changeEmailIdB4Action" validate="false" input="myprintoonIntroduction" type="bulbul.foff.customer.myprofile.actions.ChangeEmailIdB4Action" scope="request">
+      <forward name="success" path="/customer_change_email.jsp"/>
+    </action>
+                            <!--Change Email Id Action-->
+    <action name="changeEmailIdForm" path="/changeEmailIdAction" input="changeEmailId" type="bulbul.foff.customer.myprofile.actions.ChangeEmailIdAction" scope="request">
+      <forward name="success" path="/customerProfileB4Action.do"/>
+    </action>
+                            <!--MyGraphics List Action-->
+    <action  path="/myGraphicsListAction" input="globalErrorHandler" type="bulbul.foff.customer.mygraphics.actions.MyGraphicsListAction" scope="request">
+      <forward name="success" path="/mygraphics_list.jsp"/>
+    </action>
+                            <!--MyGraphics Upload B4 Action-->
+    <action name="myGraphicsUploadForm" path="/myGraphicsUploadB4Action" input="myGraphicsList" type="bulbul.foff.customer.mygraphics.actions.MyGraphicsUploadB4Action" scope="request">
+      <forward name="success" path="/mygraphics_upload.jsp"/>
+    </action>
+                            <!--MyGraphics Upload Action-->
+    <action name="myGraphicsUploadForm" path="/myGraphicsUploadAction" input="myGraphicsUpload" type="bulbul.foff.customer.mygraphics.actions.MyGraphicsUploadAction" scope="request">
+      <forward name="success" path="/myGraphicsListAction.do"/>
+    </action>
+                            <!--MyGraphics Modify B4 Action-->
+    <action name="myGraphicsModifyForm" path="/myGraphicsModifyB4Action" validate="false" input="myGraphicsList" type="bulbul.foff.customer.mygraphics.actions.MyGraphicsModifyB4Action" scope="request">
+      <forward name="success" path="/mygraphics_modify.jsp"/>
+    </action>
+                            <!--MyGraphics Modify Action-->
+    <action name="myGraphicsModifyForm" path="/myGraphicsModifyAction" input="myGraphicsModify" type="bulbul.foff.customer.mygraphics.actions.MyGraphicsModifyAction" scope="request">
+      <forward name="success" path="/myGraphicsListAction.do"/>
+    </action>
+                            <!--MyGraphics Delete Action-->
+    <action  path="/myGraphicsDeleteAction" input="myGraphicsList" type="bulbul.foff.customer.mygraphics.actions.MyGraphicsDeleteAction" scope="request">
+      <forward name="success" path="/myGraphicsListAction.do"/>
+    </action>
+                            <!--Image Display Action-->
+    <action  path="/imageDisplayAction" type="bulbul.foff.general.ImageDisplayAction" validate="false" scope="request">
+    </action>
+                            <!--Product List Action-->
+    <action  path="/productListAction" type="bulbul.foff.pcatalogue.actions.ProductListAction" scope="request">
+      <forward name="success" path="/product_list.jsp"/>
+    </action>
+                            <!--Product Action-->
+    <action  path="/productAction" input="productList" type="bulbul.foff.pcatalogue.actions.ProductAction" scope="request">
+      <forward name="success" path="/product.jsp"/>
+    </action>                            
+                          <!-- Product TreeView Action -->
+   <action  path="/productTreeViewAction"  type="bulbul.foff.pcatalogue.actions.ProductTreeViewAction" scope="request">
+    <forward name="success" path="/product_treeview.jsp"/>
+   </action>
+                          <!-- Product TreeViewAppend Action -->
+   <action  path="/productTreeViewAppendAction"  type="bulbul.foff.pcatalogue.actions.ProductTreeViewAppendAction" scope="request">
+    <forward name="success" path="/product_treeview.jsp"/>
+   </action>
+                            <!--AddToFavourite B4 Action-->
+    <action name="addToFavouriteForm" path="/addToFavouriteB4Action" validate="false" input="product" type="bulbul.foff.pcatalogue.actions.AddToFavouriteB4Action" scope="request">
+      <forward name="success" path="/add_to_favourite.jsp"/>
+    </action>   
+                            <!--AddToFavourite  Action-->
+    <action name="addToFavouriteForm" path="/addToFavouriteAction" validate="false" input="product" type="bulbul.foff.pcatalogue.actions.AddToFavouriteAction" scope="request">
+      <forward name="success" path="/add_to_favourite_success.jsp"/>
+    </action>
+                            <!--MyFavourite List Action-->
+    <action  path="/myFavouriteListAction" input="globalErrorHandler" type="bulbul.foff.customer.myfavourite.actions.MyFavouriteListAction" scope="request">
+      <forward name="success" path="/myfavourite_list.jsp"/>
+    </action>
+                            <!--MyFavourite Delete Action-->
+    <action  path="/myFavouriteDeleteAction" input="globalErrorHandler" type="bulbul.foff.customer.myfavourite.actions.MyFavouriteDeleteAction" scope="request">
+      <forward name="success" path="/myFavouriteListAction.do"/>
+    </action>
+                            <!--My Favourite Product Action-->
+    <action  path="/myFavouriteProductAction" input="myFavouriteList" type="bulbul.foff.pcatalogue.actions.ProductAction" scope="request">
+      <forward name="success" path="/myfavourite_product.jsp"/>
+    </action>
+                            <!--Shipping Address B4 Action-->
+    <action  path="/shippingAddressB4Action"  type="bulbul.foff.order.actions.ShippingAddressB4Action" scope="request">
+      <forward name="success" path="/shipping_address.jsp"/>
+    </action>
+                            <!--Shipping Address Action-->
+    <action  name="shippingAddressForm" path="/shippingAddressAction" input="shippingAddress" type="bulbul.foff.order.actions.ShippingAddressAction" scope="request">
+      <forward name="success" path="/prePaymentB4Action.do"/>
+      <forward name="cancel" path="/orderListAction.do" />
+    </action>
+                            <!--Shipping Address Book B4 Action-->
+    <action  path="/shippingAddressBookB4Action" validate="false" input="shippingAddress" type="bulbul.foff.customer.myaddress.actions.ShippingAddressBookB4Action" scope="request">
+      <forward name="success" path="/shipping_address_book.jsp"/>
+    </action>
+                            <!--Shipping Address Book Action-->
+    <action   path="/shippingAddressBookAction" input="shippingAddressBook" type="bulbul.foff.customer.myaddress.actions.ShippingAddressBookAction" scope="request">
+      <forward name="success" path="/prePaymentB4Action.do"/>
+    </action>
+                            <!--Multiple Address B4 Action-->
+    <action   path="/multipleAddressB4Action" input="shippingAddress" type="bulbul.foff.order.actions.MultipleAddressB4Action" scope="request">
+      <forward name="success" path="/multiple_shipping_address.jsp"/>
+    </action>
+                            <!--Multiple Address Action-->
+    <action  name="multipleAddressForm"  path="/multipleAddressAction" input="multipleShippingAddress" type="bulbul.foff.order.actions.MultipleAddressAction" scope="request">
+      <forward name="success" path="/prePaymentB4Action.do"/>
+    </action>
+                            <!--Address Book New B4 Action-->
+    <action  name="shippingAddressForm" path="/addressBookNewB4Action" validate="false" input="shippingAddressBook" type="bulbul.foff.customer.myaddress.actions.AddressBookNewB4Action" scope="request">
+      <forward name="success" path="/shipping_address_new.jsp"/>
+    </action>
+                            <!--Address Book New Action-->
+    <action  name="shippingAddressForm" path="/addressBookNewAction" input="shippingAddressNew" type="bulbul.foff.customer.myaddress.actions.AddressBookNewAction" scope="request">
+      <forward name="success" path="/shippingAddressBookB4Action.do"/>
+    </action>
+                            <!--Address Book Modify B4 Action-->
+    <action  name="shippingAddressForm" path="/addressBookModifyB4Action" validate="false" input="shippingAddressBook" type="bulbul.foff.customer.myaddress.actions.AddressBookModifyB4Action" scope="request">
+      <forward name="success" path="/shipping_address_modify.jsp"/>
+    </action>
+                            <!--Address Book Modify Action-->
+    <action  name="shippingAddressForm" path="/addressBookModifyAction" input="shippingAddressModify" type="bulbul.foff.customer.myaddress.actions.AddressBookModifyAction" scope="request">
+      <forward name="success" path="/shippingAddressBookB4Action.do"/>
+    </action>
+                            <!--Address Book Delete Action-->
+    <action  path="/addressBookDeleteAction" input="shippingAddressBook" type="bulbul.foff.customer.myaddress.actions.AddressBookDeleteAction" scope="request">
+      <forward name="success" path="/shippingAddressBookB4Action.do"/>
+    </action>
+                                <!--MyPrintoon Action-->
+    <action path="/myPrintoonAction" type="bulbul.foff.customer.actions.MyPrintoonAction">
+      <forward name="success" path="/myprintoon.jsp"/>
+    </action>
+                                <!--MyShipping Address Book B4 Action-->
+    <action  path="/myShippingAddressBookB4Action" type="bulbul.foff.customer.myaddress.actions.ShippingAddressBookB4Action" scope="request">
+      <forward name="success" path="/myshipping_address_book.jsp"/>
+    </action>
+                            <!--MyAddress Book New B4 Action-->
+    <action  name="shippingAddressForm" path="/myAddressBookNewB4Action" validate="false" input="myShippingAddressBook" type="bulbul.foff.customer.myaddress.actions.AddressBookNewB4Action" scope="request">
+      <forward name="success" path="/myshipping_address_new.jsp"/>
+    </action>
+                            <!--MyAddress Book New Action-->
+    <action  name="shippingAddressForm" path="/myAddressBookNewAction" input="myShippingAddressNew" type="bulbul.foff.customer.myaddress.actions.AddressBookNewAction" scope="request">
+      <forward name="success" path="/myShippingAddressBookB4Action.do"/>
+    </action>
+                            <!--MyAddress Book Modify B4 Action-->
+    <action  name="shippingAddressForm" path="/myAddressBookModifyB4Action" validate="false" input="myShippingAddressBook" type="bulbul.foff.customer.myaddress.actions.AddressBookModifyB4Action" scope="request">
+      <forward name="success" path="/myshipping_address_modify.jsp"/>
+    </action>
+                            <!--MyAddress Book Modify Action-->
+    <action  name="shippingAddressForm" path="/myAddressBookModifyAction" input="myShippingAddressModify" type="bulbul.foff.customer.myaddress.actions.AddressBookModifyAction" scope="request">
+      <forward name="success" path="/myShippingAddressBookB4Action.do"/>
+    </action>
+                            <!--MyAddress Book Delete Action-->
+    <action  path="/myAddressBookDeleteAction" input="myShippingAddressBook" type="bulbul.foff.customer.myaddress.actions.AddressBookDeleteAction" scope="request">
+      <forward name="success" path="/myShippingAddressBookB4Action.do"/>
+    </action>    
+                            <!-- My Creativity List Action -->
+    <action path="/myCreativityListAction" type="bulbul.foff.customer.mycreativity.actions.MyCreativityListAction" scope="request">
+      <forward name="success" path="/mycreativity_list.jsp"/>
+    </action>
+                            <!-- My Creativity Delete Action -->
+    <action path="/myCreativityDeleteAction" type="bulbul.foff.customer.mycreativity.actions.MyCreativityDeleteAction" scope="request">
+      <forward name="success" path="/myCreativityListAction.do"/>
+    </action>
+                            <!--Product Customise B4 Action-->
+    <action  path="/productCustomiseB4Action" validate="false" type="bulbul.foff.studio.actions.ProductCustomiseB4Action" scope="request" >
+      <forward name="success" path="/design_engine.jsp"/>
+    </action>
+                            <!--Product Customise Action-->
+    <action  path="/productCustomiseAction"  type="bulbul.foff.studio.actions.ProductCustomiseAction" scope="request" />
+    
+                            <!--Studio Action-->
+    <action path="/studioAction" type="bulbul.foff.studio.actions.StudioAction">
+      <forward name="success" path="/studio.jsp"/>
+    </action>
+                            <!--Order List Action-->
+    <action name="orderItemForm" path="/orderListAction" input="globalErrorHandler" type="bulbul.foff.order.actions.OrderListAction" scope="request">
+      <forward name="success" path="/order_list.jsp"/>
+    </action>
+                            <!--Order Create B4 Action-->
+    <action name="orderItemForm" path="/orderCreateB4Action" input="globalErrorHandler" type="bulbul.foff.order.actions.OrderCreateB4Action" scope="request">
+      <forward name="success" path="/order_create.jsp"/>
+    </action>
+                            <!--Order Create Action-->
+    <action name="orderItemForm" path="/orderCreateAction"   type="bulbul.foff.order.actions.OrderCreateAction" scope="request">
+      <forward name="success" path="/orderListAction.do" redirect="true"/>
+    </action>
+                            <!--Order Modify B4 Action-->
+    <action name="orderItemForm" path="/orderModifyB4Action" input="globalErrorHandler" type="bulbul.foff.order.actions.OrderModifyB4Action" scope="request">
+      <forward name="success" path="/order_modify.jsp"/>
+    </action>
+                            <!--Order Modify Action-->
+    <action name="orderItemForm" path="/orderModifyAction" input="orderModify"  type="bulbul.foff.order.actions.OrderModifyAction" scope="request">
+      <forward name="success" path="/orderListAction.do" redirect="true"/>
+    </action>
+                            <!--Order Item Detail Delete Action-->
+    <action path="/orderItemDetailDeleteAction"  type="bulbul.foff.order.actions.OrderItemDetailDeleteAction" scope="request">
+      <forward name="success" path="/orderListAction.do" />
+    </action>
+                            <!--Order Detail Delete Action-->
+    <action path="/orderDetailDeleteAction"  type="bulbul.foff.order.actions.OrderDetailDeleteAction" scope="request">
+      <forward name="success" path="/orderListAction.do" />
+    </action>
+                            <!--Prepayment B4  Action-->
+    <action   path="/prePaymentB4Action"  type="bulbul.foff.order.actions.PrePaymentB4Action" scope="request">
+      <forward name="success" path="/pre_payment.jsp"/>
+    </action>
+                            <!--Prepayment Action-->
+    <action   path="/prePaymentAction" type="bulbul.foff.order.actions.PrePaymentAction" scope="request">
+      <forward name="success" path="/payment.jsp"/>
+    </action>
+                            <!--Payment By CC B4 Action-->
+    <action   path="/paymentByCCB4Action"  type="bulbul.foff.order.actions.PaymentByCCB4Action" scope="request">
+      <forward name="success" path="/payment_by_cc.jsp"/>
+    </action>
+                                <!--Payment By CC Action-->
+    <action   name="paymentByCCForm" path="/paymentByCCAction" input="payment" type="bulbul.foff.order.actions.PaymentByCCAction" scope="request">
+      <forward name="success" path="/postPaymentB4Action.do"/>
+    </action>
+                                <!--Payment By DC B4 Action-->
+    <action   path="/paymentByDCB4Action" type="bulbul.foff.order.actions.PaymentByDCB4Action" scope="request">
+      <forward name="success" path="/payment_by_dc.jsp"/>
+    </action>
+                            <!--Payment By DC Action-->
+    <action   name="paymentByDCForm" path="/paymentByDCAction" input="payment" type="bulbul.foff.order.actions.PaymentByDCAction" scope="request">
+      <forward name="success" path="/postPaymentB4Action.do"/>
+    </action>
+                            <!--Payment By Inet Action-->
+    <action   name="paymentByInetForm" path="/paymentByInetAction" input="payment" type="bulbul.foff.order.actions.PaymentByInetAction" scope="request">
+      <forward name="success" path="/postPaymentB4Action.do"/>
+    </action>
+                            <!--Payment By Cash At Cash Pt Action-->
+    <action   name="paymentByCashAtCashPtForm" path="/paymentByCashAtCashPtAction" input="payment" type="bulbul.foff.order.actions.PaymentByCashAtCashPtAction" scope="request">
+      <forward name="success" path="/postPaymentB4Action.do"/>
+    </action>
+                            <!--Payment By Cash On Delivery Action-->
+    <action   name="paymentByCashOnDeliveryForm" path="/paymentByCashOnDeliveryAction" input="payment" type="bulbul.foff.order.actions.PaymentByCashOnDeliveryAction" scope="request">
+      <forward name="success" path="/postPaymentB4Action.do"/>
+    </action>
+                            <!--Payment By Cash On Delivery Action-->
+    <action   name="paymentByChequeOrDDForm" path="/paymentByChequeOrDDAction" input="payment" type="bulbul.foff.order.actions.PaymentByChequeOrDDAction" scope="request">
+      <forward name="success" path="/postPaymentB4Action.do"/>
+    </action>
+                            <!--Post Payment B4 Action-->
+    <action    path="/postPaymentB4Action" type="bulbul.foff.order.actions.PostPaymentB4Action" scope="request">
+      <forward name="success" path="/post_payment.jsp"/>
+    </action>
+                            <!-- Track B4 Action-->
+    <action path="/trackB4Action" type="bulbul.foff.studio.actions.TrackB4Action" scope="request">
+      <forward name="success" path="/track.jsp"/>
+    </action>
+                            <!--Track Design Action-->
+    <action name="trackDesignForm" path="/trackDesignAction" input="track" type="bulbul.foff.studio.actions.TrackDesignAction" scope="request">
+      <forward name="success" path="/tracked_design.jsp"/>
+    </action>      
+                            <!--Delete Tracked Design Action-->
+    <action path="/deleteTrackedDesignAction" input="trackedDesign" type="bulbul.foff.studio.actions.DeleteTrackedDesignAction" scope="request">
+      <forward name="success" path="/tracked_design_deleted.jsp"/>
+    </action>      
+                            <!--Track Order Action-->
+    <action name="trackOrderForm" path="/trackOrderAction" input="track" type="bulbul.foff.studio.actions.TrackOrderAction" scope="request">
+      <forward name="success" path="/tracked_order.jsp"/>
+    </action>
+                            <!--Show Order Action-->
+    <action  path="/showOrderAction" input="trackedOrder" type="bulbul.foff.studio.actions.ShowOrderAction" scope="request">
+      <forward name="success" path="/orderListAction.do"/>
+    </action>
+                  <!--Delete Tracked Incomplete Order Action-->
+    <action path="/deleteTrackedIncompleteOrderAction" input="trackedOrder" type="bulbul.foff.studio.actions.DeleteTrackedIncompleteOrderAction" scope="request">
+      <forward name="success" path="/tracked_order_deleted.jsp"/>
+    </action> 
+                            <!--Change Outlet City Action-->
+    <action  path="/changeOutletCityAction" type="bulbul.foff.order.actions.ChangeOutletCityAction" scope="request">
+      <forward name="success" path="/outlet_list.jsp"/>
+    </action>
+                            <!--Shopping Cart Action-->
+    <action  path="/shoppingCartAction" type="bulbul.foff.general.ShoppingCartAction" input="designEngine" scope="request">
+      <forward name="success" path="/orderListAction.do"/>
+    </action>
+                            <!--Design Name Check Action-->    
+    <action path="/designNameCheckAction" type="bulbul.foff.studio.actions.DesignNameCheckAction"/>
+    
+                            <!--SVG Display Action-->
+    <action path="/svgDisplayAction" type="bulbul.foff.studio.actions.SvgDisplayAction"/>
+    
+                            <!--Images List Action-->
+    <action path="/imageListAction" type="bulbul.foff.studio.actions.ImageListAction"/>
+    
+                            <!--Image Upload Action-->
+    <action path="/imageUploadAction" type="bulbul.foff.studio.actions.ImageUploadAction"/>
+    
+                            <!--Merchandise List Action-->
+    <action path="/merchandiseListAction" type="bulbul.foff.studio.actions.MerchandiseListAction"/>
+    
+                            <!--Merchandise View Action-->
+    <action path="/merchandiseViewAction" type="bulbul.foff.studio.actions.MerchandiseViewAction"/>
+    
+                            <!--Get Printable Area Action-->
+    <action path="/getPrintableAreaAction" type="bulbul.foff.studio.actions.GetPrintableAreaAction"/>
+    
+    <action path="/clipartDisplayAction" type="bulbul.foff.studio.actions.ClipartDisplayAction"/>
+    <action path="/customImageDisplayAction" type="bulbul.foff.studio.actions.CustomImageDisplayAction"/>
+    <action path="/textDisplayAction" type="bulbul.foff.studio.actions.TextDisplayAction"/>
+    <action path="/text2SVGDisplayAction" type="bulbul.foff.studio.actions.Text2SVGDisplayAction"/>
+    <action path="/getFontFamilyAction" type="bulbul.foff.studio.actions.GetFontFamilyAction"/>
+    <action path="/getClipartsAction" type="bulbul.foff.studio.actions.GetClipartsAction"/>
+    <action path="/clipartCategoryNavigationListAction" type="bulbul.foff.studio.actions.ClipartCategoryNavigationListAction"/>
+    <action name="customImageUploadForm" path="/customImageUploadAction" type="bulbul.foff.studio.actions.CustomImageUploadAction"/>
+    <action name="customImageUploadForm" path="/customImagePreviewAction" type="bulbul.foff.studio.actions.CustomImagePreviewAction"/>
+    <action path="/getCurrentDesignAction" type="bulbul.foff.studio.actions.GetCurrentDesignAction"/>
+    <action path="/deleteDesignElementAction" type="bulbul.foff.studio.actions.DeleteDesignElementAction"/>
+    <action path="/fontCategoryNavigationListAction"
+            type="bulbul.foff.studio.actions.FontCategoryNavigationListAction"/>
+    <action path="/productCategoryNavigationListAction"
+            type="bulbul.foff.studio.actions.ProductCategoryNavigationListAction"/>
+    <action path="/productCategoryListAction" type="bulbul.foff.studio.actions.ProductCategoryListAction"/>
+    <action path="/openDesignAction" type="bulbul.foff.studio.actions.OpenDesignAction"/>
+    <action path="/populateDesignAction" type="bulbul.foff.studio.actions.PopulateDesignAction"/>
+  </action-mappings>
+  
+  <controller>
+    <set-property property="inputForward" value="true"/>
+  </controller>
+  
+  <message-resources parameter="bulbul.foff.general.resources.ApplicationResources" null="false"/>
+  
+  <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+    <set-property property="pathnames" value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"/>
+  </plug-in>
+ 
+</struts-config>
