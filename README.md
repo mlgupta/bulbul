@@ -1,2 +1,3 @@
-# samhita
-A Document Management System written in java
+# bulbul
+Java Web application built to facilitate T-Shirt design
+
